@@ -1,0 +1,7915 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e; /* or your desired dark color */
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+.home-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .home-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 57%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 3240px;
+    position: relative;
+  }
+  
+  .home-page .the-largest-network {
+    position: absolute;
+    width: 683px;
+    top: 314px;
+    left: 163px;
+    font-family: "Avenir-Light", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper {
+    font-weight: 300;
+  }
+  
+  .home-page .span {
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+  }
+  
+  .home-page .welcome-to {
+    position: absolute;
+    width: 596px;
+    top: 539px;
+    left: 163px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .p {
+    position: absolute;
+    width: 263px;
+    top: 797px;
+    left: 163px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .search-bar {
+    position: absolute;
+    width: 349px;
+    height: 52px;
+    top: 855px;
+    left: 163px;
+  }
+  
+  .home-page .overlap-group {
+    position: relative;
+    width: 347px;
+    height: 52px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .home-page .overlap {
+    position: absolute;
+    width: 56px;
+    height: 52px;
+    top: 0;
+    left: 291px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .home-page .search-arrow {
+    position: absolute;
+    width: 29px;
+    height: 15px;
+    top: 18px;
+    left: 13px;
+  }
+  
+  .home-page .text-wrapper-2 {
+    position: absolute;
+    width: 49px;
+    top: 15px;
+    left: 23px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 15px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .home-page-picture {
+    position: absolute;
+    width: 730px;
+    height: 727px;
+    top: 274px;
+    left: 992px;
+    object-fit: cover;
+  }
+  
+  .home-page .overlap-2 {
+    position: absolute;
+    width: 389px;
+    height: 260px;
+    top: 1437px;
+    left: 780px;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .div-wrapper {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 30px;
+    left: 26px;
+    background-color: #3c5f82;
+    border-radius: 21px;
+  }
+  
+  .home-page .text-wrapper-3 {
+    position: absolute;
+    width: 14px;
+    top: 5px;
+    left: 14px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-4 {
+    position: absolute;
+    width: 355px;
+    top: 141px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-5 {
+    position: absolute;
+    width: 263px;
+    top: 84px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .overlap-3 {
+    position: absolute;
+    width: 389px;
+    height: 260px;
+    top: 1437px;
+    left: 1214px;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .overlap-4 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 30px;
+    left: 25px;
+    background-color: #3c5f82;
+    border-radius: 21px;
+  }
+  
+  .home-page .text-wrapper-6 {
+    position: absolute;
+    width: 355px;
+    top: 141px;
+    left: 24px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-7 {
+    position: absolute;
+    width: 263px;
+    top: 84px;
+    left: 24px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .overlap-5 {
+    position: absolute;
+    width: 389px;
+    height: 260px;
+    top: 1741px;
+    left: 1214px;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .overlap-6 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 23px;
+    left: 25px;
+    background-color: #3c5f82;
+    border-radius: 21px;
+  }
+  
+  .home-page .text-wrapper-8 {
+    width: 14px;
+    top: 4px;
+    left: 14px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-9 {
+    position: absolute;
+    width: 355px;
+    top: 128px;
+    left: 24px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-10 {
+    position: absolute;
+    width: 263px;
+    top: 82px;
+    left: 24px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .overlap-7 {
+    position: absolute;
+    width: 389px;
+    height: 260px;
+    top: 1741px;
+    left: 780px;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .overlap-8 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 23px;
+    left: 26px;
+    background-color: #3c5f82;
+    border-radius: 21px;
+  }
+  
+  .home-page .text-wrapper-11 {
+    position: absolute;
+    width: 355px;
+    top: 128px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-12 {
+    position: absolute;
+    width: 263px;
+    top: 82px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .locations-group {
+    position: absolute;
+    width: 294px;
+    height: 149px;
+    top: 1063px;
+    left: 269px;
+  }
+  
+  .home-page .overlap-9 {
+    position: relative;
+    width: 290px;
+    height: 149px;
+    background-color: #182736;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .text-wrapper-13 {
+    position: absolute;
+    width: 152px;
+    top: 17px;
+    left: 42px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-14 {
+    width: 135px;
+    top: 52px;
+    left: 42px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-size: 64px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .total-chargers-group {
+    position: absolute;
+    width: 294px;
+    height: 149px;
+    top: 1063px;
+    left: 643px;
+  }
+  
+  .home-page .overlap-10 {
+    position: relative;
+    width: 290px;
+    height: 149px;
+    background-color: #192736;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .text-wrapper-15 {
+    position: absolute;
+    width: 160px;
+    top: 17px;
+    left: 36px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-16 {
+    position: absolute;
+    width: 160px;
+    top: 54px;
+    left: 36px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 64px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .AC-group {
+    position: absolute;
+    width: 294px;
+    height: 149px;
+    top: 1063px;
+    left: 1017px;
+  }
+  
+  .home-page .DC-group {
+    position: absolute;
+    width: 294px;
+    height: 149px;
+    top: 1063px;
+    left: 1391px;
+  }
+  
+  .home-page .text-wrapper-17 {
+    position: absolute;
+    width: 376px;
+    top: 1330px;
+    left: 276px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 55px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .carhome {
+    position: absolute;
+    width: 499px;
+    height: 485px;
+    top: 1461px;
+    left: 183px;
+    object-fit: cover;
+  }
+  
+  .home-page .text-wrapper-18 {
+    position: absolute;
+    width: 425px;
+    top: 2219px;
+    left: 747px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .overlap-11 {
+    position: absolute;
+    width: 440px;
+    height: 308px;
+    top: 2361px;
+    left: 229px;
+    background-color: #112f4d;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #4d85c1;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .overlap-12 {
+    position: absolute;
+    width: 370px;
+    height: 188px;
+    top: 25px;
+    left: 35px;
+  }
+  
+  .home-page .text-wrapper-19 {
+    position: absolute;
+    width: 370px;
+    top: 0;
+    left: 0;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-20 {
+    position: absolute;
+    width: 370px;
+    top: 0;
+    left: 0;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-21 {
+    position: absolute;
+    width: 263px;
+    top: 246px;
+    left: 34px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .overlap-13 {
+    position: absolute;
+    width: 440px;
+    height: 308px;
+    top: 2361px;
+    left: 740px;
+    background-color: #122f4d;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #4d85c1;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .the-charging-process {
+    position: absolute;
+    width: 370px;
+    top: 21px;
+    left: 34px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-22 {
+    position: absolute;
+    width: 263px;
+    top: 243px;
+    left: 34px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .overlap-14 {
+    position: absolute;
+    width: 440px;
+    height: 308px;
+    top: 2361px;
+    left: 1251px;
+    background-color: #122f4d;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #4d85c1;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .home-page .text-wrapper-23 {
+    position: absolute;
+    width: 370px;
+    top: 18px;
+    left: 34px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-24 {
+    position: absolute;
+    width: 263px;
+    top: 240px;
+    left: 34px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-25 {
+    position: absolute;
+    width: 128px;
+    top: 2895px;
+    left: 1276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-26 {
+    position: absolute;
+    width: 227px;
+    top: 2964px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-27 {
+    position: absolute;
+    width: 227px;
+    top: 3039px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-28 {
+    position: absolute;
+    width: 367px;
+    top: 3161px;
+    left: 784px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-29 {
+    position: absolute;
+    width: 265px;
+    top: 2998px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-30 {
+    position: absolute;
+    width: 227px;
+    top: 2930px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-31 {
+    position: absolute;
+    width: 173px;
+    top: 2956px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-32 {
+    position: absolute;
+    width: 102px;
+    top: 3002px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-33 {
+    position: absolute;
+    width: 79px;
+    top: 2956px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-34 {
+    position: absolute;
+    width: 124px;
+    top: 3002px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-35 {
+    position: absolute;
+    width: 124px;
+    top: 3048px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-36 {
+    position: absolute;
+    width: 153px;
+    top: 2956px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-37 {
+    position: absolute;
+    width: 92px;
+    top: 3002px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-38 {
+    position: absolute;
+    width: 92px;
+    top: 3048px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-39 {
+    position: absolute;
+    width: 92px;
+    top: 3094px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-40 {
+    position: absolute;
+    width: 102px;
+    top: 3048px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-41 {
+    position: absolute;
+    width: 102px;
+    top: 3094px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-42 {
+    position: absolute;
+    width: 69px;
+    top: 2895px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-43 {
+    position: absolute;
+    width: 69px;
+    top: 2895px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .line {
+    position: absolute;
+    width: 1785px;
+    height: 2px;
+    top: 2860px;
+    left: 67px;
+  }
+  
+  .home-page .img {
+    position: absolute;
+    width: 210px;
+    height: 152px;
+    top: 2924px;
+    left: 79px;
+  }
+  
+  .home-page .navigation {
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 78px;
+    left: 144px;
+  }
+  
+  .home-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .home-page .overlap-group-2 {
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .home-page .text-wrapper-44 {
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .home-page .text-wrapper-45 {
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-46 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .text-wrapper-47 {
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .home-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+
+  .login-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .input-email {
+    position: absolute;
+    top: 200px;     /* Adjust vertically */
+    left: 50%;      /* Center horizontally */
+    transform: translateX(-50%);
+    
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 17px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    outline: none;
+  }
+  
+  .input-password {
+    position: absolute;
+    top: 340px;  /* Place below the email field */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 17px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    outline: none;
+  }
+  
+  .login-button {
+    position: absolute;
+    top: 450px;  /* Place below the password field */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-size: 20px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgb(21, 112, 148) 24%,
+      rgb(12, 66, 87) 100%
+    );
+    cursor: pointer;
+    outline: none;
+  }
+
+  .login-button:hover {
+    opacity: 0.7;
+  }
+
+  .login-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  
+  .login-page .overlap {
+    position: absolute;
+    width: 746px;
+    height: 649px;
+    top: 300px;
+    left: 587px;
+    background-color: #061622;
+    border-radius: 27px;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .login-page .don-t-have-an {
+    position: absolute;
+    width: 304px;
+    top: 552px;
+    left: 223px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 400;
+    color: transparent;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .login-page .text-wrapper {
+    font-weight: 500;
+    color: #8f8f8f;
+  }
+  
+  .login-page .span {
+    font-family: "Avenir-Regular", Helvetica;
+    color: #ffffff;
+  }
+
+  .login-page input,
+.login-page button {
+  width: 389px;
+  height: 59px;
+  border-radius: 12px;
+  border: 1px solid #2963a0;
+  box-shadow: 9px 14px 8px #00000040;
+  padding: 0 20px;
+  font-family: "Avenir-Medium", Helvetica;
+  font-size: 17px;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 34, 56, 1) 24%,
+    rgba(20, 51, 82, 1) 100%
+  );
+  outline: none;
+  margin-bottom: 20px;
+}
+
+  .login-page button {
+  background: linear-gradient(
+    180deg,
+    rgb(21, 112, 148) 24%,
+    rgb(12, 66, 87) 100%
+  );
+  font-family: "Avenir-Heavy", Helvetica;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Match your layout structure */
+.overlap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  /* Use consistent styles on inputs and button */
+  .custom-input,
+  .custom-button {
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 17px;
+    color: #ffffff;
+    outline: none;
+  }
+  
+  /* Input background */
+  .custom-input {
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+  }
+  
+  /* Button specific style */
+  .custom-button {
+    background: linear-gradient(
+      180deg,
+      rgb(21, 112, 148) 24%,
+      rgb(12, 66, 87) 100%
+    );
+    font-family: "Avenir-Heavy", Helvetica;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  
+  
+  .login-page .text-wrapper-2 {
+    position: absolute;
+    width: 81px;
+    top: 133px;
+    left: 180px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .text-wrapper-3 {
+    position: absolute;
+    width: 352px;
+    top: 44px;
+    left: 199px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .login-page .overlap-group {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 183px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .login-page .text-wrapper-4 {
+    position: absolute;
+    width: 204px;
+    top: 17px;
+    left: 16px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: underline;
+  }
+  
+  .login-page .text-wrapper-5 {
+    position: absolute;
+    width: 103px;
+    top: 286px;
+    left: 180px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .div-wrapper {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 336px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .login-page .text-wrapper-6 {
+    position: absolute;
+    width: 204px;
+    top: 12px;
+    left: 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .overlap-2 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 462px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .login-page .text-wrapper-7 {
+    position: absolute;
+    width: 63px;
+    top: 12px;
+    left: 160px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .vector {
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    top: 356px;
+    left: 585px;
+  }
+  
+  .login-page .navigation {
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 71px;
+    left: 144px;
+  }
+  
+  .login-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .login-page .overlap-3 {
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .login-page .text-wrapper-8 {
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .login-page .text-wrapper-9 {
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .text-wrapper-10 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .text-wrapper-11 {
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .login-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+  
+  .admin-dashboard {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .admin-dashboard .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1895px;
+    position: relative;
+  }
+  
+  .admin-dashboard .locations-group {
+    position: absolute;
+    width: 283px;
+    height: 142px;
+    top: 229px;
+    left: 517px;
+  }
+  
+  .admin-dashboard .total-chargers-group {
+    position: absolute;
+    width: 246px;
+    height: 120px;
+    top: 229px;
+    left: 847px;
+  }
+
+  .admin-dashboard .total-station-group {
+    position: absolute;
+    width: 246px;
+    height: 120px;
+    top: 229px;
+    left: 500px;
+  }
+  
+  .admin-dashboard .overlap-group {
+    position: relative;
+    width: 242px;
+    height: 120px;
+    background-color: #192736;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper {
+    width: 216px;
+    top: 13px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    position: absolute;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-2 {
+    width: 135px;
+    top: 51px;
+    left: 25px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-size: 40px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+
+  .admin-dashboard .text-wrapper-500 {
+    width: 135px;
+    top: 13px;
+    left: 25px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #bdbbbb;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .admin-dashboard .text-wrapper-501 {
+    width: 135px;
+    top: 51px;
+    left: 25px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-size: 40px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .AC-group {
+    position: absolute;
+    width: 245px;
+    height: 120px;
+    top: 229px;
+    left: 1153px;
+  }
+  
+  .admin-dashboard .overlap {
+    position: relative;
+    width: 241px;
+    height: 120px;
+    background-color: #192736;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-3 {
+    width: 167px;
+    left: 27px;
+    position: absolute;
+    top: 14px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-4 {
+    width: 93px;
+    top: 51px;
+    left: 27px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-size: 40px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .DC-group {
+    position: absolute;
+    width: 245px;
+    height: 120px;
+    top: 229px;
+    left: 1458px;
+  }
+  
+  .admin-dashboard .text-wrapper-5 {
+    width: 184px;
+    left: 25px;
+    position: absolute;
+    top: 14px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-6 {
+    width: 102px;
+    top: 51px;
+    left: 19px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-size: 40px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .overlap-2 {
+    position: absolute;
+    width: 1536px;
+    height: 519px;
+    top: 495px;
+    left: 199px;
+  }
+  
+  .admin-dashboard .rectangle {
+    height: 519px;
+    top: 0;
+    left: 0;
+    background-color: #192736;
+    border-radius: 10px;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .rectangle-2 {
+    position: absolute;
+    width: 1522px;
+    height: 65px;
+    top: 0;
+    left: 0;
+    background-color: #445e79;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .div-2 {
+    height: 65px;
+    top: 194px;
+    left: 0;
+    background-color: #09111e;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .div-3 {
+    height: 65px;
+    top: 324px;
+    left: 0;
+    background-color: #09111e;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .rectangle-3 {
+    height: 65px;
+    top: 454px;
+    left: 0;
+    background-color: #09111e;
+    border-radius: 0px 0px 10px 10px;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+
+  .add-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Avenir', sans-serif;
+    color: #fff;
+    background-color: #2963a0;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    gap: 8px;
+  }
+  
+  .add-btn:hover {
+    background-color: #1f4e7c;
+  }
+  
+  .add-button img.material-symbols-add {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+    padding: 8px 16px;
+    background-color: #0e2850;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  .add-btn img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .admin-dashboard .div-4 {
+    height: 65px;
+    top: 129px;
+    left: 0;
+    background-color: #0e2850;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .div-5 {
+    height: 65px;
+    top: 259px;
+    left: 0;
+    background-color: #0e2850;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .rectangle-4 {
+    height: 65px;
+    top: 389px;
+    left: 0;
+    background-color: #0e2850;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-7 {
+    width: 115px;
+    top: 17px;
+    left: 45px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-8 {
+    width: 32px;
+    top: 151px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-9 {
+    width: 32px;
+    top: 216px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-10 {
+    width: 32px;
+    top: 278px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-11 {
+    width: 32px;
+    top: 342px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-12 {
+    width: 32px;
+    top: 409px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-13 {
+    width: 32px;
+    top: 476px;
+    left: 1127px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-14 {
+    width: 32px;
+    top: 149px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-15 {
+    width: 32px;
+    top: 212px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-16 {
+    width: 32px;
+    top: 276px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-17 {
+    width: 32px;
+    top: 344px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-18 {
+    width: 32px;
+    top: 409px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-19 {
+    width: 32px;
+    top: 474px;
+    left: 958px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-20 {
+    width: 83px;
+    top: 148px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-21 {
+    width: 83px;
+    top: 213px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-22 {
+    width: 83px;
+    top: 277px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-23 {
+    width: 83px;
+    top: 343px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-24 {
+    width: 83px;
+    top: 408px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-25 {
+    width: 83px;
+    top: 473px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-26 {
+    width: 151px;
+    top: 18px;
+    left: 234px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-27 {
+    position: absolute;
+    width: 151px;
+    top: 146px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-28 {
+    position: absolute;
+    width: 134px;
+    top: 211px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-29 {
+    position: absolute;
+    width: 146px;
+    top: 275px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-30 {
+    position: absolute;
+    width: 146px;
+    top: 341px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-31 {
+    position: absolute;
+    width: 146px;
+    top: 408px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-32 {
+    position: absolute;
+    width: 146px;
+    top: 473px;
+    left: 239px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-33 {
+    position: absolute;
+    width: 94px;
+    top: 18px;
+    left: 494px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-34 {
+    position: absolute;
+    width: 99px;
+    top: 213px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-35 {
+    position: absolute;
+    width: 123px;
+    top: 275px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-36 {
+    position: absolute;
+    width: 123px;
+    top: 341px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-37 {
+    position: absolute;
+    width: 97px;
+    top: 408px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-38 {
+    position: absolute;
+    width: 97px;
+    top: 475px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-39 {
+    position: absolute;
+    width: 66px;
+    top: 146px;
+    left: 489px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-40 {
+    position: absolute;
+    width: 121px;
+    top: 19px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-41 {
+    position: absolute;
+    width: 121px;
+    top: 148px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-42 {
+    width: 121px;
+    top: 275px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-43 {
+    width: 121px;
+    top: 475px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-44 {
+    position: absolute;
+    width: 137px;
+    top: 211px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-45 {
+    top: 343px;
+    position: absolute;
+    width: 137px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-46 {
+    top: 408px;
+    position: absolute;
+    width: 137px;
+    left: 697px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-47 {
+    position: absolute;
+    width: 192px;
+    top: 19px;
+    left: 872px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-48 {
+    position: absolute;
+    width: 58px;
+    top: 20px;
+    left: 1115px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-49 {
+    position: absolute;
+    width: 58px;
+    top: 20px;
+    left: 1238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-50 {
+    position: absolute;
+    width: 58px;
+    top: 150px;
+    left: 1238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-51 {
+    position: absolute;
+    width: 58px;
+    top: 215px;
+    left: 1238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-52 {
+    top: 277px;
+    left: 1238px;
+    position: absolute;
+    width: 58px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-53 {
+    position: absolute;
+    width: 58px;
+    top: 343px;
+    left: 1238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-54 {
+    top: 410px;
+    left: 1238px;
+    position: absolute;
+    width: 58px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-55 {
+    top: 477px;
+    left: 1238px;
+    position: absolute;
+    width: 58px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .station-row {
+    position: absolute;
+    width: 1536px;
+    height: 65px;
+    top: 64px;
+    left: 0;
+  }
+  
+  .admin-dashboard .overlap-3 {
+    position: relative;
+    width: 1522px;
+    height: 65px;
+    background-color: #09111e;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-56 {
+    width: 83px;
+    top: 19px;
+    left: 60px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-57 {
+    width: 32px;
+    top: 20px;
+    left: 957px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-58 {
+    width: 19px;
+    top: 22px;
+    left: 1126px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-59 {
+    position: absolute;
+    width: 151px;
+    top: 19px;
+    left: 238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-60 {
+    position: absolute;
+    width: 123px;
+    top: 19px;
+    left: 488px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-61 {
+    width: 121px;
+    top: 21px;
+    left: 696px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-62 {
+    top: 21px;
+    left: 1237px;
+    position: absolute;
+    width: 58px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 92px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .img {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 90px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-2 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 159px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-3 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 157px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-4 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 222px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-5 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 220px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-6 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 288px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-7 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 286px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-8 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 353px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-9 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 351px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-10 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 418px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-11 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 416px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .vector-12 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 484px;
+    left: 1379px;
+  }
+  
+  .admin-dashboard .vector-13 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 482px;
+    left: 1443px;
+  }
+  
+  .admin-dashboard .text-wrapper-63 {
+    width: 282px;
+    top: 425px;
+    left: 201px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    font-size: 40px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-64 {
+    width: 232px;
+    top: 1153px;
+    left: 199px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    font-size: 40px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-65 {
+    position: absolute;
+    width: 215px;
+    top: 285px;
+    left: 218px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .overlap-4 {
+    position: absolute;
+    width: 154px;
+    height: 39px;
+    top: 427px;
+    left: 1567px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #8eb8e5;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-66 {
+    position: absolute;
+    width: 99px;
+    top: 6px;
+    left: 41px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .material-symbols-add {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 7px;
+    left: 12px;
+  }
+  
+  .admin-dashboard .overlap-5 {
+    position: absolute;
+    width: 141px;
+    height: 39px;
+    top: 1161px;
+    left: 1580px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #8eb8e5;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .admin-dashboard .overlap-6 {
+    position: absolute;
+    width: 1522px;
+    height: 454px;
+    top: 1237px;
+    left: 199px;
+    background-color: #192736;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .overlap-7 {
+    position: absolute;
+    width: 1522px;
+    height: 129px;
+    top: 0;
+    left: 0;
+  }
+  
+  .admin-dashboard .text-wrapper-67 {
+    width: 80px;
+    top: 21px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-68 {
+    position: absolute;
+    width: 113px;
+    top: 22px;
+    left: 231px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-69 {
+    position: absolute;
+    width: 160px;
+    top: 18px;
+    left: 456px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-70 {
+    position: absolute;
+    width: 89px;
+    top: 20px;
+    left: 759px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-71 {
+    position: absolute;
+    width: 89px;
+    top: 20px;
+    left: 1025px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-72 {
+    position: absolute;
+    width: 165px;
+    top: 18px;
+    left: 1206px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .rectangle-5 {
+    height: 65px;
+    top: 64px;
+    left: 0;
+    background-color: #09111e;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-73 {
+    width: 83px;
+    top: 83px;
+    left: 61px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-74 {
+    width: 82px;
+    top: 84px;
+    left: 1248px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-75 {
+    position: absolute;
+    width: 151px;
+    top: 86px;
+    left: 212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-76 {
+    position: absolute;
+    width: 257px;
+    top: 83px;
+    left: 459px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-77 {
+    top: 86px;
+    left: 759px;
+    position: absolute;
+    width: 137px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-78 {
+    position: absolute;
+    width: 113px;
+    top: 85px;
+    left: 1013px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-79 {
+    width: 45px;
+    top: 16px;
+    left: 1259px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-80 {
+    position: absolute;
+    width: 83px;
+    top: 18px;
+    left: 60px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-81 {
+    position: absolute;
+    width: 134px;
+    top: 19px;
+    left: 211px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-82 {
+    position: absolute;
+    width: 231px;
+    top: 18px;
+    left: 458px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-83 {
+    position: absolute;
+    width: 113px;
+    top: 21px;
+    left: 1012px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-84 {
+    position: absolute;
+    width: 137px;
+    top: 20px;
+    left: 758px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector-14 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 27px;
+    left: 1378px;
+  }
+  
+  .admin-dashboard .vector-15 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 25px;
+    left: 1442px;
+  }
+  
+  .admin-dashboard .text-wrapper-85 {
+    width: 45px;
+    top: 18px;
+    left: 1259px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-86 {
+    width: 83px;
+    top: 13px;
+    left: 60px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-87 {
+    position: absolute;
+    width: 146px;
+    top: 16px;
+    left: 211px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-88 {
+    position: absolute;
+    width: 238px;
+    top: 14px;
+    left: 458px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-89 {
+    top: 16px;
+    left: 758px;
+    position: absolute;
+    width: 137px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector-16 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 24px;
+    left: 1378px;
+  }
+  
+  .admin-dashboard .vector-17 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 22px;
+    left: 1442px;
+  }
+  
+  .admin-dashboard .text-wrapper-90 {
+    position: absolute;
+    width: 73px;
+    top: 16px;
+    left: 1012px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-91 {
+    width: 57px;
+    top: 18px;
+    left: 1259px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-92 {
+    position: absolute;
+    width: 169px;
+    top: 19px;
+    left: 211px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-93 {
+    position: absolute;
+    width: 238px;
+    top: 16px;
+    left: 458px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-94 {
+    position: absolute;
+    width: 113px;
+    top: 16px;
+    left: 1012px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector-18 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 29px;
+    left: 1378px;
+  }
+  
+  .admin-dashboard .vector-19 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 27px;
+    left: 1442px;
+  }
+  
+  .admin-dashboard .text-wrapper-95 {
+    width: 32px;
+    top: 17px;
+    left: 1263px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-96 {
+    width: 64px;
+    top: 17px;
+    left: 1069px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-97 {
+    width: 83px;
+    top: 17px;
+    left: 60px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    white-space: nowrap;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-98 {
+    position: absolute;
+    width: 188px;
+    top: 15px;
+    left: 238px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-99 {
+    position: absolute;
+    width: 238px;
+    top: 15px;
+    left: 488px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-100 {
+    top: 15px;
+    left: 833px;
+    position: absolute;
+    width: 137px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector-20 {
+    position: absolute;
+    width: 20px;
+    height: 18px;
+    top: 28px;
+    left: 1378px;
+  }
+  
+  .admin-dashboard .vector-21 {
+    position: absolute;
+    width: 19px;
+    height: 20px;
+    top: 26px;
+    left: 1442px;
+  }
+  
+  .admin-dashboard .rectangle-6 {
+    height: 65px;
+    top: -1px;
+    left: -1px;
+    background-color: #0e2850;
+    position: absolute;
+    width: 1522px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-101 {
+    width: 64px;
+    top: 17px;
+    left: 1247px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-102 {
+    position: absolute;
+    width: 188px;
+    top: 18px;
+    left: 211px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-103 {
+    position: absolute;
+    width: 238px;
+    top: 15px;
+    left: 458px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-104 {
+    top: 17px;
+    left: 758px;
+    position: absolute;
+    width: 137px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .vector-22 {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    top: 28px;
+    left: 1378px;
+  }
+  
+  .admin-dashboard .vector-23 {
+    position: absolute;
+    width: 18px;
+    height: 20px;
+    top: 26px;
+    left: 1442px;
+  }
+  
+  .admin-dashboard .text-wrapper-105 {
+    position: absolute;
+    width: 121px;
+    top: 17px;
+    left: 1012px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .overlap-8 {
+    position: absolute;
+    width: 1522px;
+    height: 65px;
+    top: 389px;
+    left: 0;
+    background-color: #09111e;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .admin-dashboard .text-wrapper-106 {
+    width: 61px;
+    top: 18px;
+    left: 1247px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-size: 24px;
+    position: absolute;
+    font-weight: 400;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-107 {
+    position: absolute;
+    width: 182px;
+    top: 16px;
+    left: 211px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .admin-dashboard .text-wrapper-108 {
+    position: absolute;
+    width: 121px;
+    top: 16px;
+    left: 1012px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .navigation {
+    position: absolute;
+    width: 1642px;
+    height: 77px;
+    top: 56px;
+    left: 144px;
+  }
+  
+  .admin-dashboard .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .admin-dashboard .text-wrapper-109 {
+    width: 81px;
+    top: 24px;
+    left: 80px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 274px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1285px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-110 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 1027px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .text-wrapper-111 {
+    width: 121px;
+    top: 23px;
+    left: 586px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .admin-dashboard .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 809px;
+    object-fit: cover;
+  }
+  
+  .admin-dashboard .admin-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 20px;
+    left: 1525px;
+  }
+  
+  .user-profile-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .user-profile-page .total-station-group {
+    position: absolute;
+    width: 246px;
+    height: 120px;
+    top: 253px;
+    left: 830px;
+  }
+  
+  .user-profile-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1380px;
+    position: relative;
+  }
+  
+  .user-profile-page .locations-group {
+    position: absolute;
+    width: 267px;
+    height: 142px;
+    top: 253px;
+    left: 833px;
+  }
+  
+  .user-profile-page .overlap {
+    position: absolute;
+    width: 380px;
+    height: 442px;
+    top: 253px;
+    left: 289px;
+    background-image: url(./img/image.png);
+    background-size: 100% 100%;
+  }
+  
+  .user-profile-page .IMG {
+    position: absolute;
+    width: 359px;
+    height: 420px;
+    top: 0;
+    left: 4px;
+  }
+  
+  .user-profile-page .AC-group {
+    position: absolute;
+    width: 245px;
+    height: 120px;
+    top: 253px;
+    left: 1133px;
+  }
+  
+  .user-profile-page .overlap-group {
+    position: relative;
+    width: 241px;
+    height: 120px;
+    background-color: #192736;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper {
+    position: absolute;
+    width: 167px;
+    top: 14px;
+    left: 27px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #bdbbbb;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-2 {
+    position: absolute;
+    width: 115px;
+    top: 51px;
+    left: 27px;
+    font-family: "Baumans-Regular", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-2 {
+    position: absolute;
+    width: 1290px;
+    height: 324px;
+    top: 954px;
+    left: 293px;
+    background-color: #192736;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .overlap-3 {
+    position: absolute;
+    width: 1290px;
+    height: 129px;
+    top: 0;
+    left: 0;
+  }
+  
+  .user-profile-page .rectangle {
+    top: 0;
+    background-color: #445e79;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    width: 1290px;
+    height: 65px;
+    left: 0;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .rectangle-2 {
+    top: 64px;
+    background-color: #09111e;
+    position: absolute;
+    width: 1290px;
+    height: 65px;
+    left: 0;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-3 {
+    position: absolute;
+    width: 75px;
+    top: 86px;
+    left: 1126px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-4 {
+    width: 19px;
+    top: 83px;
+    left: 786px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-5 {
+    position: absolute;
+    width: 151px;
+    top: 18px;
+    left: 166px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-6 {
+    position: absolute;
+    width: 151px;
+    top: 83px;
+    left: 171px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-7 {
+    position: absolute;
+    width: 94px;
+    top: 18px;
+    left: 426px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-8 {
+    position: absolute;
+    width: 123px;
+    top: 83px;
+    left: 421px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-9 {
+    position: absolute;
+    width: 121px;
+    top: 20px;
+    left: 905px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-10 {
+    width: 121px;
+    top: 86px;
+    left: 905px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-11 {
+    position: absolute;
+    width: 192px;
+    top: 21px;
+    left: 1068px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-12 {
+    position: absolute;
+    width: 94px;
+    top: 18px;
+    left: 757px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-13 {
+    width: 19px;
+    top: 81px;
+    left: 59px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-14 {
+    position: absolute;
+    width: 67px;
+    top: 17px;
+    left: 35px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-15 {
+    position: absolute;
+    width: 58px;
+    top: 19px;
+    left: 622px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-16 {
+    position: absolute;
+    width: 58px;
+    top: 84px;
+    left: 622px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-4 {
+    position: absolute;
+    width: 1290px;
+    height: 65px;
+    top: 194px;
+    left: 0;
+    background-color: #09111e;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-17 {
+    position: absolute;
+    width: 32px;
+    top: 18px;
+    left: 785px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-18 {
+    position: absolute;
+    width: 74px;
+    top: 19px;
+    left: 1125px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-19 {
+    position: absolute;
+    width: 134px;
+    top: 16px;
+    left: 170px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-20 {
+    position: absolute;
+    width: 99px;
+    top: 18px;
+    left: 420px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-21 {
+    width: 137px;
+    top: 17px;
+    left: 904px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-22 {
+    width: 32px;
+    top: 16px;
+    left: 58px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-23 {
+    position: absolute;
+    width: 58px;
+    top: 19px;
+    left: 621px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-5 {
+    position: absolute;
+    width: 1290px;
+    height: 65px;
+    top: 129px;
+    left: 0;
+    background-color: #0e2850;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-24 {
+    width: 75px;
+    top: 21px;
+    left: 1125px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-25 {
+    position: absolute;
+    width: 151px;
+    top: 16px;
+    left: 170px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-26 {
+    position: absolute;
+    width: 66px;
+    top: 16px;
+    left: 420px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-27 {
+    width: 121px;
+    top: 19px;
+    left: 904px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    font-size: 24px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-6 {
+    position: absolute;
+    width: 1290px;
+    height: 65px;
+    top: 259px;
+    left: 0;
+    background-color: #0e2850;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-28 {
+    position: absolute;
+    width: 138px;
+    top: 16px;
+    left: 170px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-29 {
+    position: absolute;
+    width: 481px;
+    top: 867px;
+    left: 293px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .user-profile-page .text-wrapper-30 {
+    position: absolute;
+    width: 294px;
+    top: 705px;
+    left: 331px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 36px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .user-profile-page .text-wrapper-31 {
+    position: absolute;
+    width: 108px;
+    top: 630px;
+    left: 837px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-32 {
+    position: absolute;
+    width: 108px;
+    top: 714px;
+    left: 837px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-33 {
+    position: absolute;
+    width: 70px;
+    top: 445px;
+    left: 837px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-34 {
+    position: absolute;
+    width: 108px;
+    top: 528px;
+    left: 837px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-7 {
+    position: absolute;
+    width: 393px;
+    height: 59px;
+    top: 430px;
+    left: 981px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-35 {
+    position: absolute;
+    width: 305px;
+    top: 12px;
+    left: 17px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .vector {
+    position: absolute;
+    width: 18px;
+    height: 17px;
+    top: 20px;
+    left: 345px;
+  }
+  
+  .user-profile-page .overlap-8 {
+    position: absolute;
+    width: 393px;
+    height: 60px;
+    top: 511px;
+    left: 981px;
+  }
+  
+  .user-profile-page .contact-number-field {
+    position: absolute;
+    width: 393px;
+    height: 59px;
+    top: 1px;
+    left: 0;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+  }
+  
+  .user-profile-page .text-wrapper-36 {
+    width: 121px;
+    top: 0;
+    left: 21px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    font-size: 32px;
+    position: absolute;
+    color: #ffffff;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .img {
+    position: absolute;
+    width: 18px;
+    height: 17px;
+    top: 22px;
+    left: 346px;
+  }
+  
+  .user-profile-page .overlap-9 {
+    position: absolute;
+    width: 393px;
+    height: 59px;
+    top: 616px;
+    left: 981px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-37 {
+    position: absolute;
+    width: 135px;
+    top: 13px;
+    left: 21px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .overlap-10 {
+    position: absolute;
+    width: 393px;
+    height: 59px;
+    top: 698px;
+    left: 981px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .user-profile-page .text-wrapper-38 {
+    position: absolute;
+    width: 158px;
+    top: 11px;
+    left: 21px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .navigation {
+    position: absolute;
+    width: 1642px;
+    height: 77px;
+    top: 67px;
+    left: 144px;
+  }
+  
+  .user-profile-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .user-profile-page .text-wrapper-39 {
+    width: 81px;
+    top: 24px;
+    left: 80px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 274px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1285px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-40 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 1027px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .text-wrapper-41 {
+    width: 121px;
+    top: 23px;
+    left: 586px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-profile-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 809px;
+    object-fit: cover;
+  }
+  
+  .user-profile-page .admin-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 20px;
+    left: 1525px;
+  }
+  
+  .product-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  .product-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+        180deg,
+        rgba(9, 17, 30, 1) 39%,
+        rgba(16, 49, 101, 1) 100%
+    );
+    height: 3580px;
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .product-page .text-wrapper {
+    position: absolute;
+    width: 544px;
+    top: 228px;
+    left: 688px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .text-wrapper-2{
+    position: absolute;
+    width: 225px;
+    top: 370px;
+    left: 129px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-3{
+    position: absolute;
+    width: 225px;
+    top: 2144px;
+    left: 129px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-4{
+    width: 128px;
+    top: 3232px;
+    left: 1276px;
+    color: #b1c8d6;
+    white-space: nowrap;
+    position: absolute;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 500;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-5{
+    position: absolute;
+    width: 227px;
+    top: 3301px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-6{
+    position: absolute;
+    width: 227px;
+    top: 3376px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .p{
+    position: absolute;
+    width: 367;
+    top: 3498px;
+    left: 784px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-7{
+    position: absolute;
+    width: 265px;
+    top: 3335px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-8{
+    position: absolute;
+    width: 227px;
+    top: 3267px;
+    left: 343px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-9{
+    position: absolute;
+    width: 173px;
+    top: 3293px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+
+  .product-page .text-wrapper-10{
+    position: absolute;
+    width: 102px;
+    top: 3339px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-11{
+    position: absolute;
+    width: 79px;
+    top: 3293px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-12{
+    position: absolute;
+    width: 124px;
+    top: 3339px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-13{
+    position: absolute;
+    width: 124px;
+    top: 3385px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+
+  .product-page .text-wrapper-14{
+    position: absolute;
+    width: 153px;
+    top: 3293px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-15{
+    position: absolute;
+    width: 92px;
+    top: 3339px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-16{
+    position: absolute;
+    width: 92px;
+    top: 3385px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-17{
+    position: absolute;
+    width: 92px;
+    top: 3431px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-18{
+    position: absolute;
+    width: 102px;
+    top: 3385px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-19{
+    position: absolute;
+    width: 102px;
+    top: 3431px;
+    left: 1272px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-20{
+    position: absolute;
+    width: 69px;
+    top: 3232px;
+    left: 1517px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .text-wrapper-21{
+    position: absolute;
+    width: 69px;
+    top: 3232px;
+    left: 1699px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .line{
+    position: absolute;
+    width: 1785px;
+    height: 2px;
+    top: 3197px;
+    left: 67px;
+  }
+
+  .product-page .img{
+    position: absolute;
+    width: 209px;
+    height: 152px;
+    top: 3261px;
+    left: 79px;
+  }
+
+  .product-page .swift-charge-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 481px;
+    left: 129px;
+  }
+
+  .product-page .overlap-group{
+    position: relative;
+    width: 505px;
+    height: 688px;
+    border-radius: 27px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+
+  .product-page .swift-charge-houses{
+    position: absolute;
+    width: 460px;
+    top: 441px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .product-page .span{
+    color: #bdbbbb;
+  }
+
+  .product-page .text-wrapper-22{
+    color: #ffffff;
+  }
+
+  .product-page .text-wrapper-23{
+    position: absolute;
+    width: 149px;
+    top: 393px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .DQ-station {
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 29px;
+    left: 29px;
+    object-fit: cover;
+  }
+
+  .product-page .quick-charge-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 481px;
+    left: 707px;
+  }
+
+  .product-page .quick-station-is-the {
+    position: absolute;
+    width: 446px;
+    top: 451px;
+    left: 35px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-24{
+    position: absolute;
+    width: 149px;
+    top: 403px;
+    left: 30px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .element-evbox-business{
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 29px;
+    left: 27px;
+    object-fit: cover;
+  }
+
+  .product-page .charge-hub-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 481px;
+    left: 1270px;
+  }
+
+  .product-page .div-2{
+    position: absolute;
+    width: 446px;
+    top: 451px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-25{
+    position: absolute;
+    width: 149px;
+    top: 403px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .GDN-e-pit-charger{
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 29px;
+    left: 26px;
+    object-fit: cover;
+  }
+
+  .product-page .eco-charge-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 1260px;
+    left: 129px;
+  }
+
+  .product-page .div-3{
+    position: absolute;
+    width: 446px;
+    top: 441px;
+    left: 35px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-26{
+    position: absolute;
+    width: 149px;
+    top: 393px;
+    left: 35px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .ked-x{
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 33px;
+    left: 29px;
+    object-fit: cover;
+  }
+
+  .product-page .amp-station-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 1260px;
+    left: 707px;
+  }
+
+  .product-page .element-f{
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 33px;
+    left: 27px;
+    object-fit: cover;
+  }
+
+  .product-page .volt-station-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 2266px;
+    left: 131px;
+  }
+
+  .product-page .volt-station-has-the{
+    position: absolute;
+    width: 446px;
+    top: 441px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .product-page .rapid-station-card{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 2266px;
+    left: 700px;
+  }
+
+  .product-page .text-wrapper-27{
+    position: absolute;
+    width: 149px;
+    top: 393px;
+    left: 29px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .element-l-normal{
+    position: absolute;
+    width: 509px;
+    height: 688px;
+    top: 2266px;
+    left: 707px;
+  }
+
+  .product-page .adbd{
+    position: absolute;
+    width: 449px;
+    height: 332px;
+    top: 31px;
+    left: 26px;
+    object-fit: cover;
+  }
+
+  .product-page .navigation{
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 63px;
+    left: 143px;
+  }
+
+  .product-page .navbar{
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+
+  .product-page .div-wrapper{
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+
+  .product-page .text-wrapper-28{
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0; 
+    line-height: normal;
+  }
+
+  .product-page .text-wrapper-29{
+    position: absolute;
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .charging-station{
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .about-us{
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .text-wrapper-30{
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .text-wrapper-31{
+    position: absolute;
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0; 
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .product-page .chargehivelogo{
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+
+  .registration-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .registration-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  
+  .registration-page .overlap {
+    position: absolute;
+    width: 1145px;
+    height: 800px;
+    top: 218px;
+    left: 387px;
+    background-color: #061622;
+    border-radius: 27px;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .registration-page .text-wrapper {
+    position: absolute;
+    width: 81px;
+    top: 166px;
+    left: 641px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .text-wrapper-2 {
+    position: absolute;
+    width: 370px;
+    top: 63px;
+    left: 388px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 35px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .registration-page .overlap-group {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 216px;
+    left: 641px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .registration-page .text-wrapper-3 {
+    position: absolute;
+    width: 204px;
+    top: 17px;
+    left: 16px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: underline;
+  }
+  
+  .registration-page .text-wrapper-4 {
+    position: absolute;
+    width: 103px;
+    top: 319px;
+    left: 641px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .div-wrapper {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 369px;
+    left: 641px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .registration-page .text-wrapper-5 {
+    position: absolute;
+    width: 204px;
+    top: 12px;
+    left: 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .text-wrapper-6 {
+    position: absolute;
+    width: 198px;
+    top: 472px;
+    left: 641px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .overlap-2 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 522px;
+    left: 641px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .registration-page .text-wrapper-7 {
+    position: absolute;
+    width: 120px;
+    top: 166px;
+    left: 156px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .full-name-field {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 216px;
+    left: 156px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+  }
+  
+  .registration-page .text-wrapper-8 {
+    position: absolute;
+    width: 184px;
+    top: 319px;
+    left: 156px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .contact-number-field {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 369px;
+    left: 156px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+  }
+  
+  .registration-page .text-wrapper-9 {
+    position: absolute;
+    width: 184px;
+    top: 472px;
+    left: 156px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .address-field {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 522px;
+    left: 156px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+  }
+  
+  .registration-page .overlap-3 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 662px;
+    left: 366px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .registration-page .text-wrapper-10 {
+    position: absolute;
+    width: 104px;
+    top: 12px;
+    left: 160px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .visibility-icon {
+    top: 389px;
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    left: 1050px;
+  }
+  
+  .registration-page .img {
+    top: 543px;
+    position: absolute;
+    width: 21px;
+    height: 20px;
+    left: 1050px;
+  }
+  
+  .registration-page .navigation {
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 59px;
+    left: 169px;
+  }
+  
+  .registration-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .registration-page .overlap-4 {
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .registration-page .text-wrapper-11 {
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .registration-page .text-wrapper-12 {
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .text-wrapper-13 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .text-wrapper-14 {
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .registration-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+
+  .registration-page input,
+.registration-page button {
+  width: 389px;
+  height: 59px;
+  border-radius: 12px;
+  border: 1px solid #2963a0;
+  box-shadow: 9px 14px 8px #00000040;
+  padding: 0 20px;
+  font-family: "Avenir-Medium", Helvetica;
+  font-size: 17px;
+  color: #ffffff;
+  background: linear-gradient(
+    180deg,
+    rgba(12, 34, 56, 1) 24%,
+    rgba(20, 51, 82, 1) 100%
+  );
+  outline: none;
+}
+
+.registration-page input::placeholder {
+  color: #8f8f8f;
+  text-decoration: underline;
+}
+
+.registration-page button {
+  background: linear-gradient(
+    180deg,
+    rgb(21, 112, 148) 24%,
+    rgb(12, 66, 87) 100%
+  );
+  font-family: "Avenir-Heavy", Helvetica;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.registration-page button:hover {
+  opacity: 0.7;
+}
+
+.registration-page .form-group {
+  position: absolute;
+}
+
+.registration-page .form-label {
+  font-family: "Avenir-Roman", Helvetica;
+  font-weight: 400;
+  font-size: 24px;
+  color: #ffffff;
+  position: absolute;
+  white-space: nowrap;
+}
+
+  .user-dashboard {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .user-dashboard .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1080px;
+    position: relative;
+  }
+  
+  .user-dashboard .overlap {
+    position: absolute;
+    width: 1450px;
+    height: 519px;
+    top: 462px;
+    left: 235px;
+    background-color: #192736;
+    border-radius: 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .overlap-group {
+    position: absolute;
+    width: 1450px;
+    height: 129px;
+    top: 0;
+    left: 0;
+  }
+  
+  .user-dashboard .rectangle {
+    top: 0;
+    background-color: #445e79;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    left: 0;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .rectangle-2 {
+    top: 64px;
+    background-color: #09111e;
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    left: 0;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper {
+    width: 32px;
+    top: 83px;
+    left: 829px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-2 {
+    width: 19px;
+    top: 83px;
+    left: 1011px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-3 {
+    position: absolute;
+    width: 151px;
+    top: 18px;
+    left: 71px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-4 {
+    position: absolute;
+    width: 151px;
+    top: 83px;
+    left: 76px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-5 {
+    position: absolute;
+    width: 94px;
+    top: 18px;
+    left: 331px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-6 {
+    position: absolute;
+    width: 123px;
+    top: 83px;
+    left: 326px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-7 {
+    position: absolute;
+    width: 121px;
+    top: 19px;
+    left: 534px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-8 {
+    position: absolute;
+    width: 121px;
+    top: 85px;
+    left: 534px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-9 {
+    position: absolute;
+    width: 192px;
+    top: 18px;
+    left: 743px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-10 {
+    position: absolute;
+    width: 58px;
+    top: 17px;
+    left: 999px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-11 {
+    position: absolute;
+    width: 58px;
+    top: 18px;
+    left: 1166px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-12 {
+    position: absolute;
+    width: 58px;
+    top: 83px;
+    left: 1166px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .log-in-button {
+    position: absolute;
+    width: 97px;
+    height: 39px;
+    top: 77px;
+    left: 1306px;
+    background-color: #455e7a;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #8eb8e5;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .user-dashboard .log-in-button-2 {
+    position: absolute;
+    width: 97px;
+    height: 39px;
+    top: 77px;
+    left: 1306px;
+    background-color: #455e7a;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #8eb8e5;
+  }
+  
+  .user-dashboard .text-wrapper-13 {
+    position: absolute;
+    width: 45px;
+    top: 84px;
+    left: 1334px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-2 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 194px;
+    left: 0;
+    background-color: #09111e;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-14 {
+    position: absolute;
+    width: 32px;
+    top: 18px;
+    left: 1010px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-15 {
+    width: 32px;
+    top: 16px;
+    left: 828px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-16 {
+    position: absolute;
+    width: 134px;
+    top: 16px;
+    left: 75px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-17 {
+    position: absolute;
+    width: 99px;
+    top: 18px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-18 {
+    position: absolute;
+    width: 137px;
+    top: 16px;
+    left: 533px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-19 {
+    position: absolute;
+    width: 58px;
+    top: 18px;
+    left: 1165px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .div-wrapper {
+    position: absolute;
+    width: 97px;
+    height: 39px;
+    top: 13px;
+    left: 1306px;
+    background-color: #455e7a;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #8eb8e5;
+  }
+  
+  .user-dashboard .text-wrapper-20 {
+    position: absolute;
+    width: 45px;
+    top: 6px;
+    left: 27px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-3 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 324px;
+    left: 0;
+    background-color: #09111e;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-21 {
+    width: 32px;
+    top: 14px;
+    left: 1010px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-22 {
+    width: 32px;
+    top: 18px;
+    left: 828px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-23 {
+    position: absolute;
+    width: 146px;
+    top: 16px;
+    left: 75px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-24 {
+    position: absolute;
+    width: 123px;
+    top: 16px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-25 {
+    position: absolute;
+    width: 137px;
+    top: 18px;
+    left: 533px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-26 {
+    position: absolute;
+    width: 58px;
+    top: 16px;
+    left: 1165px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-4 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 454px;
+    left: 0;
+    background-color: #09111e;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-27 {
+    position: absolute;
+    width: 146px;
+    top: 18px;
+    left: 75px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-28 {
+    position: absolute;
+    width: 97px;
+    top: 20px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-29 {
+    top: 20px;
+    position: absolute;
+    width: 121px;
+    left: 533px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-30 {
+    top: 20px;
+    position: absolute;
+    width: 58px;
+    left: 1165px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-5 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 129px;
+    left: 0;
+    background-color: #0e2850;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-31 {
+    position: absolute;
+    width: 151px;
+    top: 16px;
+    left: 75px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-32 {
+    position: absolute;
+    width: 66px;
+    top: 16px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-33 {
+    top: 18px;
+    position: absolute;
+    width: 121px;
+    left: 533px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-6 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 259px;
+    left: 0;
+    background-color: #0e2850;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-34 {
+    width: 32px;
+    top: 15px;
+    left: 1010px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-35 {
+    width: 32px;
+    top: 15px;
+    left: 828px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-36 {
+    position: absolute;
+    width: 146px;
+    top: 15px;
+    left: 75px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-37 {
+    position: absolute;
+    width: 123px;
+    top: 15px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-38 {
+    top: 15px;
+    position: absolute;
+    width: 121px;
+    left: 533px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-39 {
+    top: 15px;
+    position: absolute;
+    width: 58px;
+    left: 1165px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .overlap-7 {
+    position: absolute;
+    width: 1450px;
+    height: 65px;
+    top: 389px;
+    left: 0;
+    background-color: #0e2850;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 5px 5px 4px #00000040;
+  }
+  
+  .user-dashboard .text-wrapper-40 {
+    width: 32px;
+    top: 16px;
+    left: 1010px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-41 {
+    position: absolute;
+    width: 97px;
+    top: 18px;
+    left: 325px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-42 {
+    position: absolute;
+    width: 388px;
+    top: 361px;
+    left: 235px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .user-dashboard .text-wrapper-43 {
+    position: absolute;
+    width: 246px;
+    top: 261px;
+    left: 237px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .user-dashboard .search-bar {
+    position: absolute;
+    width: 349px;
+    height: 52px;
+    top: 350px;
+    left: 1338px;
+  }
+  
+  .user-dashboard .overlap-group-2 {
+    position: relative;
+    width: 347px;
+    height: 52px;
+    background-color: #ffffff;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .user-dashboard .search-arrow-wrapper {
+    position: absolute;
+    width: 56px;
+    height: 52px;
+    top: 0;
+    left: 291px;
+    background-color: #84a3c5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .user-dashboard .search-arrow {
+    position: absolute;
+    width: 29px;
+    height: 15px;
+    top: 18px;
+    left: 13px;
+  }
+  
+  .user-dashboard .text-wrapper-44 {
+    position: absolute;
+    width: 203px;
+    top: 14px;
+    left: 31px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .navigation {
+    position: absolute;
+    width: 1642px;
+    height: 77px;
+    top: 76px;
+    left: 144px;
+  }
+  
+  .user-dashboard .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .user-dashboard .text-wrapper-45 {
+    width: 81px;
+    top: 24px;
+    left: 80px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 274px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1285px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-46 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 1027px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .text-wrapper-47 {
+    width: 121px;
+    top: 23px;
+    left: 586px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .user-dashboard .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 809px;
+    object-fit: cover;
+  }
+  
+  .user-dashboard .admin-icon {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    top: 20px;
+    left: 1525px;
+  }
+
+  .about-us-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .about-us-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 2559px;
+    position: relative;
+  }
+  
+  .about-us-page .overlap {
+    position: absolute;
+    width: 1496px;
+    height: 657px;
+    top: 292px;
+    left: 219px;
+    background-image: url(./img/image.png);
+    background-size: 100% 100%;
+  }
+  
+  .about-us-page .shutterstock {
+    position: absolute;
+    width: 1477px;
+    height: 635px;
+    top: 0;
+    left: 1px;
+  }
+  
+  .about-us-page .footer {
+    position: absolute;
+    width: 1823px;
+    height: 327px;
+    top: 2159px;
+    left: 67px;
+    background-color: transparent;
+  }
+  
+  .about-us-page .text-wrapper {
+    position: absolute;
+    width: 128px;
+    top: 34px;
+    left: 1209px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .text-wrapper-2 {
+    position: absolute;
+    width: 227px;
+    top: 103px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-3 {
+    position: absolute;
+    width: 227px;
+    top: 178px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .p {
+    position: absolute;
+    width: 367px;
+    top: 300px;
+    left: 717px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-4 {
+    position: absolute;
+    width: 265px;
+    top: 137px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-5 {
+    position: absolute;
+    width: 227px;
+    top: 69px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-6 {
+    position: absolute;
+    width: 173px;
+    top: 95px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-7 {
+    position: absolute;
+    width: 102px;
+    top: 141px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-8 {
+    position: absolute;
+    width: 79px;
+    top: 95px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-9 {
+    position: absolute;
+    width: 124px;
+    top: 141px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-10 {
+    position: absolute;
+    width: 124px;
+    top: 187px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-11 {
+    position: absolute;
+    width: 153px;
+    top: 95px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-12 {
+    position: absolute;
+    width: 92px;
+    top: 141px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-13 {
+    position: absolute;
+    width: 92px;
+    top: 187px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-14 {
+    position: absolute;
+    width: 92px;
+    top: 233px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-15 {
+    position: absolute;
+    width: 102px;
+    top: 187px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-16 {
+    position: absolute;
+    width: 102px;
+    top: 233px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-17 {
+    position: absolute;
+    width: 69px;
+    top: 34px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .text-wrapper-18 {
+    position: absolute;
+    width: 69px;
+    top: 34px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .line {
+    position: absolute;
+    width: 1785px;
+    height: 2px;
+    top: -2px;
+    left: 0;
+  }
+  
+  .about-us-page .img {
+    position: absolute;
+    width: 209px;
+    height: 152px;
+    top: 62px;
+    left: 12px;
+  }
+  
+  .about-us-page .locations-group {
+    position: absolute;
+    width: 620px;
+    height: 452px;
+    top: 1409px;
+    left: 247px;
+  }
+  
+  .about-us-page .as-the-world {
+    position: absolute;
+    width: 1476px;
+    top: 988px;
+    left: 222px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 33px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .established-in {
+    position: absolute;
+    width: 761px;
+    top: 1257px;
+    left: 936px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 33px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-19 {
+    position: absolute;
+    width: 329px;
+    top: 189px;
+    left: 795px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 48px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .navigation {
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 65px;
+    left: 144px;
+  }
+  
+  .about-us-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .about-us-page .overlap-group {
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .about-us-page .text-wrapper-20 {
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .about-us-page .text-wrapper-21 {
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .text-wrapper-22 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .text-wrapper-23 {
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .about-us-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+
+  .contact-page {
+    background-color: rgba(255, 255, 255, 1.0);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .contact-page .div {
+    background-color: rgba(255, 255, 255, 1.0);
+    background: linear-gradient(
+      180deg,
+      rgba(9, 17, 30, 1) 39%,
+      rgba(16, 49, 101, 1) 100%
+    );
+    width: 1920px;
+    height: 1771px;
+    position: relative;
+  }
+  
+  .contact-page .text-wrapper {
+    position: absolute;
+    width: 568px;
+    top: 469px;
+    left: 146px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 33px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .p {
+    position: absolute;
+    width: 353px;
+    top: 956px;
+    left: 146px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 24px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-2 {
+    position: absolute;
+    width: 326px;
+    top: 675px;
+    left: 144px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 32px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-3 {
+    position: absolute;
+    width: 326px;
+    top: 744px;
+    left: 144px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 32px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-4 {
+    position: absolute;
+    width: 286px;
+    top: 874px;
+    left: 144px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 33px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-5 {
+    position: absolute;
+    width: 353px;
+    top: 956px;
+    left: 567px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #e2e2e2;
+    font-size: 24px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-6 {
+    position: absolute;
+    width: 286px;
+    top: 874px;
+    left: 565px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 33px;
+    text-align: justify;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .overlap {
+    position: absolute;
+    width: 551px;
+    height: 98px;
+    top: 352px;
+    left: 146px;
+  }
+  
+  .contact-page .text-wrapper-7 {
+    position: absolute;
+    width: 551px;
+    top: 0;
+    left: 0;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 72px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .overlap-group {
+    position: absolute;
+    width: 746px;
+    height: 877px;
+    top: 292px;
+    left: 1014px;
+    background-color: #061622;
+    border-radius: 27px;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .by-contacting-us-you {
+    position: absolute;
+    width: 270px;
+    top: 746px;
+    left: 240px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: transparent;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .span {
+    color: #8f8f8f;
+  }
+  
+  .contact-page .text-wrapper-8 {
+    color: #ffffff;
+  }
+  
+  .contact-page .text-wrapper-9 {
+    position: absolute;
+    width: 244px;
+    top: 69px;
+    left: 251px;
+    font-family: "Avenir-Black", Helvetica;
+    font-weight: 900;
+    color: #ffffff;
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .div-wrapper {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 183px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .text-wrapper-10 {
+    position: absolute;
+    width: 204px;
+    top: 17px;
+    left: 16px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .overlap-2 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 369px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .overlap-3 {
+    position: absolute;
+    width: 389px;
+    height: 166px;
+    top: 462px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .overlap-4 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 276px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .text-wrapper-11 {
+    position: absolute;
+    width: 204px;
+    top: 16px;
+    left: 19px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #8f8f8f;
+    font-size: 17px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .overlap-5 {
+    position: absolute;
+    width: 389px;
+    height: 59px;
+    top: 665px;
+    left: 180px;
+    border-radius: 12px;
+    border: 1px solid;
+    border-color: #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+  }
+  
+  .contact-page .text-wrapper-12 {
+    position: absolute;
+    width: 69px;
+    top: 15px;
+    left: 159px;
+    font-family: "Avenir-Heavy", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .footer {
+    position: absolute;
+    width: 1823px;
+    height: 327px;
+    top: 1379px;
+    left: 67px;
+    background-color: transparent;
+  }
+  
+  .contact-page .text-wrapper-13 {
+    position: absolute;
+    width: 128px;
+    top: 34px;
+    left: 1209px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .text-wrapper-14 {
+    position: absolute;
+    width: 227px;
+    top: 103px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-15 {
+    width: 227px;
+    top: 178px;
+    left: 276px;
+    color: #b1c8d6;
+    font-size: 20px;
+    position: absolute;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-16 {
+    position: absolute;
+    width: 367px;
+    top: 300px;
+    left: 717px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-17 {
+    position: absolute;
+    width: 265px;
+    top: 137px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-18 {
+    position: absolute;
+    width: 227px;
+    top: 69px;
+    left: 276px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-19 {
+    position: absolute;
+    width: 173px;
+    top: 95px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-20 {
+    position: absolute;
+    width: 102px;
+    top: 141px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-21 {
+    position: absolute;
+    width: 79px;
+    top: 95px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-22 {
+    position: absolute;
+    width: 124px;
+    top: 141px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-23 {
+    position: absolute;
+    width: 124px;
+    top: 187px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-24 {
+    position: absolute;
+    width: 153px;
+    top: 95px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-25 {
+    position: absolute;
+    width: 92px;
+    top: 141px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-26 {
+    position: absolute;
+    width: 92px;
+    top: 187px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-27 {
+    position: absolute;
+    width: 92px;
+    top: 233px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-28 {
+    position: absolute;
+    width: 102px;
+    top: 187px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-29 {
+    position: absolute;
+    width: 102px;
+    top: 233px;
+    left: 1205px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-30 {
+    position: absolute;
+    width: 69px;
+    top: 34px;
+    left: 1450px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .text-wrapper-31 {
+    position: absolute;
+    width: 69px;
+    top: 34px;
+    left: 1632px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-weight: 500;
+    color: #b1c8d6;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .line {
+    position: absolute;
+    width: 1785px;
+    height: 2px;
+    top: -2px;
+    left: 0;
+  }
+  
+  .contact-page .img {
+    position: absolute;
+    width: 209px;
+    height: 152px;
+    top: 62px;
+    left: 12px;
+  }
+  
+  .contact-page .navigation {
+    position: absolute;
+    width: 1644px;
+    height: 77px;
+    top: 63px;
+    left: 144px;
+  }
+  
+  .contact-page .navbar {
+    position: relative;
+    width: 1632px;
+    height: 77px;
+    background-color: #061521;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .contact-page .overlap-6 {
+    position: absolute;
+    width: 203px;
+    height: 77px;
+    top: 0;
+    left: 1429px;
+    background-color: #32d3d5;
+    border-radius: 68px;
+    border: 1px solid;
+    border-color: #000000;
+  }
+  
+  .contact-page .text-wrapper-32 {
+    position: absolute;
+    width: 72px;
+    top: 20px;
+    left: 65px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #000000;
+    font-size: 28px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  
+  .contact-page .text-wrapper-33 {
+    width: 81px;
+    top: 24px;
+    left: 62px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .charging-station {
+    position: absolute;
+    width: 199px;
+    top: 23px;
+    left: 251px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .about-us {
+    position: absolute;
+    width: 96px;
+    top: 23px;
+    left: 1212px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .text-wrapper-34 {
+    position: absolute;
+    width: 120px;
+    top: 23px;
+    left: 993px;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .text-wrapper-35 {
+    width: 121px;
+    top: 23px;
+    left: 558px;
+    position: absolute;
+    font-family: "Avenir-Roman", Helvetica;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: normal;
+    white-space: nowrap;
+  }
+  
+  .contact-page .chargehivelogo {
+    position: absolute;
+    width: 116px;
+    height: 58px;
+    top: 17px;
+    left: 778px;
+    object-fit: cover;
+  }
+
+  .contact-section {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    border-radius: 12px;
+  }
+  
+  .contact-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #4ade80;
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #061521;
+    color: #000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #22c55e;
+  }
+
+
+.contact-page input{
+    width: 100%;
+    height: 56px;
+    padding: 0.75rem;
+    border: 1px solid #182736;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.contact-page textarea{
+    width: 100%;
+    height: 163px;
+    padding: 0.75rem;
+    border: 1px solid #182736;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    color: #fff;
+    border-radius: 12px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    padding: 0.75rem 1.5rem;
+    background-color: #1f4e7c;
+    width: 387px;
+    height: 56px;
+    color: #fff;
+    font-size: 18px;
+    font-family: "Avenir-Medium", Helvetica;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #22c55e;
+}
+
