@@ -6,9 +6,6 @@ ChargeHive is an EV Charging Station platform that enables users to find chargin
 
 ## Installation
 
-### Prerequisites
-
-- [List any prerequisites here]
 
 ### Steps
 
@@ -20,12 +17,12 @@ ChargeHive is an EV Charging Station platform that enables users to find chargin
 
 2. Install dependencies:
    ```bash
-   # Add installation commands here
+   
    ```
 
 3. Configure the application:
    ```bash
-   # Add configuration steps here
+   
    ```
 
 ## Usage
@@ -33,13 +30,8 @@ ChargeHive is an EV Charging Station platform that enables users to find chargin
 ### Basic Usage
 
 ```bash
-# Add basic usage examples here
+
 ```
-
-### Advanced Features
-
-- [Feature 1]: Description of feature 1
-- [Feature 2]: Description of feature 2
 
 ## Contributing
 
@@ -55,9 +47,7 @@ Please make sure to update tests as appropriate and adhere to the existing codin
 
 ## License
 
-This project is licensed under the [LICENSE NAME] - see the LICENSE file for details.
+This project is licensed under ChargeHive.
 
-## Acknowledgments
 
-- [Any acknowledgments or credits]
 
