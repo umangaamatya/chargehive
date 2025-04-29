@@ -1,0 +1,31 @@
+# === Java & Compilation Files ===
+*.class
+*.jar
+*.war
+*.ear
+
+# === Build and Output Directories ===
+/bin/
+/build/
+/target/
+
+# === Eclipse IDE Files ===
+.classpath
+.project
+.settings/
+
+# === OS & Editor Artifacts ===
+.DS_Store
+Thumbs.db
+*.log
+
+# === User Configuration ===
+*.swp
+*.swo
+*.bak
+*.tmp
+*.old
+
+# === Other Possibly Generated or Intermediate Files ===
+/out/
+*.lock
