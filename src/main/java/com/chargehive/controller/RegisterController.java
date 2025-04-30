@@ -56,8 +56,8 @@ public class RegisterController extends HttpServlet {
         String userName = req.getParameter("user_name");
         String userContact = req.getParameter("user_contact");
         String userAddress = req.getParameter("user_address");
-        String userEmail = req.getParameter("user_email");
-        String userPassword = req.getParameter("user_password");
+        String userEmail = req.getParameter("user_email").trim();
+        String userPassword = req.getParameter("user_password").trim();
         String retypePassword = req.getParameter("confirm_password");
         
         // Validate required fields
@@ -82,7 +82,7 @@ public class RegisterController extends HttpServlet {
         }
         
         // Encrypt password
-        userPassword = PasswordUtil.encrypt(userName, userPassword);
+        userPassword = PasswordUtil.encrypt(userEmail, userPassword);
         
         // Create user with default values
         UserModel newUser = new UserModel(

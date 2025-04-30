@@ -1048,55 +1048,16 @@
     width: 100%;
   }
   
-  .input-email {
-    position: absolute;
-    top: 200px;     /* Adjust vertically */
-    left: 50%;      /* Center horizontally */
-    transform: translateX(-50%);
-    
-    width: 389px;
-    height: 59px;
-    border-radius: 12px;
-    border: 1px solid #2963a0;
-    box-shadow: 9px 14px 8px #00000040;
-    padding: 0 20px;
-    font-family: "Avenir-Medium", Helvetica;
-    font-size: 17px;
-    color: #ffffff;
-    background: linear-gradient(
-      180deg,
-      rgba(12, 34, 56, 1) 24%,
-      rgba(20, 51, 82, 1) 100%
-    );
-    outline: none;
-  }
   
-  .input-password {
-    position: absolute;
-    top: 340px;  /* Place below the email field */
-    left: 50%;
-    transform: translateX(-50%);
-    
-    width: 389px;
-    height: 59px;
-    border-radius: 12px;
-    border: 1px solid #2963a0;
-    box-shadow: 9px 14px 8px #00000040;
-    padding: 0 20px;
-    font-family: "Avenir-Medium", Helvetica;
-    font-size: 17px;
-    color: #ffffff;
-    background: linear-gradient(
-      180deg,
-      rgba(12, 34, 56, 1) 24%,
-      rgba(20, 51, 82, 1) 100%
-    );
-    outline: none;
-  }
+  
+  /* .login-page .user_email,
+.login-page .user_password {
+  margin-bottom: 0; Reset unwanted generic styles
+} */
   
   .login-button {
     position: absolute;
-    top: 450px;  /* Place below the password field */
+    top: 450px;  
     left: 50%;
     transform: translateX(-50%);
     
@@ -1168,7 +1129,7 @@
     color: #ffffff;
   }
 
-  .login-page input,
+   .login-page input,
 .login-page button {
   width: 389px;
   height: 59px;
@@ -1198,9 +1159,9 @@
   font-size: 20px;
   cursor: pointer;
   transition: 0.3s ease;
-}
+} 
 
-/* Match your layout structure */
+
 .overlap {
     display: flex;
     flex-direction: column;
@@ -1208,42 +1169,6 @@
     gap: 15px;
   }
   
-  /* Use consistent styles on inputs and button */
-  .custom-input,
-  .custom-button {
-    width: 389px;
-    height: 59px;
-    border-radius: 12px;
-    border: 1px solid #2963a0;
-    box-shadow: 9px 14px 8px #00000040;
-    padding: 0 20px;
-    font-family: "Avenir-Medium", Helvetica;
-    font-size: 17px;
-    color: #ffffff;
-    outline: none;
-  }
-  
-  /* Input background */
-  .custom-input {
-    background: linear-gradient(
-      180deg,
-      rgba(12, 34, 56, 1) 24%,
-      rgba(20, 51, 82, 1) 100%
-    );
-  }
-  
-  /* Button specific style */
-  .custom-button {
-    background: linear-gradient(
-      180deg,
-      rgb(21, 112, 148) 24%,
-      rgb(12, 66, 87) 100%
-    );
-    font-family: "Avenir-Heavy", Helvetica;
-    font-size: 20px;
-    cursor: pointer;
-    transition: 0.3s ease;
-  }
 
   
   
@@ -1495,6 +1420,62 @@
     left: 778px;
     object-fit: cover;
   }
+  
+  .login-page .user_email,
+  .login-page .user_password {
+  margin-bottom: 0; /* Resets the generic margin */
+  position: absolute; /* Restores positioning */
+  top: 200px; /* Adjust as needed */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user_email {
+    position: absolute;
+    top: 200px;     /* Adjust vertically */
+    left: 50%;      /* Center horizontally */
+    transform: translateX(-50%);
+    
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 17px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    outline: none;
+  }
+  
+.login-page .user_password {
+    position: absolute;
+    top: 340px;  /* Place below the email field */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    width: 389px;
+    height: 59px;
+    border-radius: 12px;
+    border: 1px solid #2963a0;
+    box-shadow: 9px 14px 8px #00000040;
+    padding: 0 20px;
+    font-family: "Avenir-Medium", Helvetica;
+    font-size: 17px;
+    color: #ffffff;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 34, 56, 1) 24%,
+      rgba(20, 51, 82, 1) 100%
+    );
+    outline: none;
+  }
+  
   
   .admin-dashboard {
     background-color: rgba(255, 255, 255, 1.0);

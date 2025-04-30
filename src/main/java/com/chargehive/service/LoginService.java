@@ -34,19 +34,20 @@ public class LoginService {
 	/**
 	 * Validates the user credentials against the database records.
 	 *
-	 * @param studentModel the StudentModel object containing user credentials
+	 * @param userModel the UserModel object containing user credentials
 	 * @return true if the user credentials are valid, false otherwise; null if a
 	 *         connection error occurs
 	 */
 	public Boolean loginUser(UserModel userModel) {
+		System.out.println(">>> loginUser() called with email: " + userModel.getUserEmail());
 		if (isConnectionError) {
 			System.out.println("Connection Error!");
 			return null;
 		}
 
-		String query = "SELECT userName, password FROM User WHERE userName = ?";
+		String query = "SELECT user_email, user_password FROM user WHERE user_email = ?";
 		try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
-			stmt.setString(1, userModel.getUserName());
+			stmt.setString(1, userModel.getUserEmail());
 			ResultSet result = stmt.executeQuery();
 
 			if (result.next()) {
@@ -63,23 +64,20 @@ public class LoginService {
 	/**
 	 * Validates the password retrieved from the database.
 	 *
-	 * @param result       the ResultSet containing the username and password from
+	 * @param result       the ResultSet containing the email and password from
 	 *                     the database
-	 * @param studentModel the StudentModel object containing user credentials
+	 * @param userModel the UserModel object containing user credentials
 	 * @return true if the passwords match, false otherwise
 	 * @throws SQLException if a database access error occurs
 	 */
 	private boolean validatePassword(ResultSet result, UserModel userModel) throws SQLException {
-		String dbUsername = result.getString("userName");
-		String dbPassword = result.getString("password");
+		String dbEmail = result.getString("user_email");
+		String dbPassword = result.getString("user_password");
 		
-		System.out.println(dbUsername);
-		System.out.println(dbPassword);
-		System.out.println(PasswordUtil.decrypt(dbPassword, dbUsername).equals(userModel.getUserPassword()));
-		
-
-		return dbUsername.equals(userModel.getUserName())
-				&& PasswordUtil.decrypt(dbPassword, dbUsername).equals(userModel.getUserPassword());
+		System.out.println("Decrypted password: " + PasswordUtil.decrypt(dbPassword, dbEmail));
+		System.out.println("Entered password: " + userModel.getUserPassword());
+		return dbEmail.equals(userModel.getUserEmail())
+				&& PasswordUtil.decrypt(dbPassword, dbEmail).equals(userModel.getUserPassword());
 	}
 }
 

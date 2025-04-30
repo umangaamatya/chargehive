@@ -33,10 +33,10 @@
           
           <form action="${pageContext.request.contextPath}/login" method="post">
             <div class="text-wrapper-2">Email</div>
-            <input type="email" name="email" class="input-email" placeholder="username@gmail.com" required />
+            <input type="email" name="user_email" class="user_email" placeholder="username@gmail.com" required />
           
             <div class="text-wrapper-5">Password</div>
-            <input type="password" name="password" class="input-password" placeholder="•••••••••••" required />
+            <input type="password" name="user_password" class="user_password" placeholder="•••••••••••" required />
           
             <button type="submit" class="login-button">Log In</button>
           </form>
