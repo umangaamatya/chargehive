@@ -53,11 +53,11 @@
         <div class="navigation">
           <div class="navbar">
             <li class="overlap-4"><a href="${pageContext.request.contextPath}/login.jsp" class="text-wrapper-11">Login</a></li>
-            <a href="${pageContext.request.contextPath}/index.jsp" class="text-wrapper-12">Home</a>
-            <a href="${pageContext.request.contextPath}/product.jsp" class="charging-station">Charging Stations</a>
-            <a href="${pageContext.request.contextPath}/contact.jsp" class="about-us">Contact</a>
-            <a href="${pageContext.request.contextPath}/aboutus.jsp" class="text-wrapper-13">About Us</a>
-            <a href="${pageContext.request.contextPath}/admin.jsp" class="text-wrapper-14">Dashboard</a>
+            <a href="${pageContext.request.contextPath}/index" class="text-wrapper-12">Home</a>
+            <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
+            <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
+            <a href="${pageContext.request.contextPath}/about" class="text-wrapper-13">About Us</a>
+            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-14">Dashboard</a>
             <img class="chargehivelogo" src="${pageContext.request.contextPath}/resources/images/chargehiveLogo.png" />
           </div>
         </div>

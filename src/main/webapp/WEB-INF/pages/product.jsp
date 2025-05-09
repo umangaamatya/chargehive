@@ -13,29 +13,31 @@
         <div class="text-wrapper">Discover our stations</div>
         <div class="text-wrapper-2">Kathmandu</div>
         <div class="text-wrapper-3">Lalitpur</div>
-        <div class="text-wrapper-4">Quick Links</div>
-        <div class="text-wrapper-5">Gairidhara, Kathmandu</div>
-        <div class="text-wrapper-6">010502204</div>
-        <p class="p">© 2025 ChargeHive. All rights reserved.</p>
-        <a href="mailto:support@chargehive.com" target="_blank" rel="noopener noreferrer"
-          ><div class="text-wrapper-7">support@chargehive.com</div></a
-        >
-        <div class="text-wrapper-8">Samata Marg - 4</div>
-        <div class="text-wrapper-9">Charging Stations</div>
-        <div class="text-wrapper-10">Dashboard</div>
-        <div class="text-wrapper-11">LinkedIn</div>
-        <div class="text-wrapper-12">Privacy Policy</div>
-        <div class="text-wrapper-13">Cookie Policy</div>
-        <div class="text-wrapper-14">Terms of Service</div>
-        <div class="text-wrapper-15">Facebook</div>
-        <div class="text-wrapper-16">Instagram</div>
-        <div class="text-wrapper-17">X</div>
-        <div class="text-wrapper-18">About Us</div>
-        <div class="text-wrapper-19">Contact Us</div>
-        <div class="text-wrapper-20">Social</div>
-        <div class="text-wrapper-21">Legal</div>
-        <img class="line" src="resources/images/Line 1.png" />
-        <img class="img" src="resources/images/chargeHiveLogoTransparent.png" />
+        <footer>
+	        <div class="text-wrapper-4">Quick Links</div>
+			<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-5">Gairidhara, Kathmandu</a>
+			<a class="text-wrapper-6">010502204</a>
+			<p class="p">© 2025 ChargeHive. All rights reserved.</p>
+			<a href="mailto:support@chargehive.com" target="_blank" rel="noopener noreferrer">
+			  <div class="text-wrapper-7">support@chargehive.com</div>
+			</a>
+			<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-8">Samata Marg - 4</a>
+			<a href="${pageContext.request.contextPath}/product" class="text-wrapper-9">Charging Stations</a>
+			<a href="${pageContext.request.contextPath}/admin" class="text-wrapper-10">Dashboard</a>
+			<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-11">LinkedIn</a>
+			<a href="" class="text-wrapper-12">Privacy Policy</a>
+			<a href="" class="text-wrapper-13">Cookie Policy</a>
+			<a href="" class="text-wrapper-14">Terms of Service</a>
+			<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-15">Facebook</a>
+			<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-16">Instagram</a>
+			<a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-17">X</a>
+			<a href="${pageContext.request.contextPath}/about" class="text-wrapper-18">About Us</a>
+			<a href="${pageContext.request.contextPath}/contact" class="text-wrapper-19">Contact Us</a>
+			<div class="text-wrapper-20">Social</div>
+			<div class="text-wrapper-21">Legal</div>
+			<img class="line" src="resources/images/Line 1.png" />
+			<img class="img" src="resources/images/chargeHiveLogoTransparent.png" />
+        </footer>
         <div class="swift-charge-card">
           <div class="overlap-group">
             <p class="swift-charge-houses">

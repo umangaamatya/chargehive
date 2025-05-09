@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -110,29 +112,31 @@
           </p>
           <div class="text-wrapper-24">- Paras Shrestha</div>
         </div>
-        <div class="text-wrapper-25">Quick Links</div>
-        <div class="text-wrapper-26">Gairidhara, Kathmandu</div>
-        <div class="text-wrapper-27">010502204</div>
-        <p class="text-wrapper-28">© 2025 ChargeHive. All rights reserved.</p>
-        <a href="mailto:support@chargehive.com" target="_blank" rel="noopener noreferrer"
-          ><div class="text-wrapper-29">support@chargehive.com</div></a
-        >
-        <div class="text-wrapper-30">Samata Marg - 4</div>
-        <div class="text-wrapper-31">Charging Stations</div>
-        <div class="text-wrapper-32">Dashboard</div>
-        <div class="text-wrapper-33">LinkedIn</div>
-        <div class="text-wrapper-34">Privacy Policy</div>
-        <div class="text-wrapper-35">Cookie Policy</div>
-        <div class="text-wrapper-36">Terms of Service</div>
-        <div class="text-wrapper-37">Facebook</div>
-        <div class="text-wrapper-38">Instagram</div>
-        <div class="text-wrapper-39">X</div>
-        <div class="text-wrapper-40">About Us</div>
-        <div class="text-wrapper-41">Contact Us</div>
-        <div class="text-wrapper-42">Social</div>
-        <div class="text-wrapper-43">Legal</div>
-        <img class="line" src="/chargehive/resources/images/Line 1.png" />
-        <img class="img" src="/chargehive/resources/images/chargeHiveLogoTransparent.png" />
+       <div class="text-wrapper-25">Quick Links</div>
+       <footer>
+		<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-26">Gairidhara, Kathmandu</a>
+		<a class="text-wrapper-27">010502204</a>
+		<p class="text-wrapper-28">© 2025 ChargeHive. All rights reserved.</p>
+		<a href="mailto:support@chargehive.com" target="_blank" rel="noopener noreferrer">
+		  <div class="text-wrapper-29">support@chargehive.com</div>
+		</a>
+		<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-30">Samata Marg - 4</a>
+		<a href="${pageContext.request.contextPath}/product" class="text-wrapper-31">Charging Stations</a>
+		<a href="${pageContext.request.contextPath}/admin" class="text-wrapper-32">Dashboard</a>
+		<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-33">LinkedIn</a>
+		<a href="" class="text-wrapper-34">Privacy Policy</a>
+		<a href="" class="text-wrapper-35">Cookie Policy</a>
+		<a href="" class="text-wrapper-36">Terms of Service</a>
+		<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-37">Facebook</a>
+		<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-38">Instagram</a>
+		<a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-39">X</a>
+		<a href="${pageContext.request.contextPath}/about" class="text-wrapper-40">About Us</a>
+		<a href="${pageContext.request.contextPath}/contact" class="text-wrapper-41">Contact Us</a>
+		<div class="text-wrapper-42">Social</div>
+		<div class="text-wrapper-43">Legal</div>
+		<img class="line" src="/chargehive/resources/images/Line 1.png" />
+		<img class="img" src="/chargehive/resources/images/chargeHiveLogoTransparent.png" />
+		</footer>
         <div class="navigation">
           <div class="navbar">
             <div class="overlap-group-2"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-44">Login</a></div>

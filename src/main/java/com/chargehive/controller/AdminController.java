@@ -18,7 +18,12 @@ import java.sql.Statement;
 import com.chargehive.util.RedirectionUtil;
 
 @MultipartConfig
-@WebServlet(asyncSupported = true, urlPatterns = {"/admin", "/admin/addStation"})
+@WebServlet(asyncSupported = true, urlPatterns = {
+	    "/admin", 
+	    "/admin/addStation", 
+	    "/admin/deleteStation", 
+	    "/admin/updateStation"
+	})
 public class AdminController extends HttpServlet {
     
     private static final long serialVersionUID = 1L;
@@ -35,6 +40,10 @@ public class AdminController extends HttpServlet {
         
         if ("/admin/addStation".equals(path)) {
             handleAddStation(request, response);
+        } else if (path.equals("/admin/deleteStation")) {
+            deleteStation(request, response);
+        } else if (path.equals("/admin/updateStation")) {
+            updateStation(request, response);
         } else {
             doGet(request, response);
         }
@@ -108,6 +117,87 @@ public class AdminController extends HttpServlet {
             resp.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
             out.print("{\"status\":\"error\",\"message\":\"Error processing request: " + 
                       e.getMessage().replace("\"", "\\\"") + "\"}");
+        }
+    }
+    
+    
+    private void updateStation(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+
+        try {
+            int stationId = Integer.parseInt(getRequiredParameter(request, "stationId"));
+            String stationName = getRequiredParameter(request, "stationName");
+            String location = getRequiredParameter(request, "location");
+            String availability = getRequiredParameter(request, "availability");
+            float price = Float.parseFloat(getRequiredParameter(request, "price"));
+            int ports = Integer.parseInt(getRequiredParameter(request, "ports"));
+            String type = getRequiredParameter(request, "type");
+
+            String url = "jdbc:mysql://localhost:3307/chargehive";
+            String username = "root";
+            String password = "";
+
+            try (Connection conn = DriverManager.getConnection(url, username, password)) {
+                String sql = "UPDATE station SET station_name = ?, station_location = ?, station_availability = ?, station_price = ?, station_ports = ?, station_type = ? WHERE station_id = ?";
+                try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                    stmt.setString(1, stationName);
+                    stmt.setString(2, location);
+                    stmt.setString(3, availability);
+                    stmt.setFloat(4, price);
+                    stmt.setInt(5, ports);
+                    stmt.setString(6, type);
+                    stmt.setInt(7, stationId);
+
+                    int rowsUpdated = stmt.executeUpdate();
+
+                    if (rowsUpdated > 0) {
+                        out.write("{\"status\":\"success\",\"message\":\"Station updated successfully.\"}");
+                    } else {
+                        out.write("{\"status\":\"error\",\"message\":\"Station ID not found or no change detected.\"}");
+                    }
+                }
+            }
+        } catch (NumberFormatException e) {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            out.write("{\"status\":\"error\",\"message\":\"Invalid number format.\"}");
+        } catch (IllegalArgumentException e) {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            out.write("{\"status\":\"error\",\"message\":\"" + e.getMessage() + "\"}");
+        } catch (SQLException e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.write("{\"status\":\"error\",\"message\":\"Database error: " + e.getMessage().replace("\"", "\\\"") + "\"}");
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.write("{\"status\":\"error\",\"message\":\"Unexpected error: " + e.getMessage().replace("\"", "\\\"") + "\"}");
+        }
+    }
+    
+    private void deleteStation(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int stationId = Integer.parseInt(request.getParameter("stationId"));
+
+        String url = "jdbc:mysql://localhost:3307/chargehive";
+        String username = "root";
+        String password = "";
+
+        try (Connection conn = DriverManager.getConnection(url, username, password)) {
+            String sql = "DELETE FROM station WHERE station_id = ?";
+            PreparedStatement stmt = conn.prepareStatement(sql);
+            stmt.setInt(1, stationId);
+
+            int rowsAffected = stmt.executeUpdate();
+
+            response.setContentType("application/json");
+            PrintWriter out = response.getWriter();
+
+            if (rowsAffected > 0) {
+                out.write("{\"status\": \"success\", \"message\": \"Station deleted successfully.\"}");
+            } else {
+                out.write("{\"status\": \"error\", \"message\": \"Station ID not found.\"}");
+            }
+        } catch (Exception e) {
+            response.setContentType("application/json");
+            response.getWriter().write("{\"status\": \"error\", \"message\": \"" + e.getMessage() + "\"}");
         }
     }
     
