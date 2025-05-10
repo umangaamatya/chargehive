@@ -1,88 +1,3 @@
-//package com.chargehive.service;
-//
-//import java.sql.Connection;
-//import java.sql.PreparedStatement;
-//import java.sql.ResultSet;
-//import java.sql.SQLException;
-//
-//import com.chargehive.config.DbConfig;
-//import com.chargehive.model.UserModel;
-//import com.chargehive.util.PasswordUtil;
-//
-///**
-// * Service class for handling login operations. Connects to the database,
-// * verifies user credentials, and returns login status.
-// */
-//public class LoginService {
-//
-//	private Connection dbConn;
-//	private boolean isConnectionError = false;
-//
-//	/**
-//	 * Constructor initializes the database connection. Sets the connection error
-//	 * flag if the connection fails.
-//	 */
-//	public LoginService() {
-//		try {
-//			dbConn = DbConfig.getDbConnection();
-//		} catch (SQLException ex) {
-//			ex.printStackTrace();
-//			isConnectionError = true;
-//		}
-//	}
-//
-//	/**
-//	 * Validates the user credentials against the database records.
-//	 *
-//	 * @param userModel the UserModel object containing user credentials
-//	 * @return true if the user credentials are valid, false otherwise; null if a
-//	 *         connection error occurs
-//	 */
-//	public Boolean loginUser(UserModel userModel) {
-//		System.out.println(">>> loginUser() called with email: " + userModel.getUserEmail());
-//		if (isConnectionError) {
-//			System.out.println("Connection Error!");
-//			return null;
-//		}
-//
-//		String query = "SELECT user_email, user_password FROM user WHERE user_email = ?";
-//		try (PreparedStatement stmt = dbConn.prepareStatement(query)) {
-//			stmt.setString(1, userModel.getUserEmail());
-//			ResultSet result = stmt.executeQuery();
-//
-//			if (result.next()) {
-//				return validatePassword(result, userModel);
-//			}
-//		} catch (SQLException e) {
-//			e.printStackTrace();
-//			return null;
-//		}
-//
-//		return false;
-//	}
-//
-//	/**
-//	 * Validates the password retrieved from the database.
-//	 *
-//	 * @param result       the ResultSet containing the email and password from
-//	 *                     the database
-//	 * @param userModel the UserModel object containing user credentials
-//	 * @return true if the passwords match, false otherwise
-//	 * @throws SQLException if a database access error occurs
-//	 */
-//	private boolean validatePassword(ResultSet result, UserModel userModel) throws SQLException {
-//		String dbEmail = result.getString("user_email");
-//		String dbPassword = result.getString("user_password");
-//		
-//		System.out.println("Decrypted password: " + PasswordUtil.decrypt(dbPassword, dbEmail));
-//		System.out.println("Entered password: " + userModel.getUserPassword());
-//		return dbEmail.equals(userModel.getUserEmail())
-//				&& PasswordUtil.decrypt(dbPassword, dbEmail).equals(userModel.getUserPassword());
-//	}
-//}
-//
-
-
 package com.chargehive.service;
 
 import java.sql.Connection;
@@ -174,9 +89,46 @@ public class LoginService {
 
         return securePasswordMatch(decryptedPassword, inputPassword);
     }
+    
 
     private boolean securePasswordMatch(String decryptedPassword, String inputPassword) {
         // Your existing secure comparison logic
         return Objects.equals(decryptedPassword, inputPassword);
     }
+    
+    
+    public UserModel authenticateUser(String email, String password) {
+        if (email == null || password == null) {
+            return null;
+        }
+
+        String query = "SELECT user_id, user_fullName, user_email, user_password, user_role FROM user WHERE user_email = ?";
+        try (Connection conn = dbConfig.getDbConnection();
+             PreparedStatement stmt = conn.prepareStatement(query)) {
+            
+            stmt.setString(1, email.trim());
+            try (ResultSet rs = stmt.executeQuery()) {
+                if (rs.next()) {
+                    String dbEmail = rs.getString("user_email");
+                    String dbPassword = rs.getString("user_password");
+                    String decryptedPassword = PasswordUtil.decrypt(dbEmail, dbPassword);
+
+                    if (decryptedPassword != null && decryptedPassword.equals(password)) {
+                        // Authenticated successfully
+                        UserModel user = new UserModel();
+                        user.setUserId(rs.getInt("user_id"));
+                        user.setUserName(rs.getString("user_fullName"));
+                        user.setUserEmail(dbEmail);
+                        user.setUserRole(rs.getString("user_role")); // e.g., "admin" or "user"
+                        return user;
+                    }
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); // Log better in production
+        }
+
+        return null; // Authentication failed
+    }
 }
+

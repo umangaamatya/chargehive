@@ -6,6 +6,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
@@ -15,6 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import com.chargehive.util.PasswordUtil;
 import com.chargehive.util.RedirectionUtil;
 
 @MultipartConfig
@@ -22,20 +25,36 @@ import com.chargehive.util.RedirectionUtil;
 	    "/admin", 
 	    "/admin/addStation", 
 	    "/admin/deleteStation", 
-	    "/admin/updateStation"
+	    "/admin/updateStation",
+	    "/admin/addUser",
+	    "/admin/deleteUser",
+	    "/admin/updateUser"
 	})
 public class AdminController extends HttpServlet {
     
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) 
-        throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        HttpSession session = request.getSession(false);
+        String role = (session != null) ? (String) session.getAttribute("userRole") : null;
+
+        if (!"admin".equalsIgnoreCase(role)) {
+            response.sendRedirect(request.getContextPath() + "/user"); // redirect unauthorized users
+            return;
+        }
+
         request.getRequestDispatcher(RedirectionUtil.adminUrl).forward(request, response);
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {
-        
+    	String role = (String) request.getSession().getAttribute("userRole");
+    	if (role == null || !"admin".equals(role)) {
+    	    response.sendRedirect(request.getContextPath() + "/user");
+    	    return;
+    	}
         String path = request.getServletPath();
         
         if ("/admin/addStation".equals(path)) {
@@ -44,6 +63,12 @@ public class AdminController extends HttpServlet {
             deleteStation(request, response);
         } else if (path.equals("/admin/updateStation")) {
             updateStation(request, response);
+        } else if (path.equals("/admin/addUser")) {
+            handleAddUser(request, response);
+        } else if (path.equals("/admin/deleteUser")) {
+            deleteUser(request, response);
+        } else if (path.equals("/admin/updateUser")) {
+            updateUser(request, response);
         } else {
             doGet(request, response);
         }
@@ -209,5 +234,133 @@ public class AdminController extends HttpServlet {
             throw new IllegalArgumentException("Missing or empty parameter: " + paramName);
         }
         return value.trim();
+    }
+    
+    private void handleAddUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+
+        try {
+            // Get form parameters
+            String fullName = getRequiredParameter(request, "userFullName");
+            String email = getRequiredParameter(request, "userEmail");
+            String contact = getRequiredParameter(request, "userContact");
+            String address = getRequiredParameter(request, "userAddress");
+            String password = getRequiredParameter(request, "userPassword");
+
+            // Encrypt password
+            String encryptedPassword = PasswordUtil.encrypt(email, password);
+
+            // Default values
+            String role = "user";
+            int loyaltyPoints = 0;
+            String membership = "bronze";
+
+            // DB connection
+            String url = "jdbc:mysql://localhost:3307/chargehive";
+            String username = "root";
+            String dbPassword = "";
+
+            try (Connection conn = DriverManager.getConnection(url, username, dbPassword)) {
+                String sql = "INSERT INTO user (user_fullName, user_email, user_password, user_contact, user_address, user_role, user_loyaltyPoints, user_membership) " +
+                             "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+
+                try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                    stmt.setString(1, fullName);
+                    stmt.setString(2, email);
+                    stmt.setString(3, encryptedPassword);
+                    stmt.setString(4, contact);
+                    stmt.setString(5, address);
+                    stmt.setString(6, role);           // ✅ user_role in correct position
+                    stmt.setInt(7, loyaltyPoints);
+                    stmt.setString(8, membership);
+
+                    int rowsInserted = stmt.executeUpdate();
+
+                    if (rowsInserted > 0) {
+                        out.write("{\"status\":\"success\",\"message\":\"User added successfully.\"}");
+                    } else {
+                        out.write("{\"status\":\"error\",\"message\":\"Failed to add user.\"}");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.write("{\"status\":\"error\",\"message\":\"" + e.getMessage().replace("\"", "\\\"") + "\"}");
+        }
+    }
+    
+    private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        int userId = Integer.parseInt(request.getParameter("userId"));
+
+        String url = "jdbc:mysql://localhost:3307/chargehive";
+        String username = "root";
+        String password = "";
+
+        try (Connection conn = DriverManager.getConnection(url, username, password)) {
+            String sql = "DELETE FROM user WHERE user_id = ?";
+            try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                stmt.setInt(1, userId);
+                int rowsAffected = stmt.executeUpdate();
+
+                response.setContentType("application/json");
+                PrintWriter out = response.getWriter();
+
+                if (rowsAffected > 0) {
+                    out.write("{\"status\": \"success\", \"message\": \"User deleted successfully.\"}");
+                } else {
+                    out.write("{\"status\": \"error\", \"message\": \"User ID not found.\"}");
+                }
+            }
+        } catch (Exception e) {
+            response.setContentType("application/json");
+            response.getWriter().write("{\"status\": \"error\", \"message\": \"" + e.getMessage() + "\"}");
+        }
+    }
+    
+    private void updateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
+        response.setContentType("application/json");
+        PrintWriter out = response.getWriter();
+
+        try {
+            int userId = Integer.parseInt(getRequiredParameter(request, "userId"));
+            String fullName = getRequiredParameter(request, "userFullName");
+            String email = getRequiredParameter(request, "userEmail");
+            String password = getRequiredParameter(request, "userPassword");
+            String contact = getRequiredParameter(request, "userContact");
+            String address = getRequiredParameter(request, "userAddress");
+            int loyaltyPoints = Integer.parseInt(getRequiredParameter(request, "userLoyaltyPoints"));
+
+            // Encrypt password
+            String encryptedPassword = PasswordUtil.encrypt(email, password);
+
+            // DB connection
+            String jdbcUrl = "jdbc:mysql://localhost:3307/chargehive";
+            String dbUser = "root";
+            String dbPassword = "";
+
+            try (Connection conn = DriverManager.getConnection(jdbcUrl, dbUser, dbPassword)) {
+                String sql = "UPDATE user SET user_fullName = ?, user_email = ?, user_password = ?, user_contact = ?, user_address = ?, user_loyaltyPoints = ? WHERE user_id = ?";
+                try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+                    stmt.setString(1, fullName);
+                    stmt.setString(2, email);
+                    stmt.setString(3, encryptedPassword);
+                    stmt.setString(4, contact);
+                    stmt.setString(5, address);
+                    stmt.setInt(6, loyaltyPoints);
+                    stmt.setInt(7, userId);
+
+                    int rows = stmt.executeUpdate();
+                    if (rows > 0) {
+                        out.write("{\"status\":\"success\",\"message\":\"User updated successfully.\"}");
+                    } else {
+                        out.write("{\"status\":\"error\",\"message\":\"No user found or no changes made.\"}");
+                    }
+                }
+            }
+        } catch (Exception e) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            out.write("{\"status\":\"error\",\"message\":\"" + e.getMessage().replace("\"", "\\\"") + "\"}");
+        }
     }
 }

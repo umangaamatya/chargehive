@@ -1956,6 +1956,47 @@
 .submit-btn:hover {
   background: #1452a0;
 }
+.modal-submit-btn {
+  width: 80%;
+  padding: 14px;
+  background: #1452a0;
+  color: white;
+  font-weight: bold;
+  font-family: "Avenir-Roman", Helvetica, sans-serif;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 10px;
+  transform: translateX(10%);
+}
+
+.modal-submit-btn:hover {
+  background: #346ed5;
+  transform: translateX(10%) scale(1.02);
+}
+
+.delete-submit-btn {
+  width: 80%;
+  padding: 14px;
+  background: #9a1105;
+  color: white;
+  font-weight: bold;
+  font-family: "Avenir-Roman", Helvetica, sans-serif;
+  font-size: 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  margin-top: 10px;
+  transform: translateX(10%);
+}
+
+.delete-submit-btn:hover {
+  background: #d63521;
+  transform: translateX(10%) scale(1.02);
+}
 
 @keyframes modalFadeIn {
   from {
@@ -6811,16 +6852,16 @@
   background-color: #d32f2f;
 }
 
-.delete-btn:hover {
+.deleteStation-btn:hover {
     background-color: #1f4e7c;
   }
   
-  .delete-btn img.material-symbols-add {
+  .deleteStation-btn img.material-symbols-add {
     width: 20px;
     height: 20px;
   }
 
-  .delete-btn {
+  .deleteStation-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px; /* space between icon and text */
@@ -6836,7 +6877,38 @@
     transform: translateX(180px);
   }
   
-  .delete-btn img {
+  .deleteStation-btn img {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .deleteUser-btn:hover {
+    background-color: #1f4e7c;
+  }
+  
+  .deleteUser-btn img.material-symbols-add {
+    width: 20px;
+    height: 20px;
+  }
+
+  .deleteUser-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* space between icon and text */
+    padding: 8px 16px;
+    background-color: #0e2850;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    transform: translate(180px, 735px);
+    
+  }
+  
+  .deleteUser-btn img {
     width: 16px;
     height: 16px;
   }

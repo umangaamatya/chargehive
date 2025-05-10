@@ -118,6 +118,7 @@
 		        <th>Contact</th>
 		        <th>Address</th>
 		        <th>Loyalty Points</th>
+		        <th>Action</th>
 		      </tr>
 		    </thead>
 		    <tbody>
@@ -132,14 +133,26 @@
 		          rsUser = stmtUser.executeQuery("SELECT * FROM user");
 		          while(rsUser.next()) {
 		      %>
-		        <tr>
-		          <td><%= rsUser.getInt("user_id") %></td>
-		          <td><%= rsUser.getString("user_fullName") %></td>
-		          <td><%= rsUser.getString("user_email") %></td>
-		          <td><%= rsUser.getString("user_contact") %></td>
-		          <td><%= rsUser.getString("user_address") %></td>
-		          <td><%= rsUser.getInt("user_loyaltyPoints") %></td>
-		        </tr>
+		      <tr>
+				  <td><%= rsUser.getInt("user_id") %></td>
+				  <td><%= rsUser.getString("user_fullName") %></td>
+				  <td><%= rsUser.getString("user_email") %></td>
+				  <td><%= rsUser.getString("user_contact") %></td>
+				  <td><%= rsUser.getString("user_address") %></td>
+				  <td><%= rsUser.getInt("user_loyaltyPoints") %></td>
+				  <td>
+				    <img src="resources/images/update-vector.png" alt="Update" class="update-icon"
+				         onclick="openUpdateUserModal(
+				           <%= rsUser.getInt("user_id") %>,
+				           '<%= rsUser.getString("user_fullName") %>',
+				           '<%= rsUser.getString("user_email") %>',
+				           '<%= rsUser.getString("user_contact") %>',
+				           '<%= rsUser.getString("user_address") %>',
+				           <%= rsUser.getInt("user_loyaltyPoints") %>,
+				           ''  // Password is not fetched from DB for security; user re-enters it
+				         )">
+				  </td>
+				</tr>
 		      <%
 		          }
 		        } catch(Exception e) {
@@ -161,15 +174,20 @@
             <span>Add Station</span>
           </button>
           
-          <button id="deleteStationBtn" class="overlap-4 delete-btn">
+          <button id="deleteStationBtn" class="overlap-4 deleteStation-btn">
 			  <img src="resources/images/delete-vector.png" alt="Delete" />
 			  <span>Delete Station</span>
 		  </button>
           
-          <button class="overlap-5 add-btn">
+          <button id="addUserBtn" class="overlap-5 add-btn">
             <img src="resources/images/Vector.png" alt="Add" />
             <span>Add User</span>
           </button>
+          
+          <button id="deleteUserBtn" class="overlap-4 deleteUser-btn">
+			<img src="resources/images/delete-vector.png" alt="Delete" />
+			<span>Delete User</span>
+		  </button>
 
         
         <div class="navigation">
@@ -222,7 +240,7 @@
               <option value="Slow">Slow</option>
             </select>
           </div>
-          <button type="submit" class="submit-btn">Add Station</button>
+          <button type="submit" class="modal-submit-btn">Add Station</button>
         </form>
       </div>
     </div>
@@ -263,7 +281,7 @@
 	          <option value="Slow">Slow</option>
 	        </select>
 	      </div>
-	      <button type="submit" class="submit-btn">Update Station</button>
+	      <button type="submit" class="modal-submit-btn">Update Station</button>
 	    </form>
 	  </div>
 	</div>
@@ -277,7 +295,119 @@
 	        <label for="deleteStationId">Enter Station ID to delete</label>
 	        <input type="number" id="deleteStationId" name="stationId" required>
 	      </div>
-	      <button type="submit" class="submit-btn">Delete Station</button>
+	      <button type="submit" class="delete-submit-btn">Delete Station</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<!-- Add User modal -->
+	
+	<div id="addUserModal" class="modal">
+	  <div class="modal-content">
+	    <span class="close-add-user">&times;</span>
+	    <h2>Add New User</h2>
+	    <form id="addUserForm" method="POST" action="${pageContext.request.contextPath}/admin/addUser">
+	      
+	      <div class="form-group">
+	        <label for="userFullName">Full Name</label>
+	        <input type="text" id="userFullName" name="userFullName" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="userEmail">Email</label>
+	        <input type="email" id="userEmail" name="userEmail" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="userPassword">Password</label>
+	        <input type="password" id="userPassword" name="userPassword" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="confirmPassword">Confirm Password</label>
+	        <input type="password" id="confirmPassword" name="confirmPassword" required>
+	      </div>
+	      
+	      <div class="form-group">
+	        <label for="userContact">Contact Number</label>
+	        <input type="text" id="userContact" name="userContact" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="userAddress">Address</label>
+	        <input type="text" id="userAddress" name="userAddress" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="userLoyaltyPoints">Loyalty Points</label>
+	        <input type="number" id="userLoyaltyPoints" name="userLoyaltyPoints" value="0" min="0">
+	      </div>
+	
+	      <button type="submit" class="modal-submit-btn">Add User</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<!-- Delete User Modal -->
+	
+	<div id="deleteUserModal" class="modal">
+	  <div class="modal-content">
+	    <span class="close-delete-user">&times;</span>
+	    <h2>Delete User</h2>
+	    <form id="deleteUserForm" method="POST" action="${pageContext.request.contextPath}/admin/deleteUser">
+	      <div class="form-group">
+	        <label for="deleteUserId">Enter User ID to delete</label>
+	        <input type="number" id="deleteUserId" name="userId" required>
+	      </div>
+	      <button type="submit" class="delete-submit-btn">Delete User</button>
+	    </form>
+	  </div>
+	</div>
+	
+	
+	<div id="updateUserModal" class="modal">
+	  <div class="modal-content update-user-modal">
+	    <span class="close-update-user">&times;</span>
+	    <h2>Update User</h2>
+	    <form id="updateUserForm" method="POST" action="${pageContext.request.contextPath}/admin/updateUser">
+	      <input type="hidden" id="updateUserId" name="userId">
+	
+	      <div class="form-group">
+	        <label for="updateUserFullName">Full Name</label>
+	        <input type="text" id="updateUserFullName" name="userFullName" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="updateUserEmail">Email</label>
+	        <input type="email" id="updateUserEmail" name="userEmail" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="updateUserPassword">Password</label>
+	        <input type="password" id="updateUserPassword" name="userPassword" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="confirmUpdatePassword">Confirm Password</label>
+	        <input type="password" id="confirmUpdatePassword" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="updateUserContact">Contact</label>
+	        <input type="text" id="updateUserContact" name="userContact" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="updateUserAddress">Address</label>
+	        <input type="text" id="updateUserAddress" name="userAddress" required>
+	      </div>
+	
+	      <div class="form-group">
+	        <label for="updateUserLoyaltyPoints">Loyalty Points</label>
+	        <input type="number" id="updateUserLoyaltyPoints" name="userLoyaltyPoints" min="0" required>
+	      </div>
+	
+	      <button type="submit" class="modal-submit-btn">Update User</button>
 	    </form>
 	  </div>
 	</div>
@@ -446,6 +576,187 @@
     	        });
     	    });
     	  });
+    	  
+    	  document.addEventListener('DOMContentLoaded', function () {
+    		    const addUserModal = document.getElementById("addUserModal");
+    		    const addUserBtn = document.getElementById("addUserBtn");
+    		    const closeAddUser = document.querySelector(".close-add-user");
+    		    const addUserForm = document.getElementById("addUserForm");
+
+    		    if (addUserBtn) {
+    		      addUserBtn.addEventListener("click", function (e) {
+    		        e.preventDefault();
+    		        addUserModal.style.display = "block";
+    		      });
+    		    }
+
+    		    if (closeAddUser) {
+    		      closeAddUser.addEventListener("click", function () {
+    		        addUserModal.style.display = "none";
+    		      });
+    		    }
+
+    		    window.addEventListener("click", function (event) {
+    		      if (event.target === addUserModal) {
+    		        addUserModal.style.display = "none";
+    		      }
+    		    });
+
+    		    addUserForm.addEventListener("submit", function (e) {
+    		    	  e.preventDefault();
+
+    		    	  const pwd = document.getElementById("userPassword").value;
+    		    	  const confirmPwd = document.getElementById("confirmPassword").value;
+
+    		    	  // Validate password match before proceeding
+    		    	  if (pwd !== confirmPwd) {
+    		    	    alert("Passwords do not match.");
+    		    	    return; // Stop the submission
+    		    	  }
+
+    		    	  const formData = new FormData(addUserForm);
+
+    		    	  fetch('${pageContext.request.contextPath}/admin/addUser', {
+    		    	    method: 'POST',
+    		    	    body: formData
+    		    	  })
+    		    	    .then(response => response.json())
+    		    	    .then(data => {
+    		    	      if (data.status === "success") {
+    		    	        alert(data.message);
+    		    	        addUserForm.reset();
+    		    	        addUserModal.style.display = "none";
+    		    	        location.reload();
+    		    	      } else {
+    		    	        throw new Error(data.message);
+    		    	      }
+    		    	    })
+    		    	    .catch(error => {
+    		    	      console.error("Error:", error);
+    		    	      alert("Error adding user: " + error.message);
+    		    	    });
+    		    	});
+    		  });
+    	  
+    	  document.addEventListener('DOMContentLoaded', function () {
+    		  const deleteUserModal = document.getElementById("deleteUserModal");
+    		  const deleteUserBtn = document.getElementById("deleteUserBtn");
+    		  const closeDeleteUser = document.querySelector(".close-delete-user");
+    		  const deleteUserForm = document.getElementById("deleteUserForm");
+
+    		  if (deleteUserBtn) {
+    		    deleteUserBtn.addEventListener("click", function (e) {
+    		      e.preventDefault();
+    		      deleteUserModal.style.display = "block";
+    		    });
+    		  }
+
+    		  if (closeDeleteUser) {
+    		    closeDeleteUser.addEventListener("click", function () {
+    		      deleteUserModal.style.display = "none";
+    		    });
+    		  }
+
+    		  window.addEventListener("click", function (event) {
+    		    if (event.target === deleteUserModal) {
+    		      deleteUserModal.style.display = "none";
+    		    }
+    		  });
+
+    		  deleteUserForm.addEventListener("submit", function (e) {
+    			  e.preventDefault();
+
+    			  const confirmDelete = confirm("Are you sure you want to delete this user?");
+    			  if (!confirmDelete) return;
+
+    			  const formData = new FormData(deleteUserForm);
+
+    		    fetch('${pageContext.request.contextPath}/admin/deleteUser', {
+    		      method: 'POST',
+    		      body: formData
+    		    })
+    		      .then(response => response.json())
+    		      .then(data => {
+    		        if (data.status === "success") {
+    		          alert(data.message);
+    		          deleteUserForm.reset();
+    		          deleteUserModal.style.display = "none";
+    		          location.reload();
+    		        } else {
+    		          throw new Error(data.message);
+    		        }
+    		      })
+    		      .catch(error => {
+    		        console.error("Error:", error);
+    		        alert("Error deleting user: " + error.message);
+    		      });
+    		  });
+    		});
+    	  
+    	  function openUpdateUserModal(id, fullName, email, contact, address, loyaltyPoints, password) {
+    		  document.getElementById("updateUserId").value = id;
+    		  document.getElementById("updateUserFullName").value = fullName;
+    		  document.getElementById("updateUserEmail").value = email;
+    		  document.getElementById("updateUserContact").value = contact;
+    		  document.getElementById("updateUserAddress").value = address;
+    		  document.getElementById("updateUserLoyaltyPoints").value = loyaltyPoints;
+    		  document.getElementById("updateUserPassword").value = "";
+    		  document.getElementById("confirmUpdatePassword").value = "";
+
+    		  document.getElementById("updateUserModal").style.display = "block";
+    		}
+
+    		document.addEventListener("DOMContentLoaded", function () {
+    		  const updateUserModal = document.getElementById("updateUserModal");
+    		  const closeUpdateUser = document.querySelector(".close-update-user");
+    		  const updateUserForm = document.getElementById("updateUserForm");
+
+    		  if (closeUpdateUser) {
+    		    closeUpdateUser.addEventListener("click", function () {
+    		      updateUserModal.style.display = "none";
+    		    });
+    		  }
+
+    		  window.addEventListener("click", function (event) {
+    		    if (event.target === updateUserModal) {
+    		      updateUserModal.style.display = "none";
+    		    }
+    		  });
+
+    		  updateUserForm.addEventListener("submit", function (e) {
+    		    e.preventDefault();
+
+    		    const password = document.getElementById("updateUserPassword").value;
+    		    const confirmPassword = document.getElementById("confirmUpdatePassword").value;
+
+    		    if (password !== confirmPassword) {
+    		      alert("Passwords do not match.");
+    		      return;
+    		    }
+
+    		    const formData = new FormData(updateUserForm);
+
+    		    fetch('${pageContext.request.contextPath}/admin/updateUser', {
+    		      method: 'POST',
+    		      body: formData
+    		    })
+    		    .then(response => response.json())
+    		    .then(data => {
+    		      if (data.status === "success") {
+    		        alert(data.message);
+    		        updateUserForm.reset();
+    		        updateUserModal.style.display = "none";
+    		        location.reload();
+    		      } else {
+    		        throw new Error(data.message);
+    		      }
+    		    })
+    		    .catch(error => {
+    		      console.error("Error:", error);
+    		      alert("Error updating user: " + error.message);
+    		    });
+    		  });
+    		});
     </script>
 </html>
 
