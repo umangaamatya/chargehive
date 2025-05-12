@@ -52,7 +52,7 @@
         </form>
         <div class="navigation">
           <div class="navbar">
-            <li class="overlap-4"><a href="${pageContext.request.contextPath}/login.jsp" class="text-wrapper-11">Login</a></li>
+            <li class="overlap-4"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-11">Login</a></li>
             <a href="${pageContext.request.contextPath}/index" class="text-wrapper-12">Home</a>
             <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
             <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>

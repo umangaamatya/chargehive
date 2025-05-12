@@ -2714,6 +2714,74 @@
     white-space: nowrap;
   }
   
+ .profile-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999; /* Ensure it's above other content */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+}
+
+.profile-modal-content {
+  background: linear-gradient(180deg, #09111e 39%, #103165 100%);
+  margin: 5% auto;
+  padding: 30px 40px;
+  border-radius: 20px;
+  width: 500px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  position: relative;
+  font-family: "Avenir-Roman", Helvetica;
+  font-size: 20px;
+  text-align: center;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.profile-modal-content input {
+  width: 90%;
+  padding: 12px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+.profile-modal-content button {
+  padding: 12px 25px;
+  background-color: #1e88e5;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-modal-content button:hover {
+  background-color: #1565c0;
+}
+
+.profile-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+  
+  @keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
   .user-profile-page .text-wrapper-13 {
     width: 19px;
     top: 81px;
@@ -4501,16 +4569,19 @@
   }
   
   .user-dashboard .div {
-    background-color: rgba(255, 255, 255, 1.0);
-    background: linear-gradient(
-      180deg,
-      rgba(9, 17, 30, 1) 39%,
-      rgba(16, 49, 101, 1) 100%
-    );
-    width: 1920px;
-    height: 1080px;
-    position: relative;
-  }
+  background-color: rgba(255, 255, 255, 1.0);
+  background: linear-gradient(
+    180deg,
+    rgba(9, 17, 30, 1) 39%,
+    rgba(16, 49, 101, 1) 100%
+  );
+  width: 100%;
+  min-height: 100vh; /* allow full screen minimum */
+  height: auto;      /* allow to expand based on content */
+  position: relative;
+  padding-bottom: 50px; /* optional: space from bottom */
+  box-sizing: border-box;
+}
   
   .user-dashboard .overlap {
     position: absolute;
@@ -5254,6 +5325,17 @@
     letter-spacing: 0;
     line-height: normal;
   }
+  
+  .user-dashboard .text-wrapper-200 {
+  font-family: "Avenir-Black", Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  font-size: 40px;
+  line-height: 1.2;
+  margin: 40px 0 20px 235px; /* top margin, bottom spacing, left padding for alignment */
+  width: fit-content;
+  transform: translateY(700px);
+}
   
   .user-dashboard .text-wrapper-43 {
     position: absolute;
@@ -6912,3 +6994,85 @@
     width: 16px;
     height: 16px;
   }
+  
+  .book-btn {
+  padding: 8px 16px;
+  background-color: #274a95;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.book-btn:hover {
+  background-color: #1a3a75;
+  transform: translateY(-2px);
+}
+
+.book-btn:active {
+  transform: scale(0.97);
+}
+
+
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 20px 15px;
+  }
+  
+  .text-wrapper-63,
+  .text-wrapper-64 {
+    font-size: 32px;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 8px 10px;
+    font-size: 0.8em;
+  }
+}
+
+.booking-styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  font-family: "Avenir-Roman", Helvetica;
+  font-size: 48px;
+  text-align: left;
+  overflow: hidden;
+  border-radius: 12px;
+  transform: translateY(700px);
+}
+
+.booking-styled-table thead {
+  background: #102c57;
+}
+
+.booking-styled-table thead th {
+  padding: 15px;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+.booking-styled-table tbody tr {
+  background-color: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.booking-styled-table tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.booking-styled-table td {
+  padding: 14px;
+  font-size: 22px;
+}
+
+.booking-styled-table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: background 0.3s;
+}

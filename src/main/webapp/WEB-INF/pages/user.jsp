@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,101 +10,178 @@
   <body>
     <div class="user-dashboard">
       <div class="div">
-        <div class="overlap">
-          <div class="overlap-group">
-            <div class="rectangle"></div>
-            <div class="rectangle-2"></div>
-            <div class="text-wrapper">45</div>
-            <div class="text-wrapper-2">8</div>
-            <div class="text-wrapper-3">Station Name</div>
-            <div class="text-wrapper-4">Rapid Station</div>
-            <div class="text-wrapper-5">Location</div>
-            <div class="text-wrapper-6">Jhamsikhel</div>
-            <div class="text-wrapper-7">Availability</div>
-            <div class="text-wrapper-8">Available</div>
-            <div class="text-wrapper-9">Price (₹) per kWh</div>
-            <div class="text-wrapper-10">Ports</div>
-            <div class="text-wrapper-11">Type</div>
-            <div class="text-wrapper-12">Fast</div>
-            <div class="log-in-button"></div>
-            <div class="log-in-button-2"></div>
-            <div class="text-wrapper-13">Book</div>
-          </div>
-          <div class="overlap-2">
-            <div class="text-wrapper-14">10</div>
-            <div class="text-wrapper-15">50</div>
-            <div class="text-wrapper-16">Charge Hub</div>
-            <div class="text-wrapper-17">Lazimpat</div>
-            <div class="text-wrapper-18">Unavailable</div>
-            <div class="text-wrapper-19">Slow</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-          <div class="overlap-3">
-            <div class="text-wrapper-21">10</div>
-            <div class="text-wrapper-22">50</div>
-            <div class="text-wrapper-23">Eco Charge</div>
-            <div class="text-wrapper-24">Nayabazar</div>
-            <div class="text-wrapper-25">Unavailable</div>
-            <div class="text-wrapper-26">Slow</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-          <div class="overlap-4">
-            <div class="text-wrapper-14">12</div>
-            <div class="text-wrapper-22">55</div>
-            <div class="text-wrapper-27">Volt Station</div>
-            <div class="text-wrapper-28">Sanepa</div>
-            <div class="text-wrapper-29">Available</div>
-            <div class="text-wrapper-30">Fast</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-          <div class="overlap-5">
-            <div class="text-wrapper-14">12</div>
-            <div class="text-wrapper-22">55</div>
-            <div class="text-wrapper-31">Quick Charge</div>
-            <div class="text-wrapper-32">Naxal</div>
-            <div class="text-wrapper-33">Available</div>
-            <div class="text-wrapper-19">Fast</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-          <div class="overlap-6">
-            <div class="text-wrapper-34">8</div>
-            <div class="text-wrapper-35">45</div>
-            <div class="text-wrapper-36">Swift Charge</div>
-            <div class="text-wrapper-37">Baneshwor</div>
-            <div class="text-wrapper-38">Available</div>
-            <div class="text-wrapper-39">Fast</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-          <div class="overlap-7">
-            <div class="text-wrapper-40">8</div>
-            <div class="text-wrapper-22">60</div>
-            <div class="text-wrapper-27">Amp Station</div>
-            <div class="text-wrapper-41">Golfutar</div>
-            <div class="text-wrapper-25">Unavailable</div>
-            <div class="text-wrapper-19">Fast</div>
-            <div class="div-wrapper"><div class="text-wrapper-20">Book</div></div>
-          </div>
-        </div>
         <div class="text-wrapper-42">Stations near you</div>
+        <div class="tables-container">
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th>Station ID</th>
+                <th>Station Name</th>
+                <th>Location</th>
+                <th>Availability</th>
+                <th>Price (₹) per kWh</th>
+                <th>Ports</th>
+                <th>Type</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <%
+                String url = "jdbc:mysql://localhost:3307/chargehive";
+                String username = "root";
+                String password = "";
+                Connection conn = null;
+                Statement stmt = null;
+                ResultSet rs = null;
+
+                try {
+                  Class.forName("com.mysql.cj.jdbc.Driver");
+                  conn = DriverManager.getConnection(url, username, password);
+                  stmt = conn.createStatement();
+                  rs = stmt.executeQuery("SELECT * FROM station");
+                  while(rs.next()) {
+              %>
+              <tr>
+                <td><%= rs.getInt("station_id") %></td>
+                <td><%= rs.getString("station_name") %></td>
+                <td><%= rs.getString("station_location") %></td>
+                <td><%= rs.getString("station_availability") %></td>
+                <td><%= rs.getFloat("station_price") %></td>
+                <td><%= rs.getInt("station_ports") %></td>
+                <td><%= rs.getString("station_type") %></td>
+                <td>
+                  <form action="bookStation" method="POST">
+                    <input type="hidden" name="stationId" value="<%= rs.getInt("station_id") %>" />
+                    <button type="button" class="book-btn" onclick="confirmBooking(<%= rs.getInt("station_id") %>)">Book</button>
+                  </form>
+                </td>
+              </tr>
+              <%
+                  }
+                } catch(Exception e) {
+                  out.println("<tr><td colspan='8'>Error loading station data: " + e.getMessage() + "</td></tr>");
+                } finally {
+                  try { if (rs != null) rs.close(); } catch(Exception e) {}
+                  try { if (stmt != null) stmt.close(); } catch(Exception e) {}
+                  try { if (conn != null) conn.close(); } catch(Exception e) {}
+                }
+              %>
+            </tbody>
+          </table>
+        </div>
+        
+        <%
+		  Integer currentUserId = (Integer) session.getAttribute("userId");
+		  if (currentUserId == null) {
+		%>
+		  <p style="color: red;">User not logged in. Please login to view your bookings.</p>
+		<%
+		  } else {
+		%>
+		  <div class="text-wrapper-200" style="margin-top: 40px;">Your Booking History</div>
+		  <table class="booking-styled-table">
+		    <thead>
+		      <tr>
+		        <th>Booking ID</th>
+		        <th>Booking Date</th>
+		        <th>Station ID</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <%
+		        Connection bookingConn = null;
+		        PreparedStatement bookingStmt = null;
+		        ResultSet bookingRs = null;
+		
+		        try {
+		          Class.forName("com.mysql.cj.jdbc.Driver");
+		          bookingConn = DriverManager.getConnection("jdbc:mysql://localhost:3307/chargehive", "root", "");
+		          bookingStmt = bookingConn.prepareStatement("SELECT * FROM booking WHERE user_id = ?");
+		          bookingStmt.setInt(1, currentUserId);
+		          bookingRs = bookingStmt.executeQuery();
+		
+		          boolean hasBookings = false;
+		          while (bookingRs.next()) {
+		            hasBookings = true;
+		      %>
+		      <tr>
+		        <td><%= bookingRs.getInt("booking_id") %></td>
+		        <td><%= bookingRs.getString("booking_date") %></td>
+		        <td><%= bookingRs.getInt("station_id") %></td>
+		      </tr>
+		      <%
+		          }
+		
+		          if (!hasBookings) {
+		      %>
+		      <tr><td colspan="3">No bookings found for your account.</td></tr>
+		      <%
+		          }
+		        } catch(Exception e) {
+		          out.println("<tr><td colspan='3'>Error loading booking data: " + e.getMessage() + "</td></tr>");
+		        } finally {
+		          try { if (bookingRs != null) bookingRs.close(); } catch(Exception e) {}
+		          try { if (bookingStmt != null) bookingStmt.close(); } catch(Exception e) {}
+		          try { if (bookingConn != null) bookingConn.close(); } catch(Exception e) {}
+		        }
+		      %>
+		    </tbody>
+		  </table>
+		<%
+		  }
+		%>
+
         <div class="text-wrapper-43">Hi, Umanga.</div>
         <div class="search-bar">
           <div class="overlap-group-2">
-            <div class="search-arrow-wrapper"><img class="search-arrow" src="resources/images/Search Arrow.png" /></div>
+            <div class="search-arrow-wrapper">
+              <img class="search-arrow" src="resources/images/Search Arrow.png" />
+            </div>
             <div class="text-wrapper-44">Search station</div>
           </div>
         </div>
+
         <div class="navigation">
           <div class="navbar">
-            <a href="index.jsp" class="text-wrapper-45">Home</a>
-            <a href="product.jsp" class="charging-station">Charging Stations</a>
-            <a href="contact.jsp" class="about-us">Contact</a>
-            <a href="aboutus.jsp" class="text-wrapper-46">About Us</a>
-            <a href="admin.jsp" class="text-wrapper-47">Dashboard</a>
+            <a href="${pageContext.request.contextPath}/index" class="text-wrapper-45">Home</a>
+            <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
+            <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
+            <a href="${pageContext.request.contextPath}/aboutus" class="text-wrapper-46">About Us</a>
+            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-47">Dashboard</a>
             <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
-            <a href="profile.jsp"><img class="admin-icon" src="resources/images/Admin icon.png" /></a>
+            <a href="${pageContext.request.contextPath}/profile"><img class="admin-icon" src="resources/images/Admin icon.png" /></a>
           </div>
         </div>
       </div>
     </div>
+    
+    <script>
+	  function confirmBooking(stationId) {
+	    const confirmed = confirm("Do you want to book this station?");
+	    if (confirmed) {
+	      fetch("bookStation", {
+	        method: "POST",
+	        headers: {
+	          "Content-Type": "application/x-www-form-urlencoded"
+	        },
+	        body: "stationId=" + stationId
+	      })
+	      .then(response => response.json())
+	      .then(data => {
+	        if (data.status === "success") {
+	          alert("Booking successful!");
+	          location.reload();
+	        } else {
+	          alert("Error: " + data.message);
+	        }
+	      })
+	      .catch(error => {
+	        alert("Request failed: " + error);
+	      });
+	    }
+	  }
+	</script>
   </body>
+  
+  
 </html>

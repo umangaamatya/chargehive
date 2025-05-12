@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DbConfig {
     // Try BOTH ports (3307 and 3306)
-    private static final String[] PORTS_TO_TRY = {"3307", "3306"};
+    private static final String[] PORTS_TO_TRY = {"3307"};
     private static final String DB_NAME = "chargehive";
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";

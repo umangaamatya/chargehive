@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>    
 <!DOCTYPE html>
 <html>
   <head>
@@ -9,6 +10,31 @@
   </head>
   <body>
     <div class="user-profile-page">
+    <%
+	    int userId = (int) session.getAttribute("userId");
+	    String fullName = "", email = "", contact = "", address = "";
+	
+	    try {
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/chargehive", "root", "");
+	        PreparedStatement stmt = conn.prepareStatement("SELECT user_fullName, user_email, user_contact, user_address FROM user WHERE user_id = ?");
+	        stmt.setInt(1, userId);
+	        ResultSet rs = stmt.executeQuery();
+	
+	        if (rs.next()) {
+	            fullName = rs.getString("user_fullName");
+	            email = rs.getString("user_email");
+	            contact = rs.getString("user_contact");
+	            address = rs.getString("user_address");
+	        }
+	
+	        rs.close();
+	        stmt.close();
+	        conn.close();
+	    } catch (Exception e) {
+	        out.println("<p style='color:red;'>Error loading profile data: " + e.getMessage() + "</p>");
+	    }
+	%>
       <div class="div">
         <div class="overlap"><img class="IMG" src="resources/images/IMG_0663 2.JPG" /></div>
         
@@ -73,14 +99,14 @@
           </div>
         </div>
         <div class="text-wrapper-29">Recent charging sessions</div>
-        <div class="text-wrapper-30">Sparsha Shrestha</div>
+        <div class="text-wrapper-30"><%= fullName %></div>
         <div class="text-wrapper-31">Contact</div>
         <div class="text-wrapper-32">Address</div>
         <div class="text-wrapper-33">Email</div>
         <div class="text-wrapper-34">Password</div>
         <div class="overlap-7">
-          <div class="text-wrapper-35">sshrestha@gmail.com</div>
-          <img class="vector" src="resources/images/update-vector.png" />
+          <div class="text-wrapper-35"><%= email %></div>
+          <img class="vector" src="resources/images/update-vector.png" onclick="openModal('emailModal')"  />
         </div>
         <div class="overlap-8">
           <div class="contact-number-field"></div>
@@ -88,12 +114,12 @@
           <img class="img" src="resources/images/update-vector.png" />
         </div>
         <div class="overlap-9">
-          <img class="vector" src="resources/images/update-vector.png" />
-          <div class="text-wrapper-37">9705102005</div>
+          <img class="vector" src="resources/images/update-vector.png" onclick="openModal('contactModal')"/>
+          <div class="text-wrapper-37"><%= contact %></div>
         </div>
         <div class="overlap-10">
-          <img class="vector" src="resources/images/update-vector.png" />
-          <div class="text-wrapper-38">Nayabazar</div>
+          <img class="vector" src="resources/images/update-vector.png" onclick="openModal('addressModal')"/>
+          <div class="text-wrapper-38"><%= address %></div>
         </div>
         <div class="navigation">
           <div class="navbar">
@@ -108,5 +134,61 @@
         </div>
       </div>
     </div>
+    
+    <!-- Email Update Modal -->
+	<div id="emailModal" class="profile-modal">
+	  <div class="profile-modal-content">
+	    <span class="profile-close" onclick="closeModal('emailModal')">&times;</span>
+	    <h2>Update Email</h2>
+	    <form action="${pageContext.request.contextPath}/profile" method="post">
+	      <input type="hidden" name="attribute" value="email">
+	      <input type="email" name="value" required placeholder="Enter new email">
+	      <button type="submit">Update</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<!-- Contact Update Modal -->
+	<div id="contactModal" class="profile-modal">
+	  <div class="profile-modal-content">
+	    <span class="profile-close" onclick="closeModal('contactModal')">&times;</span>
+	    <h2>Update Contact</h2>
+	    <form action="${pageContext.request.contextPath}/profile" method="post">
+	      <input type="hidden" name="attribute" value="contact">
+	      <input type="text" name="value" required placeholder="Enter new contact number">
+	      <button type="submit">Update</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<!-- Address Update Modal -->
+	<div id="addressModal" class="profile-modal">
+	  <div class="profile-modal-content">
+	    <span class="profile-close" onclick="closeModal('addressModal')">&times;</span>
+	    <h2>Update Address</h2>
+	    <form action="${pageContext.request.contextPath}/profile" method="post">
+	      <input type="hidden" name="attribute" value="address">
+	      <input type="text" name="value" required placeholder="Enter new address">
+	      <button type="submit">Update</button>
+	    </form>
+	  </div>
+	</div>
+	
+	<script>
+	  function openModal(id) {
+	    document.getElementById(id).style.display = "block";
+	  }
+	
+	  function closeModal(id) {
+	    document.getElementById(id).style.display = "none";
+	  }
+	
+	  // Close modal when clicking outside
+	  window.onclick = function(event) {
+	    document.querySelectorAll(".modal").forEach(modal => {
+	      if (event.target === modal) modal.style.display = "none";
+	    });
+	  };
+	</script>
   </body>
 </html>
