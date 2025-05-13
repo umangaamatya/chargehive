@@ -6873,6 +6873,25 @@
   z-index: 1;
 }
 
+.deleteStation-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px; /* spacing between icon and text */
+  padding: 8px 16px;
+  border: none;
+  background: #242f56;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap; /* prevents text from wrapping */
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Delete Station Modal Styling */
 #deleteStationModal {
   display: none;
