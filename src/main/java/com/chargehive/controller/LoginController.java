@@ -2,6 +2,7 @@ package com.chargehive.controller;
 
 import com.chargehive.model.UserModel;
 import com.chargehive.service.LoginService;
+import com.chargehive.util.CookiesUtil;
 import com.chargehive.util.RedirectionUtil;
 import com.chargehive.util.SessionUtil;
 import com.chargehive.util.ValidationUtil;
@@ -48,10 +49,14 @@ public class LoginController extends HttpServlet {
             UserModel user = loginService.authenticateUser(email, password);
 
             if (user != null) {
-                // ✅ Set session attributes using SessionUtil
+                // ✅ Set session attributes
                 SessionUtil.setAttribute(req, "userId", Integer.valueOf(user.getUserId()));
                 SessionUtil.setAttribute(req, "userEmail", user.getUserEmail());
                 SessionUtil.setAttribute(req, "userRole", user.getUserRole());
+
+                // ✅ Set cookies via CookiesUtil
+                CookiesUtil.addCookie(resp, "userEmail", user.getUserEmail(), 30 * 60);
+                CookiesUtil.addCookie(resp, "userRole", user.getUserRole(), 30 * 60);
 
                 // ✅ Redirect based on role
                 if ("admin".equalsIgnoreCase(user.getUserRole())) {

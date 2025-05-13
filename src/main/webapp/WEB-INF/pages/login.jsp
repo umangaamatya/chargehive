@@ -11,18 +11,18 @@
     <div class="login-page"> 
       <div class="div">
         <div class="overlap">
-          <%
-          String errorMessage = (String) request.getAttribute("error");
-          String successMessage = (String) request.getAttribute("success");
-
-          if (errorMessage != null && !errorMessage.isEmpty()) {
-              out.println("<p class=\"error-message\">" + errorMessage + "</p>");
-          }
-
-          if (successMessage != null && !successMessage.isEmpty()) {
-              out.println("<p class=\"success-message\">" + successMessage + "</p>");
-          }
-          %>
+         <%
+		  String errorMessage = (String) request.getAttribute("error");
+		  String successMessage = (String) request.getAttribute("success");
+		%>
+		
+		<% if (errorMessage != null && !errorMessage.isEmpty()) { %>
+		  <div class="error-message"><%= errorMessage %></div>
+		<% } %>
+		
+		<% if (successMessage != null && !successMessage.isEmpty()) { %>
+		  <div class="success-message"><%= successMessage %></div>
+		<% } %>
           
           <p class="don-t-have-an">
             <span class="text-wrapper">Don't have an account? </span>

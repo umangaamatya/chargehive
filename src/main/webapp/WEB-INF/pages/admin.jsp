@@ -2,6 +2,44 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 
+<%
+int totalStations = 0;
+int availableStations = 0;
+int totalUsers = 0;
+int totalBookings = 0;
+
+String url = "jdbc:mysql://localhost:3307/chargehive";
+String username = "root";
+String password = "";
+
+try {
+    Class.forName("com.mysql.cj.jdbc.Driver");
+    Connection conn = DriverManager.getConnection(url, username, password);
+
+    Statement stmt1 = conn.createStatement();
+    ResultSet rs1 = stmt1.executeQuery("SELECT COUNT(*) FROM station");
+    if (rs1.next()) totalStations = rs1.getInt(1);
+    rs1.close();
+
+    ResultSet rs2 = stmt1.executeQuery("SELECT COUNT(*) FROM station WHERE station_availability = 'Available'");
+    if (rs2.next()) availableStations = rs2.getInt(1);
+    rs2.close();
+
+    ResultSet rs3 = stmt1.executeQuery("SELECT COUNT(*) FROM user");
+    if (rs3.next()) totalUsers = rs3.getInt(1);
+    rs3.close();
+
+    ResultSet rs4 = stmt1.executeQuery("SELECT COUNT(*) FROM booking");
+    if (rs4.next()) totalBookings = rs4.getInt(1);
+    rs4.close();
+
+    stmt1.close();
+    conn.close();
+} catch(Exception e) {
+    out.println("Error fetching dashboard counts: " + e.getMessage());
+}
+%>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,25 +53,25 @@
         <div class="total-station-group">
             <div class="overlap-group">
               <div class="text-wrapper-500">Total Stations</div>
-              <div class="text-wrapper-501">3,210</div>
+              <div class="text-wrapper-501"><%= totalStations %></div>
             </div>
           </div>
         <div class="total-chargers-group">
           <div class="overlap-group">
             <div class="text-wrapper">Available Stations</div>
-            <div class="text-wrapper-2">2,040</div>
+            <div class="text-wrapper-2"><%= availableStations %></div>
           </div>
         </div>
         <div class="AC-group">
           <div class="overlap">
             <div class="text-wrapper-3">Total Users</div>
-            <div class="text-wrapper-4">825</div>
+            <div class="text-wrapper-4"><%= totalUsers %></div>
           </div>
         </div>
         <div class="DC-group">
           <div class="overlap">
             <div class="text-wrapper-5">Total Bookings</div>
-            <div class="text-wrapper-6">950</div>
+            <div class="text-wrapper-6"><%= totalBookings %></div>
           </div>
         </div>
         
@@ -57,9 +95,7 @@
 			</thead>
 		    <tbody>
 		      <%
-			    String url = "jdbc:mysql://localhost:3307/chargehive";
-	            String username = "root";
-	            String password = ""; 
+			    
 	              
 	            Connection conn = null;
 	            Statement stmt = null;
@@ -242,6 +278,7 @@
           </div>
           <button type="submit" class="modal-submit-btn">Add Station</button>
         </form>
+        <div id="station-error" class="error-message" style="display: none;"></div>
       </div>
     </div>
     
@@ -283,6 +320,7 @@
 	      </div>
 	      <button type="submit" class="modal-submit-btn">Update Station</button>
 	    </form>
+	    <div id="station-error" class="error-message" style="display: none;"></div>
 	  </div>
 	</div>
     
@@ -442,30 +480,32 @@
         });
     
         if(form) {
-          form.addEventListener("submit", function(e) {
-            e.preventDefault();
-            const formData = new FormData(form);
-    
-            fetch('${pageContext.request.contextPath}/admin/addStation', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    alert(data.message);
-                    form.reset();
-                    modal.style.display = "none";
-                    location.reload();
-                } else {
-                    throw new Error(data.message);
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                alert('Error adding station: ' + error.message);
-            });
-          });
+        	form.addEventListener("submit", function(e) {
+        		  e.preventDefault();
+        		  const formData = new FormData(form);
+
+        		  fetch('${pageContext.request.contextPath}/admin/addStation', {
+        		      method: 'POST',
+        		      body: formData
+        		  })
+        		  .then(res => res.json())
+        		  .then(data => {
+        		    const errorDiv = document.getElementById('station-error');
+        		    
+        		    if (data.status === 'error') {
+        		      errorDiv.style.display = 'block';
+        		      errorDiv.innerText = data.message;
+        		    } else {
+        		      errorDiv.style.display = 'none';
+        		      alert('Station added successfully!');
+        		      location.reload();
+        		    }
+        		  })
+        		  .catch(err => {
+        		    console.error('Unexpected error:', err);
+        		    alert('Something went wrong. Please try again.');
+        		  });
+        		}); // ✅ Close here only
         }
       });
       
@@ -757,6 +797,8 @@
     		    });
     		  });
     		});
+    		
+    		
     </script>
 </html>
 

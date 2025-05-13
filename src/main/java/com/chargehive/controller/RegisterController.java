@@ -5,6 +5,7 @@ import java.io.IOException;
 import com.chargehive.model.UserModel;
 import com.chargehive.service.RegisterService;
 import com.chargehive.util.PasswordUtil;
+import com.chargehive.util.ValidationUtil;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -59,49 +60,66 @@ public class RegisterController extends HttpServlet {
         String userEmail = req.getParameter("user_email").trim();
         String userPassword = req.getParameter("user_password").trim();
         String retypePassword = req.getParameter("confirm_password");
-        
-        // Validate required fields
-        if (userName == null || userName.trim().isEmpty()) {
+
+        // Full Name validation
+        if (ValidationUtil.IsEmpty(userName)) {
             throw new Exception("Full name is required");
         }
-        
-        if (userAddress == null || userAddress.trim().isEmpty()) {
+        if (!ValidationUtil.isNameValid(userName)) {
+            throw new Exception("Name must only contain alphabets and spaces");
+        }
+
+        // Contact validation
+        if (ValidationUtil.IsEmpty(userContact)) {
+            throw new Exception("Contact number is required");
+        }
+        if (!ValidationUtil.isNum(userContact)) {
+            throw new Exception("Contact must only contain numbers");
+        }
+
+        // Address validation
+        if (ValidationUtil.IsEmpty(userAddress)) {
             throw new Exception("Address is required");
         }
-        
-        if (userEmail == null || userEmail.trim().isEmpty()) {
+        if (ValidationUtil.isNum(userAddress)) {
+            throw new Exception("Address must contain valid characters, not just numbers");
+        }
+
+        // Email validation
+        if (ValidationUtil.IsEmpty(userEmail)) {
             throw new Exception("Email is required");
         }
-        
-        if (userPassword == null || userPassword.trim().isEmpty()) {
+
+        // Password validations
+     // Password validations
+        if (ValidationUtil.IsEmpty(userPassword)) {
             throw new Exception("Password is required");
         }
-        
+
         if (!userPassword.equals(retypePassword)) {
             throw new Exception("Passwords do not match");
         }
+
+        if (!ValidationUtil.isPasswordStrong(userPassword)) {
+            throw new Exception("Password must be at least 6 characters long and contain at least 1 uppercase letter, 1 number, and 1 special character (@, $, !, %, *, ?, &)");
+        }
+
         
+
         // Encrypt password
         userPassword = PasswordUtil.encrypt(userEmail, userPassword);
-        
-        // Create user with default values
-        UserModel newUser = new UserModel(
-            userName, 
-            userEmail, 
-            userPassword, 
-            userContact, 
+
+        return new UserModel(
+            userName,
+            userEmail,
+            userPassword,
+            userContact,
             userAddress,
-            DEFAULT_ROLE, 
-            DEFAULT_LOYALTY_POINTS, 
+            DEFAULT_ROLE,
+            DEFAULT_LOYALTY_POINTS,
             DEFAULT_MEMBERSHIP
         );
-        
-        return newUser;
-        
-//        boolean success = new RegisterService().addUser(newUser);
-        
     }
-    
     
     
     

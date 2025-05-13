@@ -8,11 +8,24 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
   </head>
   <body>
+  
     <div class="registration-page">
       <div class="div">
         <form action="${pageContext.request.contextPath}/registration" method="post" class="overlap" >
             <div class="text-wrapper-2">Create a new account</div>
-          
+          	
+          	
+			<%
+			    String errorMessage = (String) request.getAttribute("error");
+			    if (errorMessage != null) {
+			%>
+			    <div style="color: red; font-weight: bold; margin: 10px 0; text-align: center;">
+			        <%= errorMessage %>
+			    </div>
+			<%
+			    }
+			%>
+          	
             <div class="form-group" style="top: 166px; left: 641px;">
               <label class="form-label">Email</label>
               <input type="email" name="user_email" placeholder="username@gmail.com" required style="top: 50px; position: absolute;" />

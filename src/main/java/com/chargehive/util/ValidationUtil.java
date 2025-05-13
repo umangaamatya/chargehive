@@ -56,7 +56,7 @@ public class ValidationUtil {
      */
     public static boolean isNum(String num) {
         try {
-            Integer.parseInt(num);
+            Long.parseLong(num);  // allows longer numeric strings
             return true;
         } catch (NumberFormatException e) {
             return false;
@@ -89,7 +89,7 @@ public class ValidationUtil {
      * @param ports to validate
      * @return true if the stock is valid, false otherwise
      */
-    public static boolean isStockValid(String ports) {
+    public static boolean isPortsValid(String ports) {
         try {
             int pt = Integer.parseInt(ports);
 
@@ -125,14 +125,14 @@ public class ValidationUtil {
 
 
     /**
-     * Placeholder for validating storage (currently always returns true).
+     * Placeholder for validating type (currently always returns true).
      *
      * @param type the type to validate
      * @return true if the type is valid, false otherwise
      */
     public static boolean isTypeValid(String type) {
             // Check if the value matches one of the predefined valid type options
-            return type == "Fast" || type == "Slow";
+    	return "Fast".equals(type) || "Slow".equals(type);
         
     }
 
@@ -142,7 +142,24 @@ public class ValidationUtil {
      * @param value the value to check
      * @return true if the value is empty or null, false otherwise
      */
-    public boolean IsEmpty(String value) {
+    public static boolean IsEmpty(String value) {
         return value == null || value.trim().isEmpty();
+    }
+    
+    /**
+     * Validates if the password is at least 6 characters long and contains at least:
+     * - one uppercase letter
+     * - one number
+     * - one special character (@, $, !, %, *, ?, &)
+     *
+     * @param password the password to validate
+     * @return true if the password meets the criteria, false otherwise
+     */
+    public static boolean isPasswordStrong(String password) {
+        if (password == null || password.length() < 6) {
+            return false;
+        }
+        String pattern = "^(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{6,}$";
+        return password.matches(pattern);
     }
 }

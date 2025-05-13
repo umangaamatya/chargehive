@@ -38,7 +38,13 @@
                   Class.forName("com.mysql.cj.jdbc.Driver");
                   conn = DriverManager.getConnection(url, username, password);
                   stmt = conn.createStatement();
-                  rs = stmt.executeQuery("SELECT * FROM station");
+                  String searchQuery = request.getParameter("searchQuery");
+                  String sql = "SELECT * FROM station";
+                  if (searchQuery != null && !searchQuery.trim().isEmpty()) {
+                    sql += " WHERE station_name LIKE '%" + searchQuery + "%'";
+                  }
+                  rs = stmt.executeQuery(sql);
+                  
                   while(rs.next()) {
               %>
               <tr>
@@ -132,14 +138,34 @@
 		%>
 
         <div class="text-wrapper-43">Hi, Umanga.</div>
-        <div class="search-bar">
-          <div class="overlap-group-2">
-            <div class="search-arrow-wrapper">
-              <img class="search-arrow" src="resources/images/Search Arrow.png" />
-            </div>
-            <div class="text-wrapper-44">Search station</div>
-          </div>
-        </div>
+       <div style="display: flex; justify-content: flex-end; margin-bottom: 30px; transform: translate(-30px,-290px)">
+		  <form method="GET" action="${pageContext.request.contextPath}/user" style="display: flex; align-items: center; gap: 10px;">
+		
+		    <!-- Search input with arrow inside -->
+		    <div style="display: flex; align-items: center; border-radius: 25px; overflow: hidden; background: white;">
+		      <input 
+		        type="text" 
+		        name="searchQuery" 
+		        placeholder="Search station..." 
+		        value="<%= request.getParameter("searchQuery") != null ? request.getParameter("searchQuery") : "" %>"
+		        style="padding: 10px 15px; border: none; width: 220px; font-size: 14px; outline: none;"
+		      />
+		      <button type="submit" style="background: none; border: none; padding: 10px; cursor: pointer;">
+		        <img src="resources/images/Search Arrow.png" alt="Search" style="height: 20px; width: 20px;" />
+		      </button>
+		    </div>
+		
+		    <!-- Clear button outside, dark blue gradient -->
+		    <button 
+		      type="submit" 
+		      name="clear" 
+		      value="true"
+		      style="padding: 10px 20px; border: none; border-radius: 25px; background: linear-gradient(to right, #0a2342, #274472); color: white; font-weight: bold; cursor: pointer;"
+		    >
+		      Clear
+		    </button>
+		  </form>
+		</div>
 
         <div class="navigation">
           <div class="navbar">

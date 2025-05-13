@@ -19,6 +19,7 @@ import java.sql.Statement;
 
 import com.chargehive.util.PasswordUtil;
 import com.chargehive.util.RedirectionUtil;
+import com.chargehive.util.ValidationUtil;
 
 @MultipartConfig
 @WebServlet(asyncSupported = true, urlPatterns = {
@@ -90,6 +91,30 @@ public class AdminController extends HttpServlet {
             float price = Float.parseFloat(getRequiredParameter(req, "price"));
             int ports = Integer.parseInt(getRequiredParameter(req, "ports"));
             
+            if (!ValidationUtil.isNameValid(stationName)) {
+                throw new IllegalArgumentException("Station name must only contain alphabets and spaces.");
+            }
+
+            if (ValidationUtil.IsEmpty(location)) {
+                throw new IllegalArgumentException("Location is required.");
+            }
+
+            if (!ValidationUtil.isPriceValid(String.valueOf(price))) {
+                throw new IllegalArgumentException("Price must be between 300 and 800.");
+            }
+
+            if (!ValidationUtil.isPortsValid(String.valueOf(ports))) {
+                throw new IllegalArgumentException("Ports must be between 1 and 12.");
+            }
+
+            if (!ValidationUtil.isPortsEnough(String.valueOf(ports))) {
+                throw new IllegalArgumentException("Ports cannot exceed 20.");
+            }
+
+            if (!ValidationUtil.isTypeValid(type)) {
+                throw new IllegalArgumentException("Type must be either 'Fast' or 'Slow'.");
+            }
+            
             // Database connection details
             String jdbcUrl = "jdbc:mysql://localhost:3307/chargehive";
             String dbUser = "root";
@@ -159,6 +184,30 @@ public class AdminController extends HttpServlet {
             int ports = Integer.parseInt(getRequiredParameter(request, "ports"));
             String type = getRequiredParameter(request, "type");
 
+            if (!ValidationUtil.isNameValid(stationName)) {
+                throw new IllegalArgumentException("Station name must only contain alphabets and spaces.");
+            }
+
+            if (ValidationUtil.IsEmpty(location)) {
+                throw new IllegalArgumentException("Location is required.");
+            }
+
+            if (!ValidationUtil.isPriceValid(String.valueOf(price))) {
+                throw new IllegalArgumentException("Price must be between 300 and 800.");
+            }
+
+            if (!ValidationUtil.isPortsValid(String.valueOf(ports))) {
+                throw new IllegalArgumentException("Ports must be between 1 and 12.");
+            }
+
+            if (!ValidationUtil.isPortsEnough(String.valueOf(ports))) {
+                throw new IllegalArgumentException("Ports cannot exceed 20.");
+            }
+
+            if (!ValidationUtil.isTypeValid(type)) {
+                throw new IllegalArgumentException("Type must be either 'Fast' or 'Slow'.");
+            }
+           
             String url = "jdbc:mysql://localhost:3307/chargehive";
             String username = "root";
             String password = "";
@@ -255,7 +304,28 @@ public class AdminController extends HttpServlet {
             String role = "user";
             int loyaltyPoints = 0;
             String membership = "bronze";
+            
+            if (!ValidationUtil.isNameValid(fullName)) {
+                throw new IllegalArgumentException("Station name must only contain alphabets and spaces.");
+            }
 
+            if (ValidationUtil.IsEmpty(email)) {
+                throw new IllegalArgumentException("Location is required.");
+            }
+
+            if (!ValidationUtil.isNum(String.valueOf(contact))) {
+                throw new IllegalArgumentException("Price must be between 300 and 800.");
+            }
+            
+            if (!ValidationUtil.IsEmpty(String.valueOf(address))) {
+                throw new IllegalArgumentException("Ports cannot exceed 20.");
+            }
+            
+            if (!ValidationUtil.isPasswordStrong(password)) {
+                throw new IllegalArgumentException("Ports must be between 1 and 12.");
+            }
+
+            
             // DB connection
             String url = "jdbc:mysql://localhost:3307/chargehive";
             String username = "root";
@@ -331,6 +401,11 @@ public class AdminController extends HttpServlet {
             String address = getRequiredParameter(request, "userAddress");
             int loyaltyPoints = Integer.parseInt(getRequiredParameter(request, "userLoyaltyPoints"));
 
+            if (!ValidationUtil.isPasswordStrong(password)) {
+                out.write("{\"status\":\"error\",\"message\":\"Password must be at least 6 characters long and contain at least 1 uppercase letter, 1 number, and 1 special character (@, $, !, %, *, ?, &).\"}");
+                return;
+            }
+            
             // Encrypt password
             String encryptedPassword = PasswordUtil.encrypt(email, password);
 

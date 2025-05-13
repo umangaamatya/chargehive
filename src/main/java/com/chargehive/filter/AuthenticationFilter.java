@@ -16,7 +16,7 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebFilter(asyncSupported = true, urlPatterns = { "/" })
+@WebFilter(asyncSupported = true, urlPatterns = { "/*" })
 public class AuthenticationFilter implements Filter {
 
 	private static final String LOGIN = "/login";
@@ -45,8 +45,7 @@ public class AuthenticationFilter implements Filter {
 		HttpServletResponse res = (HttpServletResponse) response;
 		String username = req.getParameter("userName");
 		String contextPath = req.getContextPath();
-//		String userRole = loginService.getUserRole(username);
-		// Get the requested URI
+	
 		String uri = req.getRequestURI();
 
 		if (uri.endsWith(".css") || uri.endsWith(HOME) || uri.endsWith(PROFILE) || uri.endsWith(ABOUT) || uri.endsWith(ROOT)) {
@@ -55,26 +54,22 @@ public class AuthenticationFilter implements Filter {
 		}
 
 		// Get the session and check if user is logged in
-		boolean isLoggedIn = SessionUtil.getAttribute(req, "userName") != null;
+		boolean isLoggedIn = SessionUtil.getAttribute(req, "userId") != null;
 
-//		if(userRole.equals("admin")) {
-//			res.sendRedirect(req.getContextPath() + DASHBOARD);
-//		}else {
-//			res.sendRedirect(req.getContextPath() + LOGIN);
-//		}
 //		
-		if (!isLoggedIn) {
-			if (uri.endsWith(LOGIN) || uri.endsWith(REGISTER)) {
-				chain.doFilter(request, response);
-			} else {
-				res.sendRedirect(req.getContextPath() + LOGIN);
-			}
+//		
+		if (isLoggedIn) {
+		    // Allow access to everything, including /login and /registration
+		    chain.doFilter(request, response);
 		} else {
-			if (uri.endsWith(LOGIN) || uri.endsWith(REGISTER)) {
-				res.sendRedirect(req.getContextPath() + HOME);
-			} else {
-				chain.doFilter(request, response);
-			}
+		    // If not logged in, allow only public routes
+		    if (uri.endsWith(LOGIN) || uri.endsWith(REGISTER) ||
+		        uri.endsWith(HOME) || uri.endsWith(ABOUT) || uri.endsWith(ROOT) || uri.endsWith(".css") || uri.endsWith(".js")) {
+		        chain.doFilter(request, response);
+		    } else {
+		        req.setAttribute("error", "You must log in first.");
+		        req.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(req, res);
+		    }
 		}
 	}
 
