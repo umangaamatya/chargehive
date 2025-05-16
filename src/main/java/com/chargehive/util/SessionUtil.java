@@ -62,5 +62,10 @@ public class SessionUtil {
 		}
 	}
 	
+	public static boolean isLoggedIn(HttpServletRequest req) {
+        HttpSession session = req.getSession(false);
+        return session != null && session.getAttribute("userEmail") != null;
+    }
+	
 }
 

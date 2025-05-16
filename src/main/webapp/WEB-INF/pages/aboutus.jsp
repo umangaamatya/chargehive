@@ -53,17 +53,30 @@
           the go.
         </p>
         <div class="text-wrapper-19">Our Company</div>
-        <div class="navigation">
-          <div class="navbar">
-            <li class="overlap-group"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-20">Login</a></li>
-            <a href="${pageContext.request.contextPath}/index" class="text-wrapper-21">Home</a>
-            <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
-            <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
-            <a href="${pageContext.request.contextPath}/about" class="text-wrapper-22">About Us</a>
-            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-23">Dashboard</a>
-            <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
-          </div>
-        </div>
+		<div class="navigation">
+		  <div class="navbar">
+		
+		    <%-- Session-based dynamic login/logout --%>
+		    <%
+		        HttpSession session1 = request.getSession(false);
+		        boolean isLoggedIn = (session != null && session.getAttribute("userEmail") != null);
+		    %>
+		    <div class="overlap-group">
+		        <% if (isLoggedIn) { %>
+		            <a href="${pageContext.request.contextPath}/logout" class="text-wrapper-20">Logout</a>
+		        <% } else { %>
+		            <a href="${pageContext.request.contextPath}/login" class="text-wrapper-20">Login</a>
+		        <% } %>
+		    </div>
+		
+		    <a href="${pageContext.request.contextPath}/index" class="text-wrapper-21">Home</a>
+		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
+		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
+		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-22">About Us</a>
+		    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-23">Dashboard</a>
+		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
+		  </div>
+		</div>
       </div>
     </div>
   </body>

@@ -2476,7 +2476,30 @@
     top: 253px;
     left: 833px;
   }
-  
+  .upload-btn {
+  position: relative;
+  z-index: 2; /* Ensures it's above the image */
+  margin-top: 10px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transform: translateY(430px)
+}
+
+.upload-btn:hover {
+  background-color: #45a049;
+}
+
+.overlap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
   .user-profile-page .overlap {
     position: absolute;
     width: 380px;
@@ -3081,6 +3104,7 @@
     font-size: 36px;
     letter-spacing: 0;
     line-height: normal;
+    transform: translateY(40px);
   }
   
   .user-profile-page .text-wrapper-31 {

@@ -72,31 +72,26 @@ public class ImageUtil {
 	 *         otherwise.
 	 */
 	public boolean uploadImage(Part part, String rootPath, String saveFolder) {
-		String savePath = getSavePath(saveFolder);
+		String savePath = rootPath + "resources/images/" + saveFolder + "/";
 		File fileSaveDir = new File(savePath);
 
-		// Ensure the directory exists
 		if (!fileSaveDir.exists()) {
-			if (!fileSaveDir.mkdir()) {
-				return false; // Failed to create the directory
+			if (!fileSaveDir.mkdirs()) { // create parent dirs if needed
+				return false;
 			}
 		}
+
 		try {
-			// Get the image name
 			String imageName = getImageNameFromPart(part);
-			// Create the file path
-			String filePath = savePath + "/" + imageName;
-			// Write the file to the server
+			String filePath = savePath + File.separator + imageName;
 			part.write(filePath);
-			return true; // Upload successful
+			return true;
 		} catch (IOException e) {
-			e.printStackTrace(); // Log the exception
-			return false; // Upload failed
+			e.printStackTrace();
+			return false;
 		}
 	}
 	
-	public String getSavePath(String saveFolder) {
-		return "Urban/src/main/webapp/resources/images/"+saveFolder+"/";
-	}
+
 }
 

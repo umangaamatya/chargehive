@@ -36,7 +36,28 @@
 	    }
 	%>
       <div class="div">
-        <div class="overlap"><img class="IMG" src="resources/images/IMG_0663 2.JPG" /></div>
+        <%
+		    String profilePic = "default.png"; // fallback
+		    try {
+		        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/chargehive", "root", "");
+		        PreparedStatement stmt = conn.prepareStatement("SELECT user_profile_pic FROM user WHERE user_id = ?");
+		        stmt.setInt(1, userId);
+		        ResultSet rs = stmt.executeQuery();
+		        if (rs.next()) {
+		            profilePic = rs.getString("user_profile_pic");
+		            if (profilePic == null || profilePic.trim().isEmpty()) {
+		                profilePic = "default.png";
+		            }
+		        }
+		        rs.close(); stmt.close(); conn.close();
+		    } catch (Exception e) {
+		        out.println("Error fetching profile picture.");
+		    }
+		%>
+		<div class="overlap">
+		  <img class="IMG" src="${pageContext.request.contextPath}/resources/images/profile_pics/<%= profilePic %>" />
+		  <button onclick="openModal('profilePicModal')" class="upload-btn">Update Profile Picture</button>
+		</div>
         
         <div class="total-station-group">
             <div class="overlap-group">
@@ -104,6 +125,13 @@
         <div class="text-wrapper-32">Address</div>
         <div class="text-wrapper-33">Email</div>
         <div class="text-wrapper-34">Password</div>
+        
+        <form action="${pageContext.request.contextPath}/profile" method="post" enctype="multipart/form-data">
+		  <input type="hidden" name="attribute" value="profile_pic" />
+		  <input type="file" name="image" accept="image/*" required />
+		  <button type="submit">Upload</button>
+		</form>
+        
         <div class="overlap-7">
           <div class="text-wrapper-35"><%= email %></div>
           <img class="vector" src="resources/images/update-vector.png" onclick="openModal('emailModal')"  />
@@ -174,6 +202,19 @@
 	  </div>
 	</div>
 	
+	<!-- Profile Picture Upload Modal -->
+	<div id="profilePicModal" class="profile-modal">
+	  <div class="profile-modal-content">
+	    <span class="profile-close" onclick="closeModal('profilePicModal')">&times;</span>
+	    <h2>Upload Profile Picture</h2>
+	    <form action="${pageContext.request.contextPath}/profile" method="post" enctype="multipart/form-data">
+	      <input type="hidden" name="attribute" value="profile_pic" />
+	      <input type="file" name="image" accept="image/*" required />
+	      <button type="submit">Upload</button>
+	    </form>
+	  </div>
+	</div>
+
 	<script>
 	  function openModal(id) {
 	    document.getElementById(id).style.display = "block";

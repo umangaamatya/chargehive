@@ -135,16 +135,30 @@
           </div>
         </div>
         <div class="navigation">
-          <div class="navbar">
-            <li class="div-wrapper"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-28">Login</a></li>
-            <a href="${pageContext.request.contextPath}/index" class="text-wrapper-29">Home</a>
-            <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
-            <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
-            <a href="${pageContext.request.contextPath}/about" class="text-wrapper-30">About Us</a>
-            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-31">Dashboard</a>
-            <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
-          </div>
-        </div>
+		  <div class="navbar">
+		
+		    <%-- Conditional Login/Logout link --%>
+		    <%
+		        HttpSession session1 = request.getSession(false);
+		        boolean isLoggedIn = (session != null && session.getAttribute("userEmail") != null);
+		    %>
+		    <div class="div-wrapper">
+		      <% if (isLoggedIn) { %>
+		          <a href="${pageContext.request.contextPath}/logout" class="text-wrapper-28">Logout</a>
+		      <% } else { %>
+		          <a href="${pageContext.request.contextPath}/login" class="text-wrapper-28">Login</a>
+		      <% } %>
+		    </div>
+		
+		    <a href="${pageContext.request.contextPath}/index" class="text-wrapper-29">Home</a>
+		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
+		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
+		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-30">About Us</a>
+		    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-31">Dashboard</a>
+		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
+		
+		  </div>
+		</div>
       </div>
     </div>
   </body>

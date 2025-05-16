@@ -82,16 +82,29 @@
 		  <img class="img" src="resources/images/chargeHiveLogoTransparent.png" />
 		</footer>
         <div class="navigation">
-          <div class="navbar">
-            <li class="overlap-6"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-32">Login</a></li>
-            <a href="${pageContext.request.contextPath}/index" class="text-wrapper-33">Home</a>
-            <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
-            <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
-            <a href="${pageContext.request.contextPath}/about" class="text-wrapper-34">About Us</a>
-            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-35">Dashboard</a>
-            <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
-          </div>
-        </div>
+		  <div class="navbar">
+
+		    <%
+		        HttpSession session1 = request.getSession(false);
+		        boolean isLoggedIn = (session != null && session.getAttribute("userEmail") != null);
+		    %>
+		    <div class="overlap-6">
+		      <% if (isLoggedIn) { %>
+		          <a href="${pageContext.request.contextPath}/logout" class="text-wrapper-32">Logout</a>
+		      <% } else { %>
+		          <a href="${pageContext.request.contextPath}/login" class="text-wrapper-32">Login</a>
+		      <% } %>
+		    </div>
+		
+		    <a href="${pageContext.request.contextPath}/index" class="text-wrapper-33">Home</a>
+		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
+		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
+		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-34">About Us</a>
+		    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-35">Dashboard</a>
+		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
+		
+		  </div>
+		</div>
       </div>
     </div>
     

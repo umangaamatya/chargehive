@@ -139,7 +139,17 @@
 		</footer>
         <div class="navigation">
           <div class="navbar">
-            <div class="overlap-group-2"><a href="${pageContext.request.contextPath}/login" class="text-wrapper-44">Login</a></div>
+            <%
+			    HttpSession session1 = request.getSession(false);
+			    boolean isLoggedIn = (session1 != null && session1.getAttribute("userEmail") != null);
+			%>
+			<div class="overlap-group-2">
+			    <% if (isLoggedIn) { %>
+			        <a href="${pageContext.request.contextPath}/logout" class="text-wrapper-44">Logout</a>
+			    <% } else { %>
+			        <a href="${pageContext.request.contextPath}/login" class="text-wrapper-44">Login</a>
+			    <% } %>
+			</div>
             <a href="${pageContext.request.contextPath}/index" class="text-wrapper-45">Home</a>
             <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
             <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
