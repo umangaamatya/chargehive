@@ -1,5 +1,9 @@
 package com.chargehive.util;
 
+/**
+ * @author Umanga Amatya
+ */
+
 public class ValidationUtil {
 	/**
      * Validates if the station ID is within the range of 100000 to 999999.

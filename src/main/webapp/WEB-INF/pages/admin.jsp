@@ -241,6 +241,8 @@ try {
     </div>
   </body>
   
+  
+  <!-- Add Station Modal -->
   <div id="addStationModal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
@@ -282,6 +284,7 @@ try {
       </div>
     </div>
     
+    <!-- Update Station Modal -->
     <div id="updateStationModal" class="modal">
 	  <div class="modal-content update-station-modal">
 	    <span class="close-update">&times;</span>
@@ -324,6 +327,7 @@ try {
 	  </div>
 	</div>
     
+    <!-- Delete Station Modal -->
     <div id="deleteStationModal" class="modal">
 	  <div class="modal-content">
 	    <span class="close-delete">&times;</span>
@@ -339,7 +343,6 @@ try {
 	</div>
 	
 	<!-- Add User modal -->
-	
 	<div id="addUserModal" class="modal">
 	  <div class="modal-content">
 	    <span class="close-add-user">&times;</span>
@@ -387,7 +390,6 @@ try {
 	</div>
 	
 	<!-- Delete User Modal -->
-	
 	<div id="deleteUserModal" class="modal">
 	  <div class="modal-content">
 	    <span class="close-delete-user">&times;</span>
@@ -402,7 +404,7 @@ try {
 	  </div>
 	</div>
 	
-	
+	<!-- Update User Modal -->
 	<div id="updateUserModal" class="modal">
 	  <div class="modal-content update-user-modal">
 	    <span class="close-update-user">&times;</span>
@@ -451,7 +453,6 @@ try {
 	</div>
     
     <script>
-      // Your existing modal and form submission JavaScript code here
       document.addEventListener('DOMContentLoaded', function() {
         const modal = document.getElementById("addStationModal");
         const addStationBtn = document.getElementById("addStationBtn");
@@ -505,7 +506,7 @@ try {
         		    console.error('Unexpected error:', err);
         		    alert('Something went wrong. Please try again.');
         		  });
-        		}); // ✅ Close here only
+        		}); // Close here only
         }
       });
       

@@ -14,17 +14,30 @@ import com.chargehive.model.UserModel;
 import com.chargehive.util.PasswordUtil;
 
 /**
- * Service class for handling login operations. Connects to the database,
- * verifies user credentials, and returns login status.
+ * Handles user authentication logic:
+ * - Validates login credentials
+ * - Connects to database
+ * - Decrypts and verifies passwords
+ * 
+ * @author Umanga Amatya
  */
 public class LoginService {
     private static final Logger logger = Logger.getLogger(LoginService.class.getName());
     private final DbConfig dbConfig;
-
+    
+    /**
+     * Constructs the LoginService and initializes DB configuration.
+     */
     public LoginService() {
         this.dbConfig = new DbConfig();
     }
-
+    
+    /**
+     * Verifies if the given user exists and password is correct.
+     *
+     * @param userModel UserModel object containing email and password
+     * @return true if login successful, false if credentials invalid, null on DB error
+     */
     public Boolean loginUser(UserModel userModel) {
         if (userModel == null || userModel.getUserEmail() == null) {
             logger.warning("Invalid user model or email");
@@ -61,6 +74,11 @@ public class LoginService {
         }
     }
 
+    /**
+     * Closes any AutoCloseable resource quietly.
+     *
+     * @param resource ResultSet, Statement, or Connection to be closed
+     */
     private void closeQuietly(AutoCloseable resource) {
         if (resource != null) {
             try {
@@ -70,7 +88,15 @@ public class LoginService {
             }
         }
     }
-
+    
+    /**
+     * Validates user password against the encrypted value in DB.
+     *
+     * @param result    ResultSet containing DB-stored user_email and user_password
+     * @param userModel UserModel with entered email and password
+     * @return true if password matches after decryption
+     * @throws SQLException if DB column extraction fails
+     */
     private boolean validatePassword(ResultSet result, UserModel userModel) throws SQLException {
         String dbEmail = result.getString("user_email");
         String dbPassword = result.getString("user_password");
@@ -90,13 +116,25 @@ public class LoginService {
         return securePasswordMatch(decryptedPassword, inputPassword);
     }
     
-
+    /**
+     * Securely compares the decrypted password with user input.
+     *
+     * @param decryptedPassword plain text password from DB
+     * @param inputPassword     user-entered password
+     * @return true if passwords match
+     */
     private boolean securePasswordMatch(String decryptedPassword, String inputPassword) {
         // Your existing secure comparison logic
         return Objects.equals(decryptedPassword, inputPassword);
     }
     
-    
+    /**
+     * Authenticates the user and returns their profile data if successful.
+     *
+     * @param email    user's email
+     * @param password raw password to verify
+     * @return UserModel object if authenticated, null otherwise
+     */
     public UserModel authenticateUser(String email, String password) {
         if (email == null || password == null) {
             return null;

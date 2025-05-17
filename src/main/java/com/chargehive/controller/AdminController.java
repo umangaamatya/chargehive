@@ -21,6 +21,17 @@ import com.chargehive.util.PasswordUtil;
 import com.chargehive.util.RedirectionUtil;
 import com.chargehive.util.ValidationUtil;
 
+/**
+ * Handles admin operations for stations and users:
+ * add, update, delete. Access is restricted to admin users.
+ * 
+ * URL mappings:
+ * /admin, /admin/addStation, /admin/deleteStation, /admin/updateStation,
+ * /admin/addUser, /admin/deleteUser, /admin/updateUser
+ * 
+ * @author Umanga Amatya
+ */
+
 @MultipartConfig
 @WebServlet(asyncSupported = true, urlPatterns = {
 	    "/admin", 
@@ -34,21 +45,24 @@ import com.chargehive.util.ValidationUtil;
 public class AdminController extends HttpServlet {
     
     private static final long serialVersionUID = 1L;
-
+    
+    // GET: Only accessible to admin; forwards to admin dashboard
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
         HttpSession session = request.getSession(false);
         String role = (session != null) ? (String) session.getAttribute("userRole") : null;
-
+        
+        // Redirect non-admin users
         if (!"admin".equalsIgnoreCase(role)) {
-            response.sendRedirect(request.getContextPath() + "/user"); // redirect unauthorized users
+            response.sendRedirect(request.getContextPath() + "/user"); 
             return;
         }
 
         request.getRequestDispatcher(RedirectionUtil.adminUrl).forward(request, response);
     }
-
+    
+    // POST: Delegates to appropriate handler based on request path
     protected void doPost(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {
     	String role = (String) request.getSession().getAttribute("userRole");
@@ -75,6 +89,12 @@ public class AdminController extends HttpServlet {
         }
     }
     
+    /**
+     * Adds a new charging station to the database.
+     * 
+     * @param req contains stationName, location, availability, type, price, ports
+     * @param resp outputs success or error as JSON
+     */
     private void handleAddStation(HttpServletRequest req, HttpServletResponse resp) 
         throws IOException {
         
@@ -170,7 +190,12 @@ public class AdminController extends HttpServlet {
         }
     }
     
-    
+    /**
+     * Updates an existing station by stationId.
+     * 
+     * @param request must contain stationId and updated station fields
+     * @param response sends back JSON response with status
+     */
     private void updateStation(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -247,6 +272,12 @@ public class AdminController extends HttpServlet {
         }
     }
     
+    /**
+     * Deletes a station from the database by stationId.
+     * 
+     * @param request must contain stationId
+     * @param response JSON message indicating success or error
+     */
     private void deleteStation(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int stationId = Integer.parseInt(request.getParameter("stationId"));
 
@@ -275,6 +306,14 @@ public class AdminController extends HttpServlet {
         }
     }
     
+    /**
+     * Utility to get a required form field.
+     * 
+     * @param req HttpServletRequest containing parameters
+     * @param paramName name of the required field
+     * @return trimmed value
+     * @throws IllegalArgumentException if field is missing or empty
+     */
     private String getRequiredParameter(HttpServletRequest req, String paramName) 
         throws IllegalArgumentException {
         
@@ -285,6 +324,12 @@ public class AdminController extends HttpServlet {
         return value.trim();
     }
     
+    /**
+     * Handles adding a new user to the system.
+     * 
+     * @param request contains userFullName, userEmail, userPassword, userContact, userAddress
+     * @param response returns JSON with result
+     */
     private void handleAddUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();
@@ -360,6 +405,12 @@ public class AdminController extends HttpServlet {
         }
     }
     
+    /**
+     * Deletes a user based on userId.
+     * 
+     * @param request must contain userId
+     * @param response sends back JSON indicating status
+     */
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int userId = Integer.parseInt(request.getParameter("userId"));
 
@@ -388,6 +439,12 @@ public class AdminController extends HttpServlet {
         }
     }
     
+    /**
+     * Updates user details including password and contact info.
+     * 
+     * @param request must contain userId and all updated fields
+     * @param response sends JSON status of update
+     */
     private void updateUser(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json");
         PrintWriter out = response.getWriter();

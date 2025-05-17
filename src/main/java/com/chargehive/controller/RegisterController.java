@@ -14,6 +14,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/**
+ * Handles user registration logic including validation, password encryption,
+ * and saving user data to the database.
+ * 
+ * URL Mapping: /registration
+ * 
+ * @author Umanga Amatya
+ */
+
 @WebServlet(asyncSupported = true, urlPatterns = { "/registration"})
 
 public class RegisterController extends HttpServlet {
@@ -24,12 +33,25 @@ public class RegisterController extends HttpServlet {
     private static final String DEFAULT_ROLE = "user";
     private static final int DEFAULT_LOYALTY_POINTS = 0;
     private static final String DEFAULT_MEMBERSHIP = "bronze";
-
+    
+    /**
+     * Loads the registration form page.
+     *
+     * @param req  incoming request
+     * @param resp response used to forward to registration.jsp
+     */
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("WEB-INF/pages/registration.jsp").forward(req, resp);
     }
 
+    /**
+     * Processes the registration form submission.
+     * Validates user input, encrypts password, and saves user data.
+     *
+     * @param req  the registration form submission
+     * @param resp response to redirect or show error
+     */
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
@@ -41,8 +63,7 @@ public class RegisterController extends HttpServlet {
             } else if(!isAdded) {
                 handleError(req, resp, "Could not register your account. Please try again later!");
             } else {
-                // Upon successful registration
-                //resp.sendRedirect(req.getContextPath() + "/login.jsp");
+            	// Forward to login page after successful registration
             	req.getRequestDispatcher("WEB-INF/pages/login.jsp").forward(req, resp);
             }
         } catch (NumberFormatException e) {
@@ -53,6 +74,13 @@ public class RegisterController extends HttpServlet {
         }
     }
     
+    /**
+     * Extracts and validates user input fields from the registration form.
+     * 
+     * @param req HttpServletRequest containing form parameters
+     * @return UserModel with sanitized and encrypted data
+     * @throws Exception if validation fails
+     */
     private UserModel extractUserModel(HttpServletRequest req) throws Exception {
         String userName = req.getParameter("user_name");
         String userContact = req.getParameter("user_contact");
@@ -122,7 +150,13 @@ public class RegisterController extends HttpServlet {
     }
     
     
-    
+    /**
+     * Displays the registration form again with an error message.
+     *
+     * @param req     request object to attach the error
+     * @param resp    response used to forward back to the form
+     * @param message error message to display
+     */
     private void handleError(HttpServletRequest req, HttpServletResponse resp, String message)
             throws ServletException, IOException {
         req.setAttribute("error", message);

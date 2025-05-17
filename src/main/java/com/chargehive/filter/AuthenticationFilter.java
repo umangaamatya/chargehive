@@ -16,6 +16,16 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+/**
+ * Servlet Filter for handling authentication checks.
+ * Restricts access to protected pages unless the user is logged in.
+ * Allows open access to public pages such as login, registration, and home.
+ * 
+ * URL Pattern: /*
+ * 
+ * @author Umanga Amatya
+ */
+
 @WebFilter(asyncSupported = true, urlPatterns = { "/*" })
 public class AuthenticationFilter implements Filter {
 
@@ -30,13 +40,24 @@ public class AuthenticationFilter implements Filter {
 
 
 
-
+	/**
+	 * Initializes the filter. Can be used to set up resources if needed.
+	 */
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
 		Filter.super.init(filterConfig);
 	}
-
+	
+	/**
+	 * Intercepts all incoming requests and filters access based on session state.
+	 * 
+	 * @param request  the incoming ServletRequest
+	 * @param response the ServletResponse object
+	 * @param chain    the FilterChain to continue execution
+	 * @throws IOException if an input/output error occurs
+	 * @throws ServletException if a servlet-specific error occurs
+	 */
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
@@ -47,7 +68,8 @@ public class AuthenticationFilter implements Filter {
 		String contextPath = req.getContextPath();
 	
 		String uri = req.getRequestURI();
-
+		
+		// Allow access to static resources and public pages
 		if (uri.endsWith(".css") || uri.endsWith(HOME) || uri.endsWith(PROFILE) || uri.endsWith(ABOUT) || uri.endsWith(ROOT)) {
 			chain.doFilter(request, response);
 			return;
@@ -55,9 +77,7 @@ public class AuthenticationFilter implements Filter {
 
 		// Get the session and check if user is logged in
 		boolean isLoggedIn = SessionUtil.getAttribute(req, "userId") != null;
-
-//		
-//		
+		
 		if (isLoggedIn) {
 		    // Allow access to everything, including /login and /registration
 		    chain.doFilter(request, response);
@@ -72,7 +92,10 @@ public class AuthenticationFilter implements Filter {
 		    }
 		}
 	}
-
+	
+	/**
+	 * Cleans up resources when the filter is destroyed.
+	 */
 	@Override
 	public void destroy() {
 		// TODO Auto-generated method stub

@@ -6,7 +6,22 @@ import java.sql.SQLException;
 import com.chargehive.config.DbConfig;
 import com.chargehive.model.UserModel;
 
+
+/**
+ * Handles the logic for registering new users.
+ * Connects to the database and inserts user data into the `user` table.
+ * 
+ * @author Umanga Amatya
+ */
+
 public class RegisterService {
+	
+	/**
+     * Adds a new user to the database using the provided UserModel.
+     *
+     * @param userModel the user data to be inserted (name, email, password, etc.)
+     * @return true if insertion is successful, false otherwise
+     */
 	public Boolean addUser(UserModel userModel) {
 	    System.out.println("Attempting to insert user: " + userModel.toString()); // Debug
 	    
