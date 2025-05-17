@@ -1,10 +1,10 @@
-ChargeHive - EV Charging Station Web Platform
+# ChargeHive - EV Charging Station Web Platform
 
-🚀 Introduction
+## 🚀 Introduction
 
 ChargeHive is a web-based platform designed to simplify the management and booking of Electric Vehicle (EV) charging stations. It provides users with access to real-time data about station availability, pricing, and allows them to make bookings. Admins can manage users and stations via an intuitive dashboard.
 
-🌐 Technologies Used
+## 🌐 Technologies Used
 
 - Java (Servlets & JSP): Backend development
 
@@ -20,7 +20,7 @@ ChargeHive is a web-based platform designed to simplify the management and booki
 
 - JSTL: Rendering server-side logic in JSP
 
-🧱 How to Run ChargeHive Locally
+## 🧱 How to Run ChargeHive Locally
 
 1. Clone the Repository
 
@@ -107,7 +107,7 @@ Right-click the project > Run on Server
 
 Navigate to http://localhost:8080/ChargeHive
 
-📊 Key Features
+## 📊 Key Features
 
 User registration and login with session handling
 
@@ -122,7 +122,7 @@ Search and filter support
 Basic profile picture upload for users
 
 
-📅 Future Enhancements
+## 📅 Future Enhancements
 
 - OTP/email verification
 
@@ -132,10 +132,10 @@ Basic profile picture upload for users
 
 - AI-based Recommendation System
 
-🚀 Maintainers
+## 🚀 Maintainers
 
 Umanga Amatya (Backend Developer)
 
-✉️ Contact
+## ✉️ Contact
 
 For issues, reach out to: amatyaumanga@gmail.com
