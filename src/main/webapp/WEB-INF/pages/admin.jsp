@@ -48,6 +48,33 @@ try {
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css" />
   </head>
   <body>
+  
+  	 <%
+	    int userId = (int) session.getAttribute("userId");
+	    String fullName = "", email = "", contact = "", address = "";
+	
+	    try {
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/chargehive", "root", "");
+	        PreparedStatement stmt = conn.prepareStatement("SELECT user_fullName, user_email, user_contact, user_address FROM user WHERE user_id = ?");
+	        stmt.setInt(1, userId);
+	        ResultSet rs = stmt.executeQuery();
+	
+	        if (rs.next()) {
+	            fullName = rs.getString("user_fullName");
+	            email = rs.getString("user_email");
+	            contact = rs.getString("user_contact");
+	            address = rs.getString("user_address");
+	        }
+	
+	        rs.close();
+	        stmt.close();
+	        conn.close();
+	    } catch (Exception e) {
+	        out.println("<p style='color:red;'>Error loading profile data: " + e.getMessage() + "</p>");
+	    }
+	%>
+	
     <div class="admin-dashboard">
       <div class="div">
         <div class="total-station-group">
@@ -203,7 +230,10 @@ try {
 		  </table>
 		</div>
         
-        <div class="text-wrapper-65">Hi, Ardent.</div>
+        <%
+		  String firstName = fullName.split(" ")[0];
+		%>
+		<div class="text-wrapper-65">Hi, <%= firstName %>.</div>
 
           <button id="addStationBtn" class="overlap-4 add-btn">
             <img src="resources/images/Vector.png" alt="Add" />

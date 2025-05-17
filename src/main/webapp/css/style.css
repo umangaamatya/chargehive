@@ -6,12 +6,18 @@
   }
   
   html, body {
-    width: 100%;
     height: 100%;
-    background-color: #0e0e0e; /* or your desired dark color */
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(9, 17, 30, 1) 39%,
+    rgba(16, 49, 101, 1) 100%
+  );
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Avenir", sans-serif; /* optional */
   }
 
 .home-page {
@@ -2162,7 +2168,7 @@
   
   .admin-dashboard .text-wrapper-65 {
     position: absolute;
-    width: 215px;
+    width: 515px;
     top: 285px;
     left: 218px;
     font-family: "Avenir-Heavy", Helvetica;
@@ -2437,6 +2443,7 @@
 }
   
   .user-profile-page {
+ 	min-height: 100vh;
     background-color: rgba(255, 255, 255, 1.0);
     background: linear-gradient(
       180deg,
@@ -2444,9 +2451,10 @@
       rgba(16, 49, 101, 1) 100%
     );
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
+    
   }
 
   .user-profile-page .total-station-group {
@@ -2458,14 +2466,14 @@
   }
   
   .user-profile-page .div {
+    min-height: 100vh;
     background-color: rgba(255, 255, 255, 1.0);
     background: linear-gradient(
       180deg,
       rgba(9, 17, 30, 1) 39%,
       rgba(16, 49, 101, 1) 100%
     );
-    width: 1920px;
-    height: 1380px;
+    
     position: relative;
   }
   
@@ -3930,6 +3938,79 @@
     object-fit: cover;
   }
 
+.station-region {
+  margin: 60px 0;
+  text-align: left;
+  transform: translateY(300px);
+}
+
+.region-title {
+  font-size: 48px;
+  font-family: "Avenir-Medium", Helvetica, sans-serif;
+  color: #ffffff;
+  margin-bottom: 30px;
+  transform: translateX(35px);
+}
+
+.station-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  gap: 40px;
+  padding: 40px;
+}
+
+.station-card {
+  width: 509px;
+  height: 688px;
+  border-radius: 27px;
+  border: 1px solid #2963a0;
+  background-color: #10182f;
+  box-shadow: 9px 14px 8px rgba(0, 0, 0, 0.25);
+  font-family: "Avenir-Medium", Helvetica, sans-serif;
+  color: #ffffff;
+  padding: 29px;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.station-card:hover {
+  transform: scale(1.02);
+}
+
+.station-card img {
+  width: 449px;
+  height: 332px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.station-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+
+.station-card p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #bdbbbb; /* light grey */
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.station-card p strong {
+  color: #ffffff;
+}
+
   .product-page .amp-station-card{
     position: absolute;
     width: 509px;
@@ -3947,16 +4028,16 @@
     object-fit: cover;
   }
 
-  .product-page .volt-station-card{
-    position: absolute;
+  /* .product-page .volt-station-card{
+    position: relaitve;
+    display: inline-block;
     width: 509px;
-    height: 688px;
-    top: 2266px;
+    height: auto;
     left: 131px;
-  }
+  } */
 
   .product-page .volt-station-has-the{
-    position: absolute;
+    position: relative;
     width: 446px;
     top: 441px;
     left: 29px;
@@ -3990,11 +4071,7 @@
   }
 
   .product-page .element-l-normal{
-    position: absolute;
     width: 509px;
-    height: 688px;
-    top: 2266px;
-    left: 707px;
   }
 
   .product-page .adbd{
@@ -4007,21 +4084,27 @@
   }
 
   .product-page .navigation{
-    position: absolute;
+    position: fixed;
     width: 1644px;
     height: 77px;
     top: 63px;
     left: 143px;
+    z-index: 999;
+    justify-content: center;
   }
 
   .product-page .navbar{
-    position: relative;
+    margin: 0 auto;
     width: 1632px;
     height: 77px;
     background-color: #061521;
     border-radius: 68px;
     border: 1px solid;
     border-color: #000000;
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 24px;
   }
 
   .product-page .div-wrapper{
@@ -4601,9 +4684,11 @@
       rgba(16, 49, 101, 1) 100%
     );
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
   }
   
   .user-dashboard .div {
@@ -4619,23 +4704,24 @@
   position: relative;
   padding-bottom: 50px; /* optional: space from bottom */
   box-sizing: border-box;
+  flex-grow: 1;
 }
   
   .user-dashboard .overlap {
-    position: absolute;
-    width: 1450px;
-    height: 519px;
-    top: 462px;
-    left: 235px;
     background-color: #192736;
     border-radius: 10px;
     border: 1px solid;
     border-color: #2963a0;
     box-shadow: 5px 5px 4px #00000040;
+    padding: 20px;
+	margin: 40px 0;
+	width: 100%;
+	max-width: 1450px;
+	box-sizing: border-box;
   }
   
   .user-dashboard .overlap-group {
-    position: absolute;
+    
     width: 1450px;
     height: 129px;
     top: 0;
@@ -4643,25 +4729,16 @@
   }
   
   .user-dashboard .rectangle {
-    top: 0;
     background-color: #445e79;
     border-radius: 10px 10px 0px 0px;
-    position: absolute;
-    width: 1450px;
-    height: 65px;
-    left: 0;
     border: 1px solid;
     border-color: #2963a0;
     box-shadow: 5px 5px 4px #00000040;
   }
   
   .user-dashboard .rectangle-2 {
-    top: 64px;
-    background-color: #09111e;
-    position: absolute;
-    width: 1450px;
-    height: 65px;
-    left: 0;
+    background-color: #445e79;
+    border-radius: 10px 10px 0px 0px;
     border: 1px solid;
     border-color: #2963a0;
     box-shadow: 5px 5px 4px #00000040;
@@ -4669,9 +4746,6 @@
   
   .user-dashboard .text-wrapper {
     width: 32px;
-    top: 83px;
-    left: 829px;
-    position: absolute;
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -4681,11 +4755,19 @@
     white-space: nowrap;
   }
   
+  .user-dashboard .footer {
+  width: 100%;
+  padding: 24px 0;
+  text-align: center;
+  background: rgba(16, 49, 101, 0.95); /* match your gradient's end color or use a semi-transparent overlay */
+  color: #fff;
+  font-size: 1rem;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
   .user-dashboard .text-wrapper-2 {
     width: 19px;
-    top: 83px;
-    left: 1011px;
-    position: absolute;
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -4696,10 +4778,7 @@
   }
   
   .user-dashboard .text-wrapper-3 {
-    position: absolute;
     width: 151px;
-    top: 18px;
-    left: 71px;
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -4710,7 +4789,6 @@
   }
   
   .user-dashboard .text-wrapper-4 {
-    position: absolute;
     width: 151px;
     top: 83px;
     left: 76px;
@@ -4724,7 +4802,6 @@
   }
   
   .user-dashboard .text-wrapper-5 {
-    position: absolute;
     width: 94px;
     top: 18px;
     left: 331px;
@@ -4738,7 +4815,6 @@
   }
   
   .user-dashboard .text-wrapper-6 {
-    position: absolute;
     width: 123px;
     top: 83px;
     left: 326px;
@@ -4752,7 +4828,6 @@
   }
   
   .user-dashboard .text-wrapper-7 {
-    position: absolute;
     width: 121px;
     top: 19px;
     left: 534px;
@@ -4766,7 +4841,6 @@
   }
   
   .user-dashboard .text-wrapper-8 {
-    position: absolute;
     width: 121px;
     top: 85px;
     left: 534px;
@@ -4780,7 +4854,6 @@
   }
   
   .user-dashboard .text-wrapper-9 {
-    position: absolute;
     width: 192px;
     top: 18px;
     left: 743px;
@@ -4794,7 +4867,6 @@
   }
   
   .user-dashboard .text-wrapper-10 {
-    position: absolute;
     width: 58px;
     top: 17px;
     left: 999px;
@@ -4808,7 +4880,7 @@
   }
   
   .user-dashboard .text-wrapper-11 {
-    position: absolute;
+     
     width: 58px;
     top: 18px;
     left: 1166px;
@@ -4822,7 +4894,7 @@
   }
   
   .user-dashboard .text-wrapper-12 {
-    position: absolute;
+     
     width: 58px;
     top: 83px;
     left: 1166px;
@@ -4836,7 +4908,7 @@
   }
   
   .user-dashboard .log-in-button {
-    position: absolute;
+     
     width: 97px;
     height: 39px;
     top: 77px;
@@ -4849,7 +4921,7 @@
   }
   
   .user-dashboard .log-in-button-2 {
-    position: absolute;
+     
     width: 97px;
     height: 39px;
     top: 77px;
@@ -4861,7 +4933,7 @@
   }
   
   .user-dashboard .text-wrapper-13 {
-    position: absolute;
+     
     width: 45px;
     top: 84px;
     left: 1334px;
@@ -4875,7 +4947,6 @@
   }
   
   .user-dashboard .overlap-2 {
-    position: absolute;
     width: 1450px;
     height: 65px;
     top: 194px;
@@ -4887,7 +4958,7 @@
   }
   
   .user-dashboard .text-wrapper-14 {
-    position: absolute;
+     
     width: 32px;
     top: 18px;
     left: 1010px;
@@ -4904,7 +4975,7 @@
     width: 32px;
     top: 16px;
     left: 828px;
-    position: absolute;
+     
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -4915,7 +4986,7 @@
   }
   
   .user-dashboard .text-wrapper-16 {
-    position: absolute;
+     
     width: 134px;
     top: 16px;
     left: 75px;
@@ -4929,7 +5000,7 @@
   }
   
   .user-dashboard .text-wrapper-17 {
-    position: absolute;
+     
     width: 99px;
     top: 18px;
     left: 325px;
@@ -4943,7 +5014,7 @@
   }
   
   .user-dashboard .text-wrapper-18 {
-    position: absolute;
+     
     width: 137px;
     top: 16px;
     left: 533px;
@@ -4957,7 +5028,7 @@
   }
   
   .user-dashboard .text-wrapper-19 {
-    position: absolute;
+     
     width: 58px;
     top: 18px;
     left: 1165px;
@@ -4971,7 +5042,6 @@
   }
   
   .user-dashboard .div-wrapper {
-    position: absolute;
     width: 97px;
     height: 39px;
     top: 13px;
@@ -4983,7 +5053,7 @@
   }
   
   .user-dashboard .text-wrapper-20 {
-    position: absolute;
+     
     width: 45px;
     top: 6px;
     left: 27px;
@@ -4997,7 +5067,7 @@
   }
   
   .user-dashboard .overlap-3 {
-    position: absolute;
+     
     width: 1450px;
     height: 65px;
     top: 324px;
@@ -5012,7 +5082,7 @@
     width: 32px;
     top: 14px;
     left: 1010px;
-    position: absolute;
+     
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -5026,7 +5096,7 @@
     width: 32px;
     top: 18px;
     left: 828px;
-    position: absolute;
+     
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -5037,7 +5107,7 @@
   }
   
   .user-dashboard .text-wrapper-23 {
-    position: absolute;
+     
     width: 146px;
     top: 16px;
     left: 75px;
@@ -5051,7 +5121,7 @@
   }
   
   .user-dashboard .text-wrapper-24 {
-    position: absolute;
+     
     width: 123px;
     top: 16px;
     left: 325px;
@@ -5065,7 +5135,7 @@
   }
   
   .user-dashboard .text-wrapper-25 {
-    position: absolute;
+     
     width: 137px;
     top: 18px;
     left: 533px;
@@ -5079,7 +5149,7 @@
   }
   
   .user-dashboard .text-wrapper-26 {
-    position: absolute;
+     
     width: 58px;
     top: 16px;
     left: 1165px;
@@ -5093,7 +5163,7 @@
   }
   
   .user-dashboard .overlap-4 {
-    position: absolute;
+     
     width: 1450px;
     height: 65px;
     top: 454px;
@@ -5106,7 +5176,7 @@
   }
   
   .user-dashboard .text-wrapper-27 {
-    position: absolute;
+     
     width: 146px;
     top: 18px;
     left: 75px;
@@ -5120,7 +5190,7 @@
   }
   
   .user-dashboard .text-wrapper-28 {
-    position: absolute;
+     
     width: 97px;
     top: 20px;
     left: 325px;
@@ -5135,7 +5205,7 @@
   
   .user-dashboard .text-wrapper-29 {
     top: 20px;
-    position: absolute;
+     
     width: 121px;
     left: 533px;
     font-family: "Avenir-Roman", Helvetica;
@@ -5149,7 +5219,7 @@
   
   .user-dashboard .text-wrapper-30 {
     top: 20px;
-    position: absolute;
+     
     width: 58px;
     left: 1165px;
     font-family: "Avenir-Roman", Helvetica;
@@ -5162,7 +5232,7 @@
   }
   
   .user-dashboard .overlap-5 {
-    position: absolute;
+     
     width: 1450px;
     height: 65px;
     top: 129px;
@@ -5174,7 +5244,7 @@
   }
   
   .user-dashboard .text-wrapper-31 {
-    position: absolute;
+     
     width: 151px;
     top: 16px;
     left: 75px;
@@ -5188,7 +5258,7 @@
   }
   
   .user-dashboard .text-wrapper-32 {
-    position: absolute;
+     
     width: 66px;
     top: 16px;
     left: 325px;
@@ -5203,7 +5273,7 @@
   
   .user-dashboard .text-wrapper-33 {
     top: 18px;
-    position: absolute;
+     
     width: 121px;
     left: 533px;
     font-family: "Avenir-Roman", Helvetica;
@@ -5216,7 +5286,7 @@
   }
   
   .user-dashboard .overlap-6 {
-    position: absolute;
+     
     width: 1450px;
     height: 65px;
     top: 259px;
@@ -5231,7 +5301,7 @@
     width: 32px;
     top: 15px;
     left: 1010px;
-    position: absolute;
+     
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -5245,7 +5315,7 @@
     width: 32px;
     top: 15px;
     left: 828px;
-    position: absolute;
+     
     font-family: "Avenir-Roman", Helvetica;
     font-weight: 400;
     color: #ffffff;
@@ -5256,7 +5326,7 @@
   }
   
   .user-dashboard .text-wrapper-36 {
-    position: absolute;
+     
     width: 146px;
     top: 15px;
     left: 75px;
@@ -5270,7 +5340,7 @@
   }
   
   .user-dashboard .text-wrapper-37 {
-    position: absolute;
+     
     width: 123px;
     top: 15px;
     left: 325px;
@@ -5285,7 +5355,7 @@
   
   .user-dashboard .text-wrapper-38 {
     top: 15px;
-    position: absolute;
+     
     width: 121px;
     left: 533px;
     font-family: "Avenir-Roman", Helvetica;
@@ -5377,7 +5447,7 @@
   
   .user-dashboard .text-wrapper-43 {
     position: absolute;
-    width: 246px;
+    width: 500px;
     top: 261px;
     left: 237px;
     font-family: "Avenir-Heavy", Helvetica;
@@ -7106,7 +7176,7 @@
 }
 
 .booking-styled-table thead {
-  background: #102c57;
+  background: rgb(70, 93, 180);
 }
 
 .booking-styled-table thead th {

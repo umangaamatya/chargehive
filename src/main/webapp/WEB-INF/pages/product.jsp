@@ -10,9 +10,6 @@
   <body>
     <div class="product-page">
       <div class="div">
-        <div class="text-wrapper">Discover our stations</div>
-        <div class="text-wrapper-2">Kathmandu</div>
-        <div class="text-wrapper-3">Lalitpur</div>
         <footer>
 	        <div class="text-wrapper-4">Quick Links</div>
 			<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-5">Gairidhara, Kathmandu</a>
@@ -38,102 +35,91 @@
 			<img class="line" src="resources/images/Line 1.png" />
 			<img class="img" src="resources/images/chargeHiveLogoTransparent.png" />
         </footer>
-        <div class="swift-charge-card">
-          <div class="overlap-group">
-            <p class="swift-charge-houses">
-              <span class="span"
-                >Swift Charge houses ChargeHive’s fastest charging stations for EV’s in Nepal.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Baneshwor, Kathmandu<br />Ports: 8<br />Price: 45₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-23">Swift Charge</div>
-            <img class="DQ-station" src="resources/images/DQ-station.png" />
-          </div>
-        </div>
-        <div class="quick-charge-card">
-          <div class="overlap-group">
-            <p class="quick-station-is-the">
-              <span class="span"
-                >Quick Station is the latest addition to ChargeHive’s large network of stations.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Naxal, Kathmandu<br />Ports: 12<br />Price: 55₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-24">Quick Charge</div>
-            <img class="element-evbox-business" src="resources/images/02_evbox_business_charger_us_image2.jpg" />
-          </div>
-        </div>
-        <div class="charge-hub-card">
-          <div class="overlap-group">
-            <p class="div-2">
-              <span class="span"
-                >Charge Hub in Lazimpat has the most variety of chargers for different vehicles.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Lazimpat, Kathmandu<br />Ports: 10<br />Price: 50₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-25">Charge Hub</div>
-            <img class="GDN-e-pit-charger" src="resources/images/GDN_E-Pit-Charger_GD21_02.jpeg" />
-          </div>
-        </div>
-        <div class="eco-charge-card">
-          <div class="overlap-group">
-            <p class="div-3">
-              <span class="span">Eco Charge is ChargeHive’s most eco-friendly charging station.<br /><br /></span>
-              <span class="text-wrapper-22"
-                >Location: Nayabazar, Kathmandu<br />Ports: 10<br />Price: 50₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-26">Eco Charge</div>
-            <img class="ked-x" src="resources/images/ked202204110035.700x.0.jpg" />
-          </div>
-        </div>
-        <div class="amp-station-card">
-          <div class="overlap-group">
-            <p class="div-3">
-              <span class="span"
-                >Amp Station is ChargeHive’s busiest charging station in Kathmandu Valley.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Golfutar, Kathmandu<br />Ports: 8<br />Price: 60₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-26">Amp Station</div>
-            <img class="element-f" src="resources/images/360_F_854728069_gAjSaJu4CBSUBwWQSgN3LN1Dp9QM128f.jpg" />
-          </div>
-        </div>
-        <div class="volt-station-card">
-          <div class="overlap-group">
-            <p class="volt-station-has-the">
-              <span class="span"
-                >Volt Station has the most high tech and latest charging stations in Nepal.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Sanepa, Lalitpur<br />Ports: 12<br />Price: 55₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-27">Volt Station</div>
-            <img class="element-l-normal" src="resources/images/208106923_l_normal_none-1.jpg"/>
-          </div>
-        </div>
-        <div class="rapid-station-card">
-          <div class="overlap-group">
-            <p class="div-2">
-              <span class="span"
-                >Rapid Station is one of ChargeHive’s first charging stations for EV’s in Lalitpur.<br /><br
-              /></span>
-              <span class="text-wrapper-22"
-                >Location: Jhamsikhel, Lalitpur<br />Ports: 8<br />Price: 45₹ per kWh<br
-              /></span>
-            </p>
-            <div class="text-wrapper-25">Rapid Station</div>
-            <img class="adbd" src="resources/images/e89cd3a6-adbd-4f29-ac54-2faecf5548a0.jpeg" />
-          </div>
-        </div>
+        
+       <div class="text-wrapper">Discover our stations</div>
+       
+       <!--  Kathmandu -->
+       <div class="station-region">
+	       <div class="region-title">Kathmandu</div>
+	       <div class="station-cards">
+			  <!-- Swift Charge -->
+			  <div class="station-card">
+			    <img src="resources/images/DQ-station.png" alt="Swift Charge Station" />
+			    <h3>Swift Charge</h3>
+			    <p>Swift Charge houses ChargeHive’s fastest charging stations for EV’s in Nepal.</p>
+			    <p><strong>Location:</strong> Baneshwor, Kathmandu</p>
+			    <p><strong>Ports:</strong> 8</p>
+			    <p><strong>Price:</strong> 45₹ per kWh</p>
+			  </div>
+			
+			  <!-- Quick Charge -->
+			  <div class="station-card">
+			    <img src="resources/images/02_evbox_business_charger_us_image2.jpg" alt="Quick Charge Station" />
+			    <h3>Quick Charge</h3>
+			    <p>Quick Station is the latest addition to ChargeHive’s large network of stations.</p>
+			    <p><strong>Location:</strong> Naxal, Kathmandu</p>
+			    <p><strong>Ports:</strong> 12</p>
+			    <p><strong>Price:</strong> 55₹ per kWh</p>
+			  </div>
+			
+			  <!-- Charge Hub -->
+			  <div class="station-card">
+			    <img src="resources/images/GDN_E-Pit-Charger_GD21_02.jpeg" alt="Charge Hub" />
+			    <h3>Charge Hub</h3>
+			    <p>Charge Hub in Lazimpat has the most variety of chargers for different vehicles.</p>
+			    <p><strong>Location:</strong> Lazimpat, Kathmandu</p>
+			    <p><strong>Ports:</strong> 10</p>
+			    <p><strong>Price:</strong> 50₹ per kWh</p>
+			  </div>
+			
+			  <!-- Eco Charge -->
+			  <div class="station-card">
+			    <img src="resources/images/ked202204110035.700x.0.jpg" alt="Eco Charge" />
+			    <h3>Eco Charge</h3>
+			    <p>Eco Charge is ChargeHive’s most eco-friendly charging station.</p>
+			    <p><strong>Location:</strong> Nayabazar, Kathmandu</p>
+			    <p><strong>Ports:</strong> 10</p>
+			    <p><strong>Price:</strong> 50₹ per kWh</p>
+			  </div>
+			
+			  <!-- Amp Station -->
+			  <div class="station-card">
+			    <img src="resources/images/360_F_854728069_gAjSaJu4CBSUBwWQSgN3LN1Dp9QM128f.jpg" alt="Amp Station" />
+			    <h3>Amp Station</h3>
+			    <p>Amp Station is ChargeHive’s busiest charging station in Kathmandu Valley.</p>
+			    <p><strong>Location:</strong> Golfutar, Kathmandu</p>
+			    <p><strong>Ports:</strong> 8</p>
+			    <p><strong>Price:</strong> 60₹ per kWh</p>
+			  </div>
+			</div>
+		</div>	
+		
+			<div class="station-region">
+				<div class="region-title">Lalitpur</div> 
+				<div class="station-cards">
+				  <!-- Volt Station -->
+				  <div class="station-card">
+				    <img src="resources/images/208106923_l_normal_none-1.jpg" alt="Volt Station" />
+				    <h3>Volt Station</h3>
+				    <p>Volt Station has the most high tech and latest charging stations in Nepal.</p>
+				    <p><strong>Location:</strong> Sanepa, Lalitpur</p>
+				    <p><strong>Ports:</strong> 12</p>
+				    <p><strong>Price:</strong> 55₹ per kWh</p>
+				  </div>
+				
+				  <!-- Rapid Station -->
+				  <div class="station-card">
+				    <img src="resources/images/e89cd3a6-adbd-4f29-ac54-2faecf5548a0.jpeg" alt="Rapid Station" />
+				    <h3>Rapid Station</h3>
+				    <p>Rapid Station is one of ChargeHive’s first charging stations for EV’s in Lalitpur.</p>
+				    <p><strong>Location:</strong> Jhamsikhel, Lalitpur</p>
+				    <p><strong>Ports:</strong> 8</p>
+				    <p><strong>Price:</strong> 45₹ per kWh</p>
+				  </div>
+				</div>
+			  </div>	
+	     	</div>
+	      
         <div class="navigation">
 		  <div class="navbar">
 		

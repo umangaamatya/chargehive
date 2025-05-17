@@ -9,6 +9,32 @@
   </head>
   <body>
     <div class="user-dashboard">
+    
+    <%
+	    int userId = (int) session.getAttribute("userId");
+	    String fullName = "", email = "", contact = "", address = "";
+	
+	    try {
+	        Class.forName("com.mysql.cj.jdbc.Driver");
+	        Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/chargehive", "root", "");
+	        PreparedStatement stmt = conn.prepareStatement("SELECT user_fullName, user_email, user_contact, user_address FROM user WHERE user_id = ?");
+	        stmt.setInt(1, userId);
+	        ResultSet rs = stmt.executeQuery();
+	
+	        if (rs.next()) {
+	            fullName = rs.getString("user_fullName");
+	            email = rs.getString("user_email");
+	            contact = rs.getString("user_contact");
+	            address = rs.getString("user_address");
+	        }
+	
+	        rs.close();
+	        stmt.close();
+	        conn.close();
+	    } catch (Exception e) {
+	        out.println("<p style='color:red;'>Error loading profile data: " + e.getMessage() + "</p>");
+	    }
+	%>
       <div class="div">
         <div class="text-wrapper-42">Stations near you</div>
         <div class="tables-container">
@@ -137,7 +163,10 @@
 		  }
 		%>
 
-        <div class="text-wrapper-43">Hi, Umanga.</div>
+        <%
+		  String firstName = fullName.split(" ")[0];
+		%>
+		<div class="text-wrapper-43">Hi, <%= firstName %>.</div>
        <div style="display: flex; justify-content: flex-end; margin-bottom: 30px; transform: translate(-30px,-290px)">
 		  <form method="GET" action="${pageContext.request.contextPath}/user" style="display: flex; align-items: center; gap: 10px;">
 		
@@ -207,6 +236,7 @@
 	    }
 	  }
 	</script>
+	
   </body>
   
   
