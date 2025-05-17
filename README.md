@@ -24,7 +24,7 @@ ChargeHive is a web-based platform designed to simplify the management and booki
 
 1. Clone the Repository
 
-git clone https://github.com/your-username/chargehive.git
+git clone https://github.com/umangaamatya/chargehive.git
 
 2. Import into IDE
 
