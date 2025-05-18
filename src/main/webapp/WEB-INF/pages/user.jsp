@@ -198,11 +198,24 @@
 
         <div class="navigation">
           <div class="navbar">
+          
+           <%
+		  	HttpSession session1 = request.getSession(false);
+		    boolean isLoggedIn = (session1 != null && session1.getAttribute("userEmail") != null);
+		    String role = (session1 != null && session1.getAttribute("userRole") != null)
+		                  ? session1.getAttribute("userRole").toString()
+		                  : "";
+			%>
+			
             <a href="${pageContext.request.contextPath}/index" class="text-wrapper-45">Home</a>
             <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
             <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
-            <a href="${pageContext.request.contextPath}/aboutus" class="text-wrapper-46">About Us</a>
-            <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-47">Dashboard</a>
+            <a href="${pageContext.request.contextPath}/about" class="text-wrapper-46">About Us</a>
+            <% if ("admin".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-47">Dashboard</a>
+			<% } else if ("user".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/user" class="text-wrapper-47">Dashboard</a>
+			<% } %>
             <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
             <a href="${pageContext.request.contextPath}/profile"><img class="admin-icon" src="resources/images/Admin icon.png" /></a>
           </div>

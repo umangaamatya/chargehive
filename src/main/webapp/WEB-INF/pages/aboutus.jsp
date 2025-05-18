@@ -60,6 +60,9 @@
 		    <%
 		        HttpSession session1 = request.getSession(false);
 		        boolean isLoggedIn = (session != null && session.getAttribute("userEmail") != null);
+		        String role = (session1 != null && session1.getAttribute("userRole") != null)
+		                  ? session1.getAttribute("userRole").toString()
+		                  : "";
 		    %>
 		    <div class="overlap-group">
 		        <% if (isLoggedIn) { %>
@@ -73,7 +76,11 @@
 		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
 		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
 		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-22">About Us</a>
-		    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-23">Dashboard</a>
+		     <% if ("admin".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-23">Dashboard</a>
+			<% } else if ("user".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/user" class="text-wrapper-23">Dashboard</a>
+			<% } %>
 		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
 		  </div>
 		</div>

@@ -84,7 +84,7 @@ public class AuthenticationFilter implements Filter {
 		} else {
 		    // If not logged in, allow only public routes
 		    if (uri.endsWith(LOGIN) || uri.endsWith(REGISTER) ||
-		        uri.endsWith(HOME) || uri.endsWith(ABOUT) || uri.endsWith(ROOT) || uri.endsWith(".css") || uri.endsWith(".js")) {
+		        uri.endsWith(HOME) || uri.endsWith(ABOUT) || uri.endsWith(ROOT) || uri.endsWith("/aboutus.jsp") || uri.endsWith(".css") || uri.endsWith(".js")) {
 		        chain.doFilter(request, response);
 		    } else {
 		        req.setAttribute("error", "You must log in first.");

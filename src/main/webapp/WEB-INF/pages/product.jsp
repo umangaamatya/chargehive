@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.sql.*" %>    
 <!DOCTYPE html>
 <html>
   <head>
@@ -10,31 +11,7 @@
   <body>
     <div class="product-page">
       <div class="div">
-        <footer>
-	        <div class="text-wrapper-4">Quick Links</div>
-			<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-5">Gairidhara, Kathmandu</a>
-			<a class="text-wrapper-6">010502204</a>
-			<p class="p">© 2025 ChargeHive. All rights reserved.</p>
-			<a href="mailto:support@chargehive.com" target="_blank" rel="noopener noreferrer">
-			  <div class="text-wrapper-7">support@chargehive.com</div>
-			</a>
-			<a href="https://maps.app.goo.gl/UHbNqyUCy5yAo7FD9" target="_blank" rel="noopener noreferrer" class="text-wrapper-8">Samata Marg - 4</a>
-			<a href="${pageContext.request.contextPath}/product" class="text-wrapper-9">Charging Stations</a>
-			<a href="${pageContext.request.contextPath}/admin" class="text-wrapper-10">Dashboard</a>
-			<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-11">LinkedIn</a>
-			<a href="" class="text-wrapper-12">Privacy Policy</a>
-			<a href="" class="text-wrapper-13">Cookie Policy</a>
-			<a href="" class="text-wrapper-14">Terms of Service</a>
-			<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-15">Facebook</a>
-			<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-16">Instagram</a>
-			<a href="https://x.com" target="_blank" rel="noopener noreferrer" class="text-wrapper-17">X</a>
-			<a href="${pageContext.request.contextPath}/about" class="text-wrapper-18">About Us</a>
-			<a href="${pageContext.request.contextPath}/contact" class="text-wrapper-19">Contact Us</a>
-			<div class="text-wrapper-20">Social</div>
-			<div class="text-wrapper-21">Legal</div>
-			<img class="line" src="resources/images/Line 1.png" />
-			<img class="img" src="resources/images/chargeHiveLogoTransparent.png" />
-        </footer>
+        
         
        <div class="text-wrapper">Discover our stations</div>
        
@@ -94,40 +71,108 @@
 			</div>
 		</div>	
 		
-			<div class="station-region">
+			<div class="station-region lalitpur-region">
 				<div class="region-title">Lalitpur</div> 
-				<div class="station-cards">
-				  <!-- Volt Station -->
-				  <div class="station-card">
-				    <img src="resources/images/208106923_l_normal_none-1.jpg" alt="Volt Station" />
-				    <h3>Volt Station</h3>
-				    <p>Volt Station has the most high tech and latest charging stations in Nepal.</p>
-				    <p><strong>Location:</strong> Sanepa, Lalitpur</p>
-				    <p><strong>Ports:</strong> 12</p>
-				    <p><strong>Price:</strong> 55₹ per kWh</p>
-				  </div>
-				
-				  <!-- Rapid Station -->
-				  <div class="station-card">
-				    <img src="resources/images/e89cd3a6-adbd-4f29-ac54-2faecf5548a0.jpeg" alt="Rapid Station" />
-				    <h3>Rapid Station</h3>
-				    <p>Rapid Station is one of ChargeHive’s first charging stations for EV’s in Lalitpur.</p>
-				    <p><strong>Location:</strong> Jhamsikhel, Lalitpur</p>
-				    <p><strong>Ports:</strong> 8</p>
-				    <p><strong>Price:</strong> 45₹ per kWh</p>
-				  </div>
-				</div>
-			  </div>	
-	     	</div>
+					<div class="station-cards-and-table">
+						<div class="station-cards lalitpur-cards">
+						  <!-- Volt Station -->
+						  <div class="station-card">
+						    <img src="resources/images/208106923_l_normal_none-1.jpg" alt="Volt Station" />
+						    <h3>Volt Station</h3>
+						    <p>Volt Station has the most high tech and latest charging stations in Nepal.</p>
+						    <p><strong>Location:</strong> Sanepa, Lalitpur</p>
+						    <p><strong>Ports:</strong> 12</p>
+						    <p><strong>Price:</strong> 55₹ per kWh</p>
+						  </div>
+						
+						  <!-- Rapid Station -->
+						  <div class="station-card">
+						    <img src="resources/images/e89cd3a6-adbd-4f29-ac54-2faecf5548a0.jpeg" alt="Rapid Station" />
+						    <h3>Rapid Station</h3>
+						    <p>Rapid Station is one of ChargeHive’s first charging stations for EV’s in Lalitpur.</p>
+						    <p><strong>Location:</strong> Jhamsikhel, Lalitpur</p>
+						    <p><strong>Ports:</strong> 8</p>
+						    <p><strong>Price:</strong> 45₹ per kWh</p>
+						  </div>
+						</div>
+						
+						<div class="station-table-section" style="margin: 40px 0 0 40px; padding: 20px; max-width: 1200px; width: fit-content; display: flex; flex-direction: column; align-items: flex-start;">
+						  <div class="text-wrapper-63" style="color: white; font-size: 38px; font-weight: bold; margin-bottom: -450px; text-align:left;">Station Details</div>
+						
+						  <div class="tables-container" style="width: fit-content;">
+						    <table class="styled-table">
+						      <thead>
+						        <tr>
+						          <th>Station ID</th>
+						          <th>Station Name</th>
+						          <th>Location</th>
+						          <th>Availability</th>
+						          <th>Price (₹) per kWh</th>
+						          <th>Ports</th>
+						          <th>Type</th>
+						        </tr>
+						      </thead>
+						      <tbody>
+						        <%
+						          String url = "jdbc:mysql://localhost:3307/chargehive";
+						          String username = "root";
+						          String password = "";
+						          Connection conn = null;
+						          Statement stmt = null;
+						          ResultSet rs = null;
+						
+						          try {
+						            Class.forName("com.mysql.cj.jdbc.Driver");
+						            conn = DriverManager.getConnection(url, username, password);
+						            stmt = conn.createStatement();
+						            rs = stmt.executeQuery("SELECT * FROM station");
+						            while(rs.next()) {
+						        %>
+						        <tr>
+						          <td><%= rs.getInt("station_id") %></td>
+						          <td><%= rs.getString("station_name") %></td>
+						          <td><%= rs.getString("station_location") %></td>
+						          <td><%= rs.getString("station_availability") %></td>
+						          <td><%= rs.getFloat("station_price") %></td>
+						          <td><%= rs.getInt("station_ports") %></td>
+						          <td><%= rs.getString("station_type") %></td>
+						        </tr>
+						        <%
+						            }
+						          } catch(Exception e) {
+						            out.println("<tr><td colspan='7'>Error: " + e.getMessage() + "</td></tr>");
+						          } finally {
+						            try { if (rs != null) rs.close(); } catch(Exception e) {}
+						            try { if (stmt != null) stmt.close(); } catch(Exception e) {}
+						            try { if (conn != null) conn.close(); } catch(Exception e) {}
+						          }
+						        %>
+						      </tbody>
+						    </table>
+						  </div>
+						</div>
+					  </div>	
+			     	</div>
+			     	
+			     	 
+		          </div>
 	      
+	      <!-- Station Details Section (Read-Only) -->
+		
+		
         <div class="navigation">
 		  <div class="navbar">
 		
 		    <%-- Conditional Login/Logout link --%>
-		    <%
-		        HttpSession session1 = request.getSession(false);
-		        boolean isLoggedIn = (session != null && session.getAttribute("userEmail") != null);
-		    %>
+		   <%
+		  	HttpSession session1 = request.getSession(false);
+		    boolean isLoggedIn = (session1 != null && session1.getAttribute("userEmail") != null);
+		    String role = (session1 != null && session1.getAttribute("userRole") != null)
+		                  ? session1.getAttribute("userRole").toString()
+		                  : "";
+			%>
+		    
+		    
 		    <div class="div-wrapper">
 		      <% if (isLoggedIn) { %>
 		          <a href="${pageContext.request.contextPath}/logout" class="text-wrapper-28">Logout</a>
@@ -140,12 +185,21 @@
 		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
 		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
 		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-30">About Us</a>
-		    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-31">Dashboard</a>
+		    <% if ("admin".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-31">Dashboard</a>
+			<% } else if ("user".equalsIgnoreCase(role)) { %>
+			    <a href="${pageContext.request.contextPath}/user" class="text-wrapper-31">Dashboard</a>
+			<% } %>
 		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
 		
 		  </div>
 		</div>
+		
+		
+		
+		 
       </div>
-    </div>
+
+     
   </body>
 </html>
