@@ -33,6 +33,7 @@ public class RegisterController extends HttpServlet {
     private static final String DEFAULT_ROLE = "user";
     private static final int DEFAULT_LOYALTY_POINTS = 0;
     private static final String DEFAULT_MEMBERSHIP = "bronze";
+    private static final String DEFAULT_PROFILE_PIC = "";
     
     /**
      * Loads the registration form page.
@@ -145,7 +146,8 @@ public class RegisterController extends HttpServlet {
             userAddress,
             DEFAULT_ROLE,
             DEFAULT_LOYALTY_POINTS,
-            DEFAULT_MEMBERSHIP
+            DEFAULT_MEMBERSHIP,
+            DEFAULT_PROFILE_PIC
         );
     }
     

@@ -25,8 +25,8 @@ public class RegisterService {
 	public Boolean addUser(UserModel userModel) {
 	    System.out.println("Attempting to insert user: " + userModel.toString()); // Debug
 	    
-	    String sql = "INSERT INTO user (user_fullName, user_email, user_password, user_contact, user_address, user_role, user_loyaltyPoints, user_membership) " +
-	                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+	    String sql = "INSERT INTO user (user_fullName, user_email, user_password, user_contact, user_address, user_role, user_loyaltyPoints, user_membership, user_profile_pic) " +
+	                 "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
 	    try (Connection conn = DbConfig.getDbConnection();
 	         PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -40,6 +40,7 @@ public class RegisterService {
 	        stmt.setString(6, userModel.getUserRole());
 	        stmt.setInt(7, userModel.getUserLoyaltyPoints());
 	        stmt.setString(8, userModel.getUserMembership());
+	        stmt.setString(9, userModel.getUserProfilePic());
 
 	        // Debug - print the actual SQL that will execute
 	        System.out.println("Executing: " + stmt.toString()); 

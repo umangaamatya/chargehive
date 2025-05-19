@@ -14,6 +14,7 @@ public class UserModel {
 	private String userRole;
 	private int userLoyaltyPoints;
 	private String userMembership;
+	private String userProfilePic;
 	
 	
 	
@@ -26,7 +27,7 @@ public class UserModel {
 		this.userPassword = pasword;
 	}
 	
-	public UserModel(String userName, String userEmail, String userPassword, String userContact, String userAddress, String userRole, int userLoyaltyPoints, String userMembership) {
+	public UserModel(String userName, String userEmail, String userPassword, String userContact, String userAddress, String userRole, int userLoyaltyPoints, String userMembership, String userProfilePic) {
 		super();
 		this.userName = userName;
 		this.userEmail = userEmail;
@@ -36,6 +37,7 @@ public class UserModel {
 		this.userRole = userRole;
 		this.userLoyaltyPoints = userLoyaltyPoints;
 		this.userMembership = userMembership;
+		this.userProfilePic = userProfilePic;
 	}
 	
 	public UserModel(String userName) {
@@ -114,6 +116,13 @@ public class UserModel {
 		this.userMembership = userMembership;
 	}
 	
+	public String getUserProfilePic() {
+		return userProfilePic;
+	}
+	
+	public void setUserProfilePic(String userProfilePic) {
+		this.userProfilePic = userProfilePic;
+	}
 
 	
 	

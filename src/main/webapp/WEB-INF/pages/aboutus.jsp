@@ -76,11 +76,19 @@
 		    <a href="${pageContext.request.contextPath}/product" class="charging-station">Charging Stations</a>
 		    <a href="${pageContext.request.contextPath}/contact" class="about-us">Contact</a>
 		    <a href="${pageContext.request.contextPath}/about" class="text-wrapper-22">About Us</a>
-		     <% if ("admin".equalsIgnoreCase(role)) { %>
-			    <a href="${pageContext.request.contextPath}/admin" class="text-wrapper-23">Dashboard</a>
-			<% } else if ("user".equalsIgnoreCase(role)) { %>
-			    <a href="${pageContext.request.contextPath}/user" class="text-wrapper-23">Dashboard</a>
-			<% } %>
+		    <a href="#" onclick="handleDashboardRedirect()" class="text-wrapper-23">Dashboard</a>
+			<script>
+			  function handleDashboardRedirect() {
+			    <% if (!isLoggedIn) { %>
+			      alert("You must log in first to access the dashboard.");
+			      window.location.href = "<%= request.getContextPath() %>/login";
+			    <% } else if ("admin".equalsIgnoreCase(role)) { %>
+			      window.location.href = "<%= request.getContextPath() %>/admin";
+			    <% } else if ("user".equalsIgnoreCase(role)) { %>
+			      window.location.href = "<%= request.getContextPath() %>/user";
+			    <% } %>
+			  }
+			</script>
 		    <img class="chargehivelogo" src="resources/images/chargehiveLogo.png" />
 		  </div>
 		</div>
